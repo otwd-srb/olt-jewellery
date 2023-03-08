@@ -341,11 +341,11 @@
           {% if template.name == 'index' %}
           <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
             {% else %}
-            <div class="h1 header-logo" itemscope itemtype="http://schema.org/Organization">
+            <div class="header-logo" itemscope itemtype="http://schema.org/Organization">
               {% endif %}
               {% if section.settings.logo != blank %}
               <a href="{{ routes.root_url }}" itemprop="url">
-                <img height="40" width="93" src="{{ section.settings.logo | img_url: '93x40' }}" alt="{{ shop.name }}" title="{{ shop.name }}" itemprop="logo">
+                <img src="{{ section.settings.logo | img_url: '300x84' }}" alt="{{ shop.name }}" title="{{ shop.name }}" itemprop="logo">
               </a>
               {% else %}
               <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
