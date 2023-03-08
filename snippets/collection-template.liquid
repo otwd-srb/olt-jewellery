@@ -120,39 +120,67 @@
   
   
   <div class="grid-uniform product-grid col-main">
-	<div class="row">
-    <div class="products-grid-view">
+    <div class="row">
+      <div class="products-grid-view">
 
-      {% case products_per_row %}
-      {% when '2' %}
-      {% assign grid_item_width = 'medium-up--one-third large-up--one-half' %}
-      {% when '3' %}
-      {% assign grid_item_width = 'medium-up--one-third large-up--one-third' %}
-      {% when '4' %}
-      {% assign grid_item_width = 'medium-up--one-third large-up--one-quarter' %}
-      {% when '5' %}
-      {% assign grid_item_width = 'medium-down--one-half large-up--one-fifth' %}
-      {% when '6' %}
-      {% assign grid_item_width = 'medium-down--one-half large-up--one-sixth' %}
-      {% endcase %}
+        {% case products_per_row %}
+        {% when '2' %}
+        {% assign grid_item_width = 'medium-up--one-third large-up--one-half' %}
+        {% when '3' %}
+        {% assign grid_item_width = 'medium-up--one-third large-up--one-third' %}
+        {% when '4' %}
+        {% assign grid_item_width = 'medium-up--one-third large-up--one-quarter' %}
+        {% when '5' %}
+        {% assign grid_item_width = 'medium-down--one-half large-up--one-fifth' %}
+        {% when '6' %}
+        {% assign grid_item_width = 'medium-down--one-half large-up--one-sixth' %}
+        {% endcase %}
 
-      {% for product in collection.products %}{% if product.type == 'PPLR_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
-      {% assign featured = product %}
-      <div class="grid-item {{ settings.product_hover_btn }} {{ grid_item_width }} {{product.type}}">
-        {% render 'product-card-grid', product: product, collection: collection %}
+        
+        {% for product in collection.products %}
+          {% if product.type == 'PPLR_HIDDEN_PRODUCT' %}
+            {% continue %}
+          {% endif %}
+          {% assign featured = product %}
+            <div class="grid-item {{ settings.product_hover_btn }} {{ grid_item_width }} {{product.type}}">
+              {% render 'product-card-grid', product: product, collection: collection %}
+            </div>
+
+          {% else %}
+          {% if collection.handle == 'all' %}
+            {% render 'onboarding-empty-collection' %}
+          {% else %}
+          <div class="grid-item">
+            <p>{{ 'collections.general.no_matches' | t }}</p>
+          </div>
+          {% endif %}
+        {% endfor %}
+       
+
+        {% comment %}
+        https://community.shopify.com/c/shopify-discussions/sort-by-stock-push-out-of-stock-to-bottom-of-list-feature/td-p/1785852
+            {% for product in collection.products %}
+                  {% assign quantity = product.selected_or_first_available_variant.inventory_quantity %}
+          
+                  {% if quantity > 0 %}
+                    {% capture captured_temp %}
+                    {% render 'product-grid-item', product: product %}
+                    {% endcapture %}
+                    {% assign capture_over_one = capture_over_one | append: captured_temp %}
+                  {% endif %}
+          
+                  {% if quantity == 0 %}
+                    {% capture captured_temp %}
+                    {% render 'product-grid-item', product: product %}
+                    {% endcapture %}
+                    {% assign capture_nostock = capture_nostock | append: captured_temp %}
+                  {% endif %}
+
+            {% endfor %}
+        {% endcomment %}
+
+        
       </div>
-
-      {% else %}
-      {% if collection.handle == 'all' %}
-      {% render 'onboarding-empty-collection' %}
-      {% else %}
-      
-      <div class="grid-item">
-        <p>{{ 'collections.general.no_matches' | t }}</p>
-      </div>
-      {% endif %}
-      {% endfor %}
-    </div>
     </div>
   </div>
   <div class="text-center pagination-wrap">
