@@ -1,0 +1,94 @@
+<style>.cms-customtext .customtext-block .title{color:{{ section.settings.title_color }};}
+.cms-customtext .customtext-block .subtitle{color:{{ section.settings.subtitle_color }};}
+.cms-customtext .customtext-block .custombtn{color:{{ section.settings.btn_txt_color }};background:{{ section.settings.btn_bg_color }};}
+.cms-customtext .customtext-block .custombtn:hover,.cms-customtext .customtext-block .custombtn:focus,.cms-customtext .customtext-block .custombtn:active{color:{{ section.settings.btn_hover_txt_color }};background:{{ section.settings.btn_hover_bg_color }};}
+.cms-customtext .customtext-block .custom-button:hover,.cms-customtext .customtext-block .custom-button:focus,.cms-customtext .customtext-block .custom-button:active{border-bottom-color:{{ section.settings.btn_hover_bg_color }};}
+</style>
+<div class="cms-customtext">
+  <div class="container">
+    <div class="customtext-block">
+      <div class="customtext">
+        {% if section.settings.title != blank %}
+        <div class="title">{{ section.settings.title }}</div>
+        {% endif %}
+        {% if section.settings.subtitle != blank %}
+        <div class="subtitle">{{ section.settings.subtitle }}</div>
+        {% endif %}
+        {% if section.settings.btn_link != blank %}
+        <div class="custom-button">
+          <a class="custombtn btn" href="{% if section.settings.btn_link != blank %}{{ section.settings.btn_link }}{% else %}#{% endif %}">{{ section.settings.btn_txt }}</a>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+    "name": "CMS Customtext",
+    "settings": [
+      {
+        "type": "textarea",
+        "id": "title",
+        "label": "Title"
+      },
+      {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#111111"
+      },
+      {
+        "type": "text",
+        "id": "subtitle",
+        "label": "Sub title"
+      },
+      {
+        "type": "color",
+        "id": "subtitle_color",
+        "label": "Subtitle Color",
+        "default": "#111111"
+      },
+      {
+        "type": "text",
+        "id": "btn_txt",
+        "label": "Button text"
+      },
+      {
+        "type": "url",
+        "id": "btn_link",
+        "label": "Button Link"
+      },
+      {
+        "type": "color",
+        "id": "btn_txt_color",
+        "label": "Button text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "btn_bg_color",
+        "label": "Button background Color",
+        "default": "#c40529"
+      },
+      {
+        "type": "color",
+        "id": "btn_hover_txt_color",
+        "label": "Button Hover text Color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "color",
+        "id": "btn_hover_bg_color",
+        "label": "Button Hover background Color",
+        "default": "#111111"
+      }
+	],
+    "presets": [
+      {
+        "name": "CMS Customtext",
+        "category": "TT CMS section"
+      }
+    ]
+ }
+{% endschema %}

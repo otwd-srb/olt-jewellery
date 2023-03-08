@@ -1,0 +1,457 @@
+{% assign on_sale = false %}
+{% assign sale_text = 'products.product.sale' | t %}
+{% if product.compare_at_price > product.price %}{% assign on_sale = true %}{% endif %}
+{% assign sold_out = true %}
+{% assign sold_out_text = 'products.product.sold_out' | t %}
+{% if product.available %}{% assign sold_out = false %}{% endif %}
+{% unless grid_item_width %}{% assign grid_item_width = 'wide--one-third large--one-third medium-down--one-half' %}{% endunless %}
+{% assign grid_image_width = settings.product_image_width_height  %}
+{% assign grid_item_width = 'medium-up--one-third large-up--one-quarter' %}
+
+{% if settings.new_label and settings.new_products_period.size > 0 %} 
+{% assign date_pub_y = product.published_at | date:'%Y' %} 
+{% assign date_pub_d = product.published_at | date:'%j' %} 
+{% assign date_now_y = 'now' | date:'%Y' %} 
+{% assign date_now_d = 'now' | date:'%j' %} 
+{% assign dates_diff_y = date_now_y | minus: date_pub_y | times: 365 %} 
+{% assign dates_diff_d = date_now_d | minus: date_pub_d %} 
+{% assign dates_diff = dates_diff_y | plus: dates_diff_d %} 
+{% assign new_products_period = settings.new_products_period | plus: 0 %}
+{% endif %}
+
+<div class="grid-item {{ settings.product_hover_btn }} {{ grid_item_width }}">
+  <div id="product-{{ product.id }}" data-id="product-{{ product.id }}"  data-col="{{ product.id }}" class="item-row {{ settings.product_hover_btn }} product-{{ product.id }} product-layouts col-xs-12 grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}" data-ajax-enabled="{{ settings.use_ajax_cart }}">
+  <div class="product-wrapper{% if product.images.size > 1 %} product_container{% endif %}"> 
+    <div class="thumbs product-thumb">
+        <div class="product-image {{ settings.product_img_hover }}">
+          <a class="grid-view-item__link grid-view-item__links" href="{{ product.url | within: collection }}">
+            <img class="grid-view-item__image featured-image image_thumb" height="230" width="209" src="{{ product.featured_media | img_url: settings.product_image_width_height }}" alt="{{ product.featured_image.alt }}">
+            {% if product.images.size > 1 %}
+            {% if product.images.last %} 
+            <div class="second-productimg">
+              <img class="image_thumb_swap" height="230" width="209" src="{{ product.images.last | product_img_url: settings.product_image_width_height }}" alt="{{ product.images.last.alt | escape }}" />
+            </div>
+            {% endif %} 
+            {% endif %}
+          </a>
+          {% if product.images.size > 1 %}
+          {% if product.images.last %}
+          <div class="loader">
+            <div class="preloader-wrapper active">
+              <div class="spinner-layer"></div>
+            </div>
+          </div>
+          {% endif %} 
+          {% endif %} 
+          {% if product.compare_at_price > product.price %}
+          <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+          {% endif %}
+          {% assign my_fields = product.metafields.my_fields %}
+          {% assign key = 'custom_label' %}
+          {% if my_fields.custom_label != nil %}
+          <span class="custom_label">{{ product.metafields.my_fields.custom_label }}</span>
+          {% endif %}
+          {% if product.available %} 
+          {% else %}
+          <div class="sold-out-tag text-center">
+            <span class="tag">{{ 'products.product.sold_out' | t }}</span>
+          </div>
+          {% endif %}
+          
+          {% if settings.product_hover_btn =="style2" %}
+          {% if settings.enable_wishlist %}       
+          {% render 'wishlist-icon' , product: product %}         
+          {% endif %} 
+          {% endif %} 
+          
+           {% if settings.enable_countdown %}        
+        {% assign my_fields = product.metafields.my_fields %}
+        {% assign key = 'countdown' %}
+        {% if my_fields.countdown != nil %}
+        <div class="flip-countdown simple-countdown"><div class="countdown-container flip-countdown" data-countdown="{{ product.metafields.my_fields.countdown }}"></div></div>
+        {% endif %}
+        {% endif %}
+        </div>          
+       {% if settings.product_hover_btn !="style3" %}
+      {% if settings.enable_quantity %}
+      {% if product.available %} 
+      <div class="product-qty">        
+        <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}"> 
+          <div class="qty-box-set">  
+            <input type="number" name="quantity" value="1" min="1" data-id="Qty" class="quantity">
+            <div class="qnt_wrap">
+              <div class="inc button qtyplus"><i class="mdi mdi-plus"></i></div>
+              <div class="dec button qtyminus"><i class="mdi mdi-minus"></i></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      {% endif %}
+      {% endif %} 
+      {% endif %}  
+      <div class="btn_wrapper">
+         {% if settings.product_hover_btn =="style2" %}
+          {% if settings.enable_compare %}
+          <div class="add-to-compare pro_btn">     
+            <div class="show">
+              <div class="default-comparebutton-{{ product.handle }} loading">
+                <a class="add-in-compare-js btn" data-comparehandle="{{ product.handle }}" title="{{ 'products.compare.add_to_compare' | t }}">
+                  <i class="mdi mdi-cached"></i>
+                <svg class="compare-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="88.000000pt" height="89.000000pt" viewBox="0 0 88.000000 89.000000" preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(0.000000,89.000000) scale(0.100000,-0.100000)" stroke="none">
+                    <path d="M42 873 c-36 -14 -42 -56 -42 -303 0 -251 6 -288 45 -304 9 -3 132 -6 273 -6 277 1 282 2 302 54 6 16 10 124 10 262 0 245 -6 283 -45 298 -20 7 -524 7 -543 -1z m498 -303 l0 -230 -225 0 -225 0 0 230 0 230 225 0 225 0 0 -230z"/>
+                    <path d="M710 590 l0 -40 40 0 40 0 0 -230 0 -230 -224 0 -225 0 -3 42 c-3 43 -3 43 -43 43 -39 0 -40 -1 -43 -39 -4 -51 4 -82 28 -106 19 -19 34 -20 283 -20 282 1 287 1 307 54 6 16 10 124 10 262 0 299 -2 304 -116 304 l-54 0 0 -40z"/>
+                  </g>
+                </svg>
+                <svg class="compare-fill" version="1.0" xmlns="http://www.w3.org/2000/svg" width="88.000000pt" height="89.000000pt" viewBox="0 0 88.000000 89.000000" preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(0.000000,89.000000) scale(0.100000,-0.100000)" stroke="none">
+                    <path d="M42 873 c-36 -14 -42 -56 -42 -303 0 -251 6 -288 45 -304 9 -3 132 -6 273 -6 277 1 282 2 302 54 6 16 10 124 10 262 0 245 -6 283 -45 298 -20 7 -524 7 -543 -1z m422 -195 c9 -15 -4 -32 -84 -113 -52 -52 -102 -95 -110 -95 -25 0 -124 106 -117 124 13 33 38 30 78 -10 l39 -38 78 77 c78 78 96 86 116 55z"/>
+                    <path d="M710 590 l0 -40 40 0 40 0 0 -230 0 -230 -224 0 -225 0 -3 42 c-3 43 -3 43 -43 43 -39 0 -40 -1 -43 -39 -4 -51 4 -82 28 -106 19 -19 34 -20 283 -20 282 1 287 1 307 54 6 16 10 124 10 262 0 299 -2 304 -116 304 l-54 0 0 -40z"/>
+                  </g>
+                </svg>
+                  <span class="tooltip-label">{{ 'products.compare.add_to_compare' | t }}</span>
+                </a></div>
+            </div>
+          </div>
+          {% endif %}
+        {% endif %}
+        {% if settings.product_hover_btn =="style1" or settings.product_hover_btn =="style2" %}
+        {% if settings.enable_add_cart %}
+        {% if product.available %}
+        {% if product.variants.first.inventory_management == "shopify" %}
+        {% if product.variants %}  
+        {% if product.variants.first.inventory_quantity > 0 %}
+        <div class="pro_btn btn1 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+              <span class="add_cart tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn1 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+            <span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% else %}
+        {% if product.inventory_quantity > 0 %}
+        <div class="pro_btn btn2 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn2 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+            <span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        {% if product.variants.first.inventory_management == "shopify" %}  
+        {% if product.variants.first.inventory_quantity > 0 %}
+        <div class="pro_btn btn3 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn3 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+            <span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="pro_btn btn4 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i>
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        <div class="pro_btn btn4 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+            <span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% endif %} 
+        {% endif %}
+        {% if settings.product_hover_btn =="style1" or settings.product_hover_btn =="style3" %}
+        {% if settings.enable_wishlist %}       
+        {% render 'wishlist-icon' , product: product %}         
+        {% endif %} 
+          {% if settings.enable_compare %}
+          <div class="add-to-compare pro_btn">     
+            <div class="show">
+              <div class="default-comparebutton-{{ product.handle }} loading">
+                <a class="add-in-compare-js btn" data-comparehandle="{{ product.handle }}" title="{{ 'products.compare.add_to_compare' | t }}">
+                  <i class="mdi mdi-cached"></i>
+                <svg class="compare-icon" version="1.0" xmlns="http://www.w3.org/2000/svg" width="88.000000pt" height="89.000000pt" viewBox="0 0 88.000000 89.000000" preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(0.000000,89.000000) scale(0.100000,-0.100000)" stroke="none">
+                    <path d="M42 873 c-36 -14 -42 -56 -42 -303 0 -251 6 -288 45 -304 9 -3 132 -6 273 -6 277 1 282 2 302 54 6 16 10 124 10 262 0 245 -6 283 -45 298 -20 7 -524 7 -543 -1z m498 -303 l0 -230 -225 0 -225 0 0 230 0 230 225 0 225 0 0 -230z"/>
+                    <path d="M710 590 l0 -40 40 0 40 0 0 -230 0 -230 -224 0 -225 0 -3 42 c-3 43 -3 43 -43 43 -39 0 -40 -1 -43 -39 -4 -51 4 -82 28 -106 19 -19 34 -20 283 -20 282 1 287 1 307 54 6 16 10 124 10 262 0 299 -2 304 -116 304 l-54 0 0 -40z"/>
+                  </g>
+                </svg>
+                <svg class="compare-fill" version="1.0" xmlns="http://www.w3.org/2000/svg" width="88.000000pt" height="89.000000pt" viewBox="0 0 88.000000 89.000000" preserveAspectRatio="xMidYMid meet">
+                  <g transform="translate(0.000000,89.000000) scale(0.100000,-0.100000)" stroke="none">
+                    <path d="M42 873 c-36 -14 -42 -56 -42 -303 0 -251 6 -288 45 -304 9 -3 132 -6 273 -6 277 1 282 2 302 54 6 16 10 124 10 262 0 245 -6 283 -45 298 -20 7 -524 7 -543 -1z m422 -195 c9 -15 -4 -32 -84 -113 -52 -52 -102 -95 -110 -95 -25 0 -124 106 -117 124 13 33 38 30 78 -10 l39 -38 78 77 c78 78 96 86 116 55z"/>
+                    <path d="M710 590 l0 -40 40 0 40 0 0 -230 0 -230 -224 0 -225 0 -3 42 c-3 43 -3 43 -43 43 -39 0 -40 -1 -43 -39 -4 -51 4 -82 28 -106 19 -19 34 -20 283 -20 282 1 287 1 307 54 6 16 10 124 10 262 0 299 -2 304 -116 304 l-54 0 0 -40z"/>
+                  </g>
+                </svg>
+                  <span class="tooltip-label">{{ 'products.compare.add_to_compare' | t }}</span>
+                </a></div>
+            </div>
+          </div>
+          {% endif %}
+        {% endif %} 
+          {% if settings.enable_quick_view %}                  
+          {% render 'quickveiw-icon' , product: product %}                   
+          {% endif %} 
+      </div>
+      {% if settings.collections_show_rating %} 
+      <div class="spr-badges grid-item-meta">
+        <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+      </div>
+      {% endif %}
+       {% if settings.product_hover_btn =="style3" %}
+      {% if settings.display_size_variant or settings.display_color_variant %}
+      {% if product.has_only_default_variant != true %}
+      <div class="color-size"> 
+          {% if settings.display_color_variant %}   
+        		{% render 'item-swatch' , product: product %}
+          {% endif %}
+          {% if settings.display_size_variant %}  
+          <ul class="product-size">  
+            {% for option in product.options %}
+            {% if option == 'Size' %}
+            {% assign index = forloop.index0 %}
+            {% assign sizelist = '' %}
+            {% assign size = '' %}
+            {% for variant in product.variants %}
+            {% capture size %}
+            {{ variant.options[index] }}
+            {% endcapture %}
+            {% unless sizelist contains size %}  
+            {% assign text = size | handleize %}
+            <li>
+              <label>{{ size | split: ' ' | last | handle }}</label>
+              {% if variant.image != null %}
+              <span class="hidden">
+                <img width="373" height="486" src="{{ variant.image.src | product_img_url: '373x486' }}" alt="{{ text }}"/>
+              </span>
+              {% endif %}
+            </li>
+            {% capture tempList %}
+            {{ sizelist | append: size | append: ' ' }}
+            {% endcapture %}
+            {% assign sizelist = tempList %}
+            {% endunless %}
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}  
+      </div>
+      {% endif %} 
+      {% endif %}
+      {% endif %}
+    </div>  
+    <div class="product-description">
+      <div class="h4 grid-view-item__title">
+        <a class="grid-view-item__link grid-link__title" href="{{ product.url | within: collection }}">{{ product.title }}</a>
+      </div> 
+        <div class="product-desc rte">
+          {{ product.description | strip_html | truncatewords: 15 }}         
+        </div>     
+      <div class="grid-view-item__meta">
+        {% capture price %}{{ product.price | money }}{% endcapture %}
+        <div class="grid-link__org_price">
+         {% render 'product-price', product: product, variant: current_variant, show_vendor: section.settings.show_vendor %}
+        </div> 
+      </div>  
+       {% if settings.product_hover_btn !="style3" %}
+      {% if settings.display_size_variant or settings.display_color_variant %}
+      {% if product.has_only_default_variant != true %}
+      <div class="color-size"> 
+          {% if settings.display_color_variant %}   
+        		{% render 'item-swatch', product: product %}
+          {% endif %}
+          {% if settings.display_size_variant %}  
+          <ul class="product-size">  
+            {% for option in product.options %}
+            {% if option == 'Size' %}
+            {% assign index = forloop.index0 %}
+            {% assign sizelist = '' %}
+            {% assign size = '' %}
+            {% for variant in product.variants %}
+            {% capture size %}
+            {{ variant.options[index] }}
+            {% endcapture %}
+            {% unless sizelist contains size %}  
+            {% assign text = size | handleize %}
+            <li>
+              <label>{{ size | split: ' ' | last | handle }}</label>
+              {% if variant.image != null %}
+              <span class="hidden">
+                <img width="373" height="486" src="{{ variant.image.src | product_img_url: '373x486' }}" alt="{{ text }}"/>
+              </span>
+              {% endif %}
+            </li>
+            {% capture tempList %}
+            {{ sizelist | append: size | append: ' ' }}
+            {% endcapture %}
+            {% assign sizelist = tempList %}
+            {% endunless %}
+            {% endfor %}
+            {% endif %}
+            {% endfor %}
+          </ul>
+          {% endif %}  
+      </div>
+      {% endif %} 
+      {% endif %}
+      {% endif %}
+      {% if settings.product_hover_btn =="style3" %} 
+        {% if settings.enable_add_cart %}
+        {% if product.available %}
+        {% if product.variants.first.inventory_management == "shopify" %}
+        {% if product.variants %}  
+        {% if product.variants.first.inventory_quantity > 0 %}
+        <div class="pro_btn btn1 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i><i class="mdi mdi-plus"></i><span class="add_cart tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn1 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+            <i class="mdi mdi-plus"></i><span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% else %}
+        {% if product.inventory_quantity > 0 %}
+        <div class="pro_btn btn2 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i><i class="mdi mdi-plus"></i>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn2 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+            <i class="mdi mdi-plus"></i>
+            <span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        {% if product.variants.first.inventory_management == "shopify" %}  
+        {% if product.variants.first.inventory_quantity > 0 %}
+        <div class="pro_btn btn3 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i><i class="mdi mdi-plus"></i>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% else %}
+        <div class="pro_btn btn3 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+			<i class="mdi mdi-plus"></i><span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+        </div>
+        {% endif %}
+        {% else %}
+        <div class="pro_btn btn4 add_tocart">
+          <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}">                                    
+            <input type="hidden" name="id" value="{{ product.variants[0].id }}" />  
+            <a class="add-cart-btn btn" title="{{ 'products.product.add_to_cart' | t }}">
+              <i class="mdi mdi-cached"></i><i class="mdi mdi-plus"></i>
+              <span class="add_cart  tooltip-label">{{ 'products.product.add_to_cart' | t }}</span>
+            </a>
+          </form>   
+        </div>
+        {% endif %}
+        {% endif %}
+        {% else %}
+        <div class="pro_btn btn4 add_tocart soldout">
+          <a class="add-cart-btn1 btn add-to-cart-disable" title="{{ 'products.product.sold_out' | t }}">
+			<i class="mdi mdi-plus"></i><span class="sold_cart tooltip-label">{{ 'products.product.sold_out' | t }}</span>
+          </a>  
+      </div>
+      {% endif %}
+      {% endif %} 
+      {% if settings.enable_quantity %}
+      {% if product.available %} 
+      <div class="product-qty">        
+        <form action="/cart/add" method="post" class="variants clearfix cart-form-{{ product.id }}"> 
+          <div class="qty-box-set">  
+            <input type="number" name="quantity" value="1" min="1" data-id="Qty" class="quantity">
+            <div class="qnt_wrap">
+              <div class="inc button qtyplus"><i class="mdi mdi-plus"></i></div>
+              <div class="dec button qtyminus"><i class="mdi mdi-minus"></i></div>
+            </div>
+          </div>
+        </form>
+      </div>
+      {% endif %}
+      {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  </div>
+</div>

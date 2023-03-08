@@ -1,0 +1,694 @@
+<div class="container">
+  <div class="row">
+    <div class="cms-aboutus">
+      <div class="col-sm-4 tt-about">
+        <div class="section-header">
+          <div class="subtitle" style="color:{{ section.settings.about_subtitle_color }}">{{ section.settings.about_subtitle}}</div>
+          <div class="tt-title" style="color:{{ section.settings.about_title_color }}">{{ section.settings.about_title}}</div>
+          <div class="desc" style="color:{{ section.settings.about_desc_color }}">{{ section.settings.about_desc}}</div>
+          <div class="aboutus-btn"><a href="{{ section.settings.about_btn_url}}" class="btn">{{ section.settings.about_btn}}</a></div>
+        </div>
+      </div>
+      <div class="col-sm-4 tt-about">
+        <div class="aboutus-img">
+          <a href="#"> {% if section.settings.about_us != blank %}{{ section.settings.about_us | img_url: "master" | img_tag: 'about_us' }}{% endif %}</a>
+        </div>
+      </div>
+      <div class="col-sm-4 tt-about">
+        <div class="aboutus-subcontent1">
+          <div class="aboutus-title" style="color:{{ section.settings.about_sub_title1_color }}">{{ section.settings.about_sub_title1}}</div>
+          <div class="aboutus-desc" style="color:{{ section.settings.about_sub_desc1_color }}">{{ section.settings.about_sub_desc1}}</div>
+        </div>
+        <div class="aboutus-subcontent2">
+          <div class="aboutus-title" style="color:{{ section.settings.about_sub_title2_color }}">{{ section.settings.about_sub_title2}}</div>
+          <div class="aboutus-desc" style="color:{{ section.settings.about_sub_desc2_color }}">{{ section.settings.about_sub_desc2}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about-videoblock">
+  <div class="video-featured">
+    <div id="popup_toggle"><a href="#">{% if section.settings.video_img != blank %}{{ section.settings.video_img | img_url: "master" | img_tag: 'video_img' }}{% endif %}</a>
+      <span id="playVideo" class="play-icone"><i class="mdi mdi-play-circle" aria-hidden="true"></i></span>
+    </div>
+    <div class="popup_overlay">
+      <div class="popup" id="popupVid"><a class="popup_close">X</a>
+        <div class="video-wrapper"><iframe id="youtubeVideo" width="560" height="315" src="{{ section.settings.video_url }}" frameborder="0" ></iframe></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="cms-aboutus1">
+      <div class="col-sm-6 tt-about">
+        <div class="aboutus-img">
+          <a href="#"> {% if section.settings.about1_us != blank %}{{ section.settings.about1_us | img_url: "master" | img_tag: 'about_us' }}{% endif %}</a>
+        </div>
+      </div>
+      <div class="col-sm-6 tt-about">
+        <div class="section-header">
+          <div class="subtitle" style="color:{{ section.settings.about1_subtitle_color }}">{{ section.settings.about1_subtitle}}</div>
+          <div class="tt-title" style="color:{{ section.settings.about1_title_color }}">{{ section.settings.about1_title}}</div>
+          <div class="desc" style="color:{{ section.settings.about1_desc_color }}">{{ section.settings.about1_desc}}</div>
+          <div class="aboutus-btn"><a href="{{ section.settings.about1_btn_url}}" class="btn">{{ section.settings.about1_btn}}</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about-services" style="background:{{ section.settings.bg_color }}">
+  <div class="container">
+    <div class="row">
+      <div class="block_content owl-carousel" style="display: block;">
+        <div class="tt-service">
+          <div class="service-img"><a href="#"><img height="50" width="50" src="{{ section.settings.service_1 | img_url: "50x50"  }}" alt="service-img"/></a></div>
+          <div class="service-content">
+            <div class="service-title" style="color:{{ section.settings.service_title1_color }}">{{ section.settings.service_title1 }}</div>
+            <div class="service-desc" style="color:{{ section.settings.service_desc1_color }}">{{ section.settings.service_desc1 }}</div>
+          </div>
+        </div>
+        <div class="tt-service">
+          <div class="service-img"><a href="#"><img height="50" width="50" src="{{ section.settings.service_2 | img_url: "50x50"  }}" alt="service-img"/></a></div>
+          <div class="service-content">
+            <div class="service-title" style="color:{{ section.settings.service_title2_color }}">{{ section.settings.service_title2 }}</div>
+            <div class="service-desc" style="color:{{ section.settings.service_desc2_color }}">{{ section.settings.service_desc2 }}</div>
+          </div>
+        </div>
+        <div class="tt-service">
+          <div class="service-img"><a href="#"><img height="50" width="50" src="{{ section.settings.service_3 | img_url: "50x50"  }}" alt="service-img"/></a></div>
+          <div class="service-content">
+            <div class="service-title" style="color:{{ section.settings.service_title3_color }}">{{ section.settings.service_title3 }}</div>
+            <div class="service-desc" style="color:{{ section.settings.service_desc3_color }}">{{ section.settings.service_desc3 }}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  $("#playvideo").one(function(){
+    //as noted in addendum, check for querystring exitence
+    var symbol = $("#youtubeVideo")[0].src.indexOf("?") > -1 ? "&" : "?";
+    //modify source to autoplay and start video
+    $("#youtubeVideo")[0].src += symbol + "autoplay=1";
+  });
+</script>
+<style>
+  .about-videoblock .video-featured #popup_toggle .play-icone i.mdi-play-circle{ 
+    color: {{ section.settings.video_btn_color }};
+  }
+  .about-videoblock .video-featured #popup_toggle .play-icone:hover i.mdi-play-circle{ 
+    color: {{ section.settings.video_btn_hover_color }};
+  }
+  .about-videoblock .video-featured #popup_toggle .play-icone:before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -o-transform: translateX(-50%) translateY(-50%);
+    -ms-transform: translateX(-50%) translateY(-50%);
+    display: block;
+    width: 80px;
+    height: 80px;
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%; 
+    -moz-border-radius: 50%; 
+    -webkit-border-radius: 50%; 
+    -khtml-border-radius: 50%;
+    -webkit-animation: pulse-border 1500ms ease-out infinite;
+    animation: pulse-border 1500ms ease-out infinite;
+  }
+  @keyframes pulse-border {
+    0% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1);
+      opacity: 1;
+      -moz-opacity: 1; 
+      -khtml-opacity: 1; 
+      -webkit-opacity: 1;
+    }
+    100% {
+      transform: translateX(-50%) translateY(-50%) translateZ(0) scale(1.5);
+      opacity: 0;
+      -moz-opacity: 0; 
+      -khtml-opacity: 0; 
+      -webkit-opacity: 0;
+    }
+  }
+  .cms-aboutus,.cms-aboutus1 {
+    float: left;
+    width: 100%;
+    margin: 0 0 50px;
+  }
+  .about-videoblock{
+    margin: 0 0 50px;
+  }
+  .cms-aboutus .section-header,.cms-aboutus1 .section-header {
+    text-align: left;
+  }
+  .cms-aboutus .section-header .tt-title{
+    line-height: 44px;
+    text-align: left;
+  }
+  .cms-aboutus1 .section-header .tt-title {
+    text-align: left;
+  }
+  .cms-aboutus .section-header .desc,.cms-aboutus1 .section-header .desc {
+    line-height: 24px;
+  }
+  .aboutus-subcontent1 .aboutus-title, .aboutus-subcontent2 .aboutus-title {
+    font: 600 24px/26px var(--font-stack-header);
+      float: left;
+      width: 100%;
+      margin: 0 0 15px;
+      }
+  .aboutus-subcontent1 {
+    float: left;
+    width: 100%;
+    margin: 0 0 30px;
+  }
+  .aboutus-subcontent2 {
+    float: left;
+    width: 100%;
+  }
+  .aboutus-subcontent1 .aboutus-desc, .aboutus-subcontent2 .aboutus-desc {
+    font: 400 14px/24px var(--font-stack-subheading);
+      float: left;
+      width: 100%;
+      }
+  .about-videoblock,.about-videoblock .video-featured #popup_toggle {
+    float: left;
+    width: 100%;
+  }
+  .about-videoblock .video-featured, ..video-featured #popup_toggle .about-videoblock .video-featured {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .video-featured #popup_toggle {
+    position: relative;
+  }
+  .video-featured #popup_toggle a {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    overflow: hidden;
+  }
+  .video-featured #popup_toggle .play-icone {
+    bottom: 0;
+    height: 80px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    top: 0;
+    width: 80px;
+    cursor: pointer;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -khtml-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    -webkit-opacity: 1;
+    -moz-opacity: 1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    line-height: 80px;
+  }
+  .video-featured #popup_toggle .play-icone i {
+    display: inline-block;
+    float: none;
+    font-size: 80px;
+    height: 80px;
+    width: 80px;
+    line-height: 78px;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  .video-featured #popup_toggle .video-featured .popup_overlay,.video-featured .popup_overlay {
+    float: left;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    height: 100%;
+    text-align: center;
+    z-index: 9;
+    right: 0;
+    display: none;
+    top: 0;
+    background: rgba(0,0,0,.9);
+  }
+  .video-featured #popup_toggle .video-featured .popup_overlay .popup, .video-featured .popup_overlay .popup {
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    max-width: 100%;
+    max-height: 100%;
+    padding: 20px;
+    background: #222;
+    color: #fff;
+    vertical-align: middle;
+    margin: 8% 0;
+    z-index: 99999;
+  }
+  .video-featured #popup_toggle .video-featured .popup_overlay .popup_close,.video-featured .popup_overlay .popup_close {
+    display: block;
+    position: absolute;
+    top: 5px;
+    right: 7px;
+    width: 20px;
+    height: 20px;
+    padding: 8px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 12px;
+    line-height: 8px;
+    color: #fff;
+    text-decoration: none;
+  }
+  .video-wrapper {
+    position: relative;
+    overflow: hidden;
+    max-width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    height: auto;
+  }
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  .about-services {
+    float: left;
+    width: 100%;
+    padding: 80px 0;
+    margin: 0 0 50px;
+  }
+  .about-services .tt-service {
+    float: left;
+    width: 100%;
+    text-align: center;
+    padding: 0 15px;
+  }
+  .about-services .tt-service .service-img {
+    float: left;
+    width: 100%;
+    margin: 0 0 20px;
+    transition: all 400ms ease-in-out 0s;
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    -ms-transition: all 400ms ease-in-out 0s;
+  }
+  .about-services .tt-service:hover .service-img {
+    transform: rotateY( 180deg);
+    -webkit-transform: rotateY( 180deg);
+    -moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+  }
+  .about-services .tt-service .service-content {
+    float: left;
+    width: 100%;
+  }
+  .about-services .tt-service .service-content .service-title {
+    float: left;
+    width: 100%;
+    font: 500 20px/22px var(--font-stack-header);
+      margin: 0 0 20px;
+      }
+  .about-services .tt-service .service-content .service-desc {
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    width: 70%;
+    font: 400 13px/24px var(--font-stack-subheading);
+      }
+  @media only screen and (min-width: 768px) {
+    .cms-aboutus,.cms-aboutus1{
+      display: flex;
+      align-items: center;
+    }
+  }
+  @media only screen and (max-width: 1399px) {
+    .cms-aboutus .section-header, .cms-aboutus1 .section-header{
+      width: 80%;
+    }
+  }
+  @media only screen and (max-width: 1199px) {
+    .cms-aboutus .section-header .tt-title {
+      line-height: 34px;
+      font-size: 26px;
+    }
+    .aboutus-subcontent1 .aboutus-title, .aboutus-subcontent2 .aboutus-title{
+      margin: 0 0 10px;
+      font-size: 20px;
+      line-height: 22px;
+    }
+    .cms-aboutus .section-header, .cms-aboutus1 .section-header,.about-services .tt-service .service-content .service-desc{
+      width:100%;
+    }
+  }
+  @media only screen and (max-width: 991px) {
+    .about-services{
+      padding: 60px 0;
+    }
+    .aboutus-subcontent1 .aboutus-desc, .aboutus-subcontent2 .aboutus-desc{
+      font-size: 12px;
+      line-height: 22px;
+    }
+    .cms-aboutus .section-header .tt-title{
+      line-height: 30px;
+      font-size: 24px;
+    }
+    .cms-aboutus1 .section-header .tt-title{
+      font-size: 26px;
+      line-height: 28px;
+    }
+    .cms-aboutus .section-header .desc, .cms-aboutus1 .section-header .desc{
+      font-size:12px;
+      line-height:22px;
+    }
+    .cms-aboutus, .cms-aboutus1,.about-videoblock,.about-services{
+      margin: 0px 0 30px;
+    }
+    .about-services .tt-service .service-content .service-desc{
+      font-size: 12px;
+      line-height: 22px;
+    }
+    .about-services .tt-service .service-content .service-title{
+      margin: 0 0 15px;
+      font-size: 18px;
+      line-height: 20px;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    .video-featured #popup_toggle .play-icone i,.video-featured #popup_toggle .play-icone{
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+    }
+    .video-featured #popup_toggle .play-icone i{
+    font-size: 38px;
+    }
+    .about-services .block_content {
+      float: left;
+      width: 100%;
+      padding: 0 15px;
+    }
+    .cms-aboutus .section-header,.cms-aboutus .aboutus-img,.cms-aboutus1 .aboutus-img,.aboutus-subcontent1{
+      margin: 0 0 15px;
+    }
+    .about-services {
+      padding: 40px 0;
+    }
+  }
+</style>
+{% schema %}
+{
+"name": "About-us",
+"class": "index-section",
+"settings": [ 
+{
+"type": "header",
+"content": "About Detail"
+},
+{
+"type": "color",
+"id": "about_subtitle_color",
+"label": "About Subtitle color"
+},
+{
+"type": "text",
+"id": "about_subtitle",
+"label": "About Subtitle"
+},
+{
+"type": "color",
+"id": "about_title_color",
+"label": "About title color"
+},
+{
+"type": "text",
+"id": "about_title",
+"label": "About title"
+},
+{
+"type": "color",
+"id": "about_desc_color",
+"label": "About Description color"
+},
+{
+"type": "textarea",
+"id": "about_desc",
+"label": "About Description"
+},
+{
+"type": "url",
+"id": "about_btn_url",
+"label": "About Button URL"
+},
+{
+"type": "text",
+"id": "about_btn",
+"label": "About Button"
+},
+{
+"type": "image_picker",
+"id": "about_us",
+"label": "About Us Image"
+},
+{
+"type": "color",
+"id": "about_sub_title1_color",
+"label": "About Sub Title1 color"
+},
+{
+"type": "text",
+"id": "about_sub_title1",
+"label": "About Sub Title1"
+},
+{
+"type": "color",
+"id": "about_sub_desc1_color",
+"label": "About Sub Description1 color"
+},
+{
+"type": "textarea",
+"id": "about_sub_desc1",
+"label": "About Sub Description1"
+},
+{
+"type": "color",
+"id": "about_sub_title2_color",
+"label": "About Sub Title2 color"
+},
+{
+"type": "text",
+"id": "about_sub_title2",
+"label": "About Sub Title2"
+},
+{
+"type": "color",
+"id": "about_sub_desc2_color",
+"label": "About Sub Description2 color"
+},
+{
+"type": "textarea",
+"id": "about_sub_desc2",
+"label": "About Sub Description2"
+},
+{
+"type": "header",
+"content": "About Video"
+},
+{	
+"type": "image_picker",
+"id": "video_img",
+"label": "Video Image"
+},
+{
+"type": "url",
+"id": "video_url",
+"label": "Video Url",
+"info": "Accept Youtube Embed Link"
+},
+{
+"type": "color",
+"id": "video_btn_color",
+"label": "Video Button Color",
+"default":"#111"
+},
+{
+"type": "color",
+"id": "video_btn_hover_color",
+"label": "Video Button Hover Color",
+"default":"#ffc600"
+},
+{
+"type": "header",
+"content": "About Detail2"
+},
+{
+"type": "color",
+"id": "about1_subtitle_color",
+"label": "About Subtitle color"
+},
+{
+"type": "text",
+"id": "about1_subtitle",
+"label": "About Subtitle"
+},
+{
+"type": "color",
+"id": "about1_title_color",
+"label": "About title color"
+},
+{
+"type": "text",
+"id": "about1_title",
+"label": "About title"
+},
+{
+"type": "color",
+"id": "about1_desc_color",
+"label": "About Description color"
+},
+{
+"type": "textarea",
+"id": "about1_desc",
+"label": "About Description"
+},
+{
+"type": "url",
+"id": "about1_btn_url",
+"label": "About Button URL"
+},
+{
+"type": "text",
+"id": "about1_btn",
+"label": "About Button"
+},
+{
+"type": "image_picker",
+"id": "about1_us",
+"label": "About Us Image"
+},
+{
+"type": "header",
+"content": "About ervices"
+},
+{
+"type": "color",
+"id": "bg_color",
+"label": "background Color",
+"default":"#000"
+},
+{
+"type": "image_picker",
+"id": "service_1",
+"label": "Service 1 Image"
+},
+{
+"type": "color",
+"id": "service_title1_color",
+"label": "Service 1 Title Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_title1",
+"label": "Service 1 Title"
+},
+{
+"type": "color",
+"id": "service_desc1_color",
+"label": "Service 1 Description Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_desc1",
+"label": "Service 1 Description"
+},
+{
+"type": "image_picker",
+"id": "service_2",
+"label": "Service 2 Image"
+},
+{
+"type": "color",
+"id": "service_title2_color",
+"label": "Service 2 Title Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_title2",
+"label": "Service 2 Title"
+},
+{
+"type": "color",
+"id": "service_desc2_color",
+"label": "Service 2 Description Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_desc2",
+"label": "Service 2 Description"
+},
+{
+"type": "image_picker",
+"id": "service_3",
+"label": "Service 3 Image"
+},
+{
+"type": "color",
+"id": "service_title3_color",
+"label": "Service 3 Title Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_title3",
+"label": "Service 3 Title"
+},
+{
+"type": "color",
+"id": "service_desc3_color",
+"label": "Service 3 Description Color",
+"default":"#000"
+},
+{
+"type": "text",
+"id": "service_desc3",
+"label": "Service 3 Description"
+}
+],
+"presets": [
+{
+"name": "About-us",
+"category": "Image"
+}
+]
+}
+{% endschema %}

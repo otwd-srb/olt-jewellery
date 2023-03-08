@@ -1,0 +1,166 @@
+{% assign products_per_row = settings.collection_products_per_row %}
+{% unless products_per_page  %}
+{% assign products_per_page = 9 %}
+{% endunless %}
+<div id="ProductGridContainer">
+
+  {% paginate collection.products by products_per_page %}
+  <div class="collection_template" id="product-grid" data-id="{{ section.id }}"> 
+    <header class="section-header text-left">
+    {% if settings.enable_category_image == true %}
+    <div class="rte rte--header collection-desc-wrap">
+      {% if settings.category_image != blank %}
+      <div class="category_img">
+        <img src="{{ settings.category_image | image_url }}"  alt="{{ collection.title | escape }}" display="block" width="1140" height="250" />
+      </div>   
+      {% endif %}
+      <h1 class="section-header__title text-left">{{ collection.title }}</h1>
+      {% if collection.description != blank %}<div class="description">{{ collection.description }}</div>{% endif %}
+    </div>
+    {% else %}
+    <h1 class="section-header__title">{{ collection.title }}</h1>
+    {% endif %}   
+   
+    {% render 'category' %}
+    <div class="filter-wrapper {{ settings.collection_sidebar_use }} wrap_{{ settings.collection_filter_pos }}">
+      {% if settings.collection_sidebar_use == "full_width" %}
+      {% if settings.collection_filter_pos == "left_filter" %}  
+      <a class="filter-left" href="#"><i class="mdi mdi-format-align-left"></i>Filter</a>   
+      {% endif %}
+      {% endif %}
+      {% if settings.collections_view_enable %}
+      <div class="view-mode filter-grid-list grid__item">   
+        <a class="grid active" id="grid-view" title="{{ 'collections.general.grid_view' | t }}"><span >{{ 'collections.general.grid_view' | t }}</span></a>   
+          <a class="grids" id="grid-views" title="{{ 'collections.general.grid_view' | t }}"><span >{{ 'collections.general.grid_view' | t }}</span></a> 
+        <a class="list" id="list-view" title="{{ 'collections.general.list_view' | t }}"><span>{{ 'collections.general.list_view' | t }}</span></a> 
+        <a class="short-list" id="short-list-view" title="{{ 'collections.general.short_list_view' | t }}"><span>{{ 'collections.general.short_list_view' | t }}</span></a> 
+      </div>  
+      {% endif %}
+      {% if settings.collection_sidebar_use == "full_width" %}
+      {% if settings.collection_filter_pos == "right_filter" %}  
+      <a class="filter-right" href="#">Filter<i class="mdi mdi-format-align-right"></i></a> 
+      {% endif %}
+      {% endif %}
+      <div class="sorting_wrapper">
+        {% if settings.collection_sort_enable %}
+        <div class="grid--full {{ settings.collection_sidebar_use }} {{ settings.collection_filter_pos }} collection-sorting{% if settings.collection_sort_enable %} collection-sorting--enabled{% endif %}">
+          {% if settings.collection_sort_enable %}
+          {% render 'collection-sorting' %}
+          {% endif %}
+        </div>
+        {% endif %}      
+        <div class="filter-show grid__item">
+          {% if collection.products.size != collection.all_products.size %}
+          <label>{{ 'collections.toolbar.show' | t }}</label>
+          {% assign current_page_size = paginate.page_size %}
+          <div class="pages_list">
+            <button class="btn dropdown-toggle" data-toggle="dropdown">
+              <i class="mdi mdi-swap-horizontal hide"></i>
+              <span class="pag-product">{{ collection.products.size }}</span>
+              <i class="mdi mdi-chevron-down"></i>
+            </button>
+
+            {% if collection.products.size != collection.all_products.size %}
+            <ul class="dropdown-menu" role="menu">
+              {% if settings.collection_results_per_page != blank %}
+              {% assign product_per_page = settings.collection_results_per_page %}
+              {% if collection.all_products.size <= products_per_page %}<li {% if current_page_size <= products_per_page %} class="active" {% endif %}><a href="{{ paginate.items }}">{{ paginate.items }}</a></li>{% endif %}
+              {% else %}
+              {% assign product_per_page = 12 %}
+              {% endif %}
+     
+              {% if collection.all_products.size >= products_per_page %} 
+              <li {% if current_page_size == products_per_page %} class="active" {% endif %}><a href="{{products_per_page}}">{{products_per_page}}</a></li> 
+              {% endif %}
+
+              {% if collection.all_products.size >= 12 %}
+              <li {% if current_page_size == 12 %} class="active" {% endif %}><a href="12">12</a></li>
+              {% endif %}
+              
+              {% if collection.all_products.size >= 24 %}
+              <li {% if current_page_size == 24 %} class="active" {% endif %}><a href="24">24</a></li>
+              {% endif %}
+              
+              {% if collection.all_products.size >= 36 %}
+              <li {% if current_page_size == 36 %} class="active" {% endif %}><a href="36">36</a></li>
+              {% endif %}
+              
+              {% if collection.all_products.size >= products_per_page %}
+              <li {% if current_page_size > products_per_page %} class="active" {% endif %} ><a href="all">all</a></li>
+              {% endif %}
+            </ul>
+            {% endif %}
+          </div>
+            {% endif %}
+        </div>
+      </div>
+
+      {% if settings.collection_sidebar_use == "full_width" %} 
+      {% if settings.collection_filter_pos == "toggle_filter" %}  
+      <a class="filter-toggle" href="#">Filter<i class="mdi mdi-format-align-right"></i></a> 
+      <div class="filter-toggle-wrap">
+        <div class="collection_sidebar">
+          {% if current_tags == blank %}
+          {% assign has_refined = false %} 
+          {% else %}
+          {% assign has_refined = true %} 
+          {% endif %}
+          <div class="sidebar-block">
+            {% render 'sidebar-category', enable_sidecategory: section.settings.enable_sidecategory, linkedlist: section.settings.linkedlist, linkedlist_title: section.settings.linkedlist_title %}
+            {% render 'facets', results: collection, collapse_on_larger_devices: section.settings.collapse_on_larger_devices, show_filter: section.settings.show_filter, enable_sorting: section.settings.enable_sorting %}
+          </div>  
+          {% render 'promo-banner', show_promo_banner: section.settings.show_promo_banner, promo_img: section.settings.promo_img, promo_link: section.settings.promo_link %}
+        </div>
+      </div>
+      {% endif %}
+      {% endif %}
+
+    </div>
+  </header>
+  
+  
+  <div class="grid-uniform product-grid col-main">
+	<div class="row">
+    <div class="products-grid-view">
+
+      {% case products_per_row %}
+      {% when '2' %}
+      {% assign grid_item_width = 'medium-up--one-third large-up--one-half' %}
+      {% when '3' %}
+      {% assign grid_item_width = 'medium-up--one-third large-up--one-third' %}
+      {% when '4' %}
+      {% assign grid_item_width = 'medium-up--one-third large-up--one-quarter' %}
+      {% when '5' %}
+      {% assign grid_item_width = 'medium-down--one-half large-up--one-fifth' %}
+      {% when '6' %}
+      {% assign grid_item_width = 'medium-down--one-half large-up--one-sixth' %}
+      {% endcase %}
+
+      {% for product in collection.products %}{% if product.type == 'PPLR_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
+      {% assign featured = product %}
+      <div class="grid-item {{ settings.product_hover_btn }} {{ grid_item_width }} {{product.type}}">
+        {% render 'product-card-grid', product: product, collection: collection %}
+      </div>
+
+      {% else %}
+      {% if collection.handle == 'all' %}
+      {% render 'onboarding-empty-collection' %}
+      {% else %}
+      
+      <div class="grid-item">
+        <p>{{ 'collections.general.no_matches' | t }}</p>
+      </div>
+      {% endif %}
+      {% endfor %}
+    </div>
+    </div>
+  </div>
+  <div class="text-center pagination-wrap">
+    {% render 'pagination-custom', paginate: paginate %}
+    <div class="showing">
+      <span class="show-txt">Showing</span> <span class="loadcount">{{ collection.products.size }}</span> of {{ collection.all_products_count }}.
+    </div>
+  </div>
+  </div>
+  {% endpaginate %}
+</div>

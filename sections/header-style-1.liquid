@@ -1,0 +1,2067 @@
+<style>
+  .header_1_wrapper{
+    background-color:{{section.settings.color_menu_bg }};
+  }
+  .header_style_7 .header-bottom, .header_style_8 .header-bottom{
+    
+    background-color:{{section.settings.color_bottom_bg }};
+  }
+  .header_1 .right-link-icon .myaccount,
+  .header_1 .right-link-icon .site-header__search.icon-btn{
+    color:{{section.settings.main_txt_header }};
+  }
+  .header_1 .site-header__cart-count .cart-products-count,
+  .header_1 .wishlist-icon-div .wishlist-count {
+    color:{{section.settings.count_color }};
+    background:{{section.settings.countbgcolor }};
+  }
+  .header_1 .wrapper-top-cart > .site-header_cart_link svg {
+    fill:{{section.settings.main_txt_header }};
+  }
+  .header_1 .wishlist-icon-div a > i,
+  .header_1 .site-header__search .serach_icon > i,
+  .header_1 .fullscreen_header_toggle .leftmenu #menu,
+  .header_1 .right-icon .tt-mega_menu1 span.menu-close i,
+  .header_1 .menu_toggle_wrap > button {
+    color: {{section.settings.main_txt_header }};
+  }
+  .header_1 .offer-content{color:{{section.settings.offer_text_color }};}
+  .header_1 .header-top{background-color:{{section.settings.top_bg_color}};color:{{section.settings.top_header_text_color}}}
+  .header_1 #tt-megamenu1 .tt-mega_menu1 li.tt_menu_item > a::before,
+  .header_1.site-header #tt-megamenu .tt-mega_menu .tt_menus_ul > li > a::before {
+    background-color: {{ section.settings.menu_bg_color }};
+  }
+  .header_1_wrapper .main-header.fixed {
+    background-color:{{section.settings.color_menu_bg }};
+  }
+  @media (min-width: 992px) {
+    .header_1 #tt-megamenu .tt-mega_menu li.tt_menu_item > a,
+    .header_1 #tt-megamenu .tt-mega_menu li.tt_menu_item span.categories,
+    .header_1 #tt-megamenu1 .tt-mega_menu1 li.tt_menu_item span.categories, 
+    .header_1 #tt-megamenu1 .tt-mega_menu1 li.tt_menu_item > a {
+      color: {{ section.settings.menu_text_color }}
+    }
+    .header_1 #tt-megamenu .tt-mega_menu li.tt_menu_item:hover > a,
+    .header_1 #tt-megamenu .tt-mega_menu li.tt_menu_item:hover span.categories {
+      background-color: {{ section.settings.menu_bg_color }};
+      color: {{ section.settings.menu_text_hover_color }};
+    }
+  }
+   @media (max-width: 991px) {
+        .header_1_wrapper .right-nav .myaccount span svg{
+         fill:{{section.settings.main_txt_header }};        
+        }
+  }
+</style>
+{% capture navSize %}250px{% endcapture %}
+{% capture navHeaderSize %}{{ section.settings.menu_mobile }}px{% endcapture %}
+{% capture logoMaxHeight %}{{ section.settings.menu_mobile | minus: 30 }}px{% endcapture %}
+{% capture borderWidth %}{{ settings.border_width }}px{% endcapture %}
+{% capture colorBorder %}{{ settings.color_borders }}{% endcapture %}
+{%- assign sticky_class = '' -%}
+{% if section.settings.sticky_header %}{%- assign sticky_class = 'sticky_header' -%}{% endif %}
+
+{%- assign enable_full_header = '' -%}{% if settings.enable_full_header %}{%- assign enable_full_header = 'full_header' -%}{% endif %}
+<header class="site-header page-element header_1{% if section.settings.announcement_bar %} bar{% endif %}" data-section-id="{{ section.id }}" data-section-type="header-section">
+  <div class="header_1_wrapper {{ enable_full_header }}">
+    {% if section.settings.announcement_bar %}
+    <div class="header-top">
+      {% if settings.enable_full_header == false %}
+      <div class="container">
+        {% endif %}  
+        <div class="destination">{{ section.settings.destination }}</div>
+      {% if settings.enable_full_header == false %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %}
+     {% if settings.header_style_1 != 'style_4'  and settings.header_style_1 != 'style_6' and settings.header_style_1 != 'style_7' and settings.header_style_1 != 'style_8' %}
+    <div class="header-middle">
+      {% if settings.enable_full_header == false %}
+      <div class="container">
+        {% endif %}     
+        <div class="middle-content">
+          <div class="left-nav">
+            <div class="header-contact">
+              <a href="tel:{{ section.settings.contact_number }}">
+                <i class="mdi mdi-phone-in-talk"></i>
+                <div class="contact-number">{{ section.settings.contact_number }}</div>
+              </a>
+            </div>
+            <div class="header-email">
+              <a href="mailto:{{ section.settings.email }}">
+                <i class="mdi mdi-email-open"></i>
+                <div class="email">{{ section.settings.email }}</div>
+              </a>
+            </div> 
+          </div>
+          
+          <div class="right-nav">
+            {% if section.settings.display_myaccount %}
+            <div class="myaccount icon-btn">
+              <span class="dropdown-toggle" title="My Account">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 412.333 412.333" style="enable-background:new 0 0 412.333 412.333;" xml:space="preserve" height="18" width="16">
+                  <g>
+                    <path d="M206.167,205.333c56.61,0,102.667-46.056,102.667-102.667S262.777,0,206.167,0S103.5,46.056,103.5,102.667
+                             S149.556,205.333,206.167,205.333z M206.167,40c34.554,0,62.667,28.112,62.667,62.667s-28.112,62.667-62.667,62.667
+                             S143.5,137.221,143.5,102.667S171.612,40,206.167,40z"/>
+                    <path d="M206.167,223.333c-93.187,0-169,75.813-169,169v20h338v-20C375.167,299.146,299.354,223.333,206.167,223.333z
+                             M78.714,372.333c9.637-61.671,63.12-109,127.452-109s117.815,47.329,127.452,109H78.714z"/>
+                  </g>
+                </svg>
+                <span class="account-title">{{ 'customer.account.title' | t }}</span>
+                <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+              </span>
+              <div class="customer_account">  
+                <ul>
+                  {% if shop.customer_accounts_enabled %}
+                  {% if customer %}
+                  <li>
+                    <a href="/account" title="{{ 'customer.account.hello' | t }}">{{ 'customer.account.hello' | t }}<span class="username">{{ customer.first_name }}</span></a>
+                  </li>
+                  <li class="logout-link">
+                    {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                  </li>
+                  {% else %}
+                  <li>
+                    <a href="/account/login" title="{{ 'layout.customer.log_in' | t }}">{{ 'layout.customer.log_in' | t }}</a>
+                  </li>
+                  <li>
+                    <a href="/account/register" title="{{ 'layout.customer.create_account' | t }}">{{ 'layout.customer.create_account' | t }}</a>
+                  </li>          
+                  {% endif %}  
+                  {% endif %} 
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+            {% if section.settings.display_compare %}  
+            <div class="compare-icon-div">
+              <a class="compare compare-icon" href="{% if shop.locale != 'en' %}/{{ shop.locale }}{% endif %}/pages/compare" title="{{ 'products.compare.compare_name' | t }}">{{ 'products.compare.compare_name' | t }}(<span class="compare-count"></span>)</a>
+            </div>
+            {% endif %}
+            {% if section.settings.display_language %} 
+            <div class="header_language">
+               <span class="title">{{ 'general.header.language' | t }}</span>
+              <ul class="tbl-list">
+                <li class="language dropdown-parent uppercase language-block"> 
+                  {% render 'language-switcher' %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}
+            {% if section.settings.display_currency %} 
+            <div class="header_currency">
+               <span class="title">{{ 'general.header.currency' | t }}</span>
+              <ul class="tbl-list">
+                <li class="currency dropdown-parent uppercase currency-block">
+                  {% if section.settings.display_currency %}    
+                  {% render 'currencies-switcher' %}
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}  
+          </div>
+        </div>
+      {% if settings.enable_full_header == false %}
+      </div>
+      {% endif %}
+    </div>
+    {% endif %} 
+    <div id="header-sticky" class="main-header {{ sticky_class }}">
+      {% if settings.enable_full_header == false %}
+      <div class="container">
+        {% endif %}   
+        {% if settings.header_style_1 == 'style_5' %}
+        <div class="main-header-cnt">
+           {% endif %}
+        <div class="menu_toggle_wrap">
+          <button type="button" class="text-link nav-toggle" id="navToggle">
+            <i class="mdi mdi-menu"></i>
+            <span class="menu-text">{{ 'general.navigation.menu' | t }}</span>
+          </button>
+        </div>
+        
+         {% if settings.header_style_1 == 'style_4' or settings.header_style_1 == 'style_6' or settings.header_style_1 == 'style_7' %}
+          <div class="fullscreen_header_toggle">
+            <div class="leftmenu">
+              <button id="menu"></button>
+            </div>
+          </div>
+          {% if section.blocks.size > 0 %}
+          <div id="tt-megamenu1" class="tt-megamenu1">
+            <div class="tt-mega_menu1">
+              <ul class="tt_menus_ul1">
+                {% for block in section.blocks %}
+                {% if block.type == 'tt_mm_menu1' %}
+                {%- assign i1 = 0 -%}
+                {%- assign ik1 = 0 -%}
+                {%- assign i1 = i1 | plus: 1 -%}
+                {% if i1 == 1 %}
+                <li id="menu--{{ block.id }}" class="item tt_menu_item{% if block.settings.tt_mn_show_sub1 == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub1 == false %} single{% endif %}">
+                  <a href="{{ block.settings.button_link1 }}">
+                    <span class="tt_menu_item_heading_title">
+                      {{ block.settings.title1 }}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub1 == true %}
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>{% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub1 == false %}disable{% endif %}">
+                    {% endif %}
+                    {%- assign ik1 = 0 -%}
+                    {% endif %}
+                    <div class="tt_sub_menu">
+                      {% if block.settings.tt_sub_menu_ctitle1_show != blank %}
+                      {% if block.settings.tt_sub_menu_clink1 != blank %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_clink1 }}">{{ block.settings.tt_sub_menu_ctitle1 }}</a>
+                      </h4>
+                      {% endif %}
+                      {% else %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_ctitle1 }}</h4>
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      {%- assign tt_sub_menu_c1 = block.settings.tt_sub_menu_clinklist1 -%}
+                      {%- if linklists[tt_sub_menu_c1].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_c1].links -%}
+                        <li{% if link.links != blank %} class="tt_menu_item"{% endif %}>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link.links != blank %}
+                          <div class="tt_sub_menu_wrap">
+                            <ul class="sub_menu_linklist">
+                              {% for link in link.links %}
+                              <li>
+                                <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </div>
+                    {%- assign ik1 = 1 -%}
+                    {% endfor %}
+                    {% if ik1 == 0 %}
+                  </div>
+                </li>
+                {% endif %}
+              </ul>
+              <span class="menu-close"><i class="mdi mdi-close"></i></span>
+            </div>
+          </div>
+          {% endif %}
+          {% endif %}
+         {% if settings.header_style_1 == 'style_6' or settings.header_style_1 == 'style_7' %}
+          <div class="right-nav">
+            {% if section.settings.display_myaccount %}
+            <div class="myaccount icon-btn">
+              <span class="dropdown-toggle" title="My Account">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 412.333 412.333" style="enable-background:new 0 0 412.333 412.333;" xml:space="preserve" height="18" width="16">
+                  <g>
+                    <path d="M206.167,205.333c56.61,0,102.667-46.056,102.667-102.667S262.777,0,206.167,0S103.5,46.056,103.5,102.667
+                             S149.556,205.333,206.167,205.333z M206.167,40c34.554,0,62.667,28.112,62.667,62.667s-28.112,62.667-62.667,62.667
+                             S143.5,137.221,143.5,102.667S171.612,40,206.167,40z"/>
+                    <path d="M206.167,223.333c-93.187,0-169,75.813-169,169v20h338v-20C375.167,299.146,299.354,223.333,206.167,223.333z
+                             M78.714,372.333c9.637-61.671,63.12-109,127.452-109s117.815,47.329,127.452,109H78.714z"/>
+                  </g>
+                </svg>
+              </span>
+              <div class="customer_account">  
+                <ul>
+                  {% if shop.customer_accounts_enabled %}
+                  {% if customer %}
+                  <li>
+                    <a href="/account" title="{{ 'customer.account.hello' | t }}">{{ 'customer.account.hello' | t }}<span class="username">{{ customer.first_name }}</span></a>
+                  </li>
+                  <li class="logout-link">
+                    {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                  </li>
+                  {% else %}
+                  <li>
+                    <a href="/account/login" title="{{ 'layout.customer.log_in' | t }}">{{ 'layout.customer.log_in' | t }}</a>
+                  </li>
+                  <li>
+                    <a href="/account/register" title="{{ 'layout.customer.create_account' | t }}">{{ 'layout.customer.create_account' | t }}</a>
+                  </li>          
+                  {% endif %}  
+                  {% endif %} 
+                   {% if section.settings.display_compare %}  
+            <div class="compare-icon-div">
+              <a class="compare compare-icon" href="{% if shop.locale != 'en' %}/{{ shop.locale }}{% endif %}/pages/compare" title="{{ 'products.compare.compare_name' | t }}">{{ 'products.compare.compare_name' | t }}(<span class="compare-count"></span>)</a>
+            </div>
+            {% endif %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+           
+            {% if section.settings.display_language %} 
+            <div class="header_language">
+               <span class="title">{{ 'general.header.language' | t }}</span>
+              <ul class="tbl-list">
+                <li class="language dropdown-parent uppercase language-block"> 
+                  {% render 'language-switcher' %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}
+            {% if section.settings.display_currency %} 
+            <div class="header_currency">
+               <span class="title">{{ 'general.header.currency' | t }}</span>
+              <ul class="tbl-list">
+                <li class="currency dropdown-parent uppercase currency-block">
+                  {% if section.settings.display_currency %}    
+                  {% render 'currencies-switcher' %}
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}  
+          </div>
+           {% endif %}
+        <div class="header_logo_wrap">
+          {% if template.name == 'index' %}
+          <h1 class="header-logo" itemscope itemtype="http://schema.org/Organization">
+            {% else %}
+            <div class="h1 header-logo" itemscope itemtype="http://schema.org/Organization">
+              {% endif %}
+              {% if section.settings.logo != blank %}
+              <a href="{{ routes.root_url }}" itemprop="url">
+                <img height="40" width="93" src="{{ section.settings.logo | img_url: '93x40' }}" alt="{{ shop.name }}" title="{{ shop.name }}" itemprop="logo">
+              </a>
+              {% else %}
+              <a href="{{ routes.root_url }}" itemprop="url">{{ shop.name }}</a>
+              {% endif %}
+            </div>
+            {% if template.name == 'index' %}
+          </h1>
+          {% else %}
+        </div>
+        {% endif %}
+         {% if settings.header_style_1 != 'style_7' and settings.header_style_1 != 'style_8' %}
+        {% if section.blocks.size > 0 %}
+        <div id="shopify-section-TT-megamenu" class="shopify-section tt-mega-menu  {% if settings.header_style_1 == 'style_5' %}col-sm-5{% endif %}">
+          <div id="tt-megamenu" class="tt-megamenu">
+            <div class="tt-mega_menu">
+              <ul class="tt_menus_ul">
+                {%- assign i = 0 -%}
+                {%- assign ik = 0 -%}
+                {% for block in section.blocks %}
+                {%- assign i = i | plus: 1 -%}
+                {% if block.type == 'tt_mm_menu' %}
+                {% if i == 1 %}
+                <li class="tt_menu_item{% if block.settings.tt_mn_show_sub == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub == false %} single{% endif %}{% if block.settings.tt_mn_class != blank %} {{ block.settings.tt_mn_class }}{% endif %}">
+                  <a href="{{ block.settings.button_link }}">
+                    <span class="tt_menu_item_heading_title">{{ block.settings.title }}
+                      {% if block.settings.tt_mn_sub_heading != blank %}
+                      <span class="tt_mn_sub_heading" style="{% if block.settings.tt_mn_subheading_bg != blank %}background-color:{{ block.settings.tt_mn_subheading_bg }};{% endif %}{% if block.settings.tt_mn_subheading_color != blank %}color:{{ block.settings.tt_mn_subheading_color }};{% endif %}">{{ block.settings.tt_mn_sub_heading }}</span>{% endif %}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub == true %}  
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>{% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub == false %}disable{% endif %}" {% if block.settings.tt_mn_sub_contentwidth != blank %}style="width:{{ block.settings.tt_mn_sub_contentwidth }}"{% endif %} >
+                    {% else %}
+                  </div>
+                </li>
+                <li id="menu--{{ block.id }}" class="tt_menu_item{% if block.settings.tt_mn_show_sub == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub == false %} single{% endif %} {% if block.settings.tt_mn_class != blank %} {{ block.settings.tt_mn_class }}{% endif %}">
+                  <a href="{{ block.settings.button_link }}">
+                    <span class="tt_menu_item_heading_title">
+                      {{ block.settings.title }}
+                      {% if block.settings.tt_mn_sub_heading != blank %}
+                      <span class="tt_mn_sub_heading" style="{% if block.settings.tt_mn_subheading_bg != blank %}background-color:{{ block.settings.tt_mn_subheading_bg }};{% endif %}{% if block.settings.tt_mn_subheading_color != blank %}color:{{ block.settings.tt_mn_subheading_color }};{% endif %}">{{ block.settings.tt_mn_sub_heading }}</span>{% endif %}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub == true %}
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>
+                  {% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub == false %}disable{% endif %}" {% if block.settings.tt_mn_sub_contentwidth != blank %}style="width:{{ block.settings.tt_mn_sub_contentwidth }}"{% endif %}>
+                    {% endif %}
+                    {%- assign ik = 0 -%}
+                    {% endif %}
+
+
+                    {% if block.settings.tt_mn_show_sub == true %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_cwidth != blank %}style="width:{{ block.settings.tt_sub_menu_cwidth }}"{% endif %}>
+
+                      {% if block.settings.tt_sub_menu_ctitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_clink }}">{{ block.settings.tt_sub_menu_ctitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_c = block.settings.tt_sub_menu_clinklist -%}
+
+
+                      {%- if linklists[tt_sub_menu_c].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_c].links -%}
+                        <li{% if link.links != blank %} class="tt_menu_item"{% endif %}>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link.links != blank %}
+                          <div class="tt_sub_menu_wrap">
+                            <ul class="sub_menu_linklist">
+                              {% for link in link.links %}
+                              <li>
+                                <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+{% if block.settings.tt_sub_menu_csecondtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_csecondlink }}">{{ block.settings.tt_sub_menu_csecondtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_csecondmenu = block.settings.tt_sub_menu_csecondlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_csecondmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_csecondmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_csecondmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_csecondmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+                     
+                    </div>
+
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_cwidth != blank %}style="width:{{ block.settings.tt_sub_menu_cwidth }}"{% endif %}>
+                       
+                      {% if block.settings.tt_sub_menu_cthirdtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_cthirdlink }}">{{ block.settings.tt_sub_menu_cthirdtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_cthirdmenu = block.settings.tt_sub_menu_cthirdlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_cthirdmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_cthirdmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_cthirdmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_cthirdmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+
+                      {% if block.settings.tt_sub_menu_cfourthtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_cfourthlink }}">{{ block.settings.tt_sub_menu_cfourthtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_cfourthmenu = block.settings.tt_sub_menu_cfourthlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_cfourthmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_cfourthmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_cfourthmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_cfourthmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+                    </div>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_first_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_first_width != blank %}style="width:{{ block.settings.tt_sub_menu_first_width }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_first_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_first_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_first_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_first_link }}" class="{% if block.settings.tt_sub_menu_first_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_first_width != blank %}width="{{ block.settings.tt_sub_menu_first_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_first_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.tt_sub_menu_second_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_second_width != blank %}style="width:{{ block.settings.tt_sub_menu_second_width }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_second_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_second_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_second_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_second_link }}" class="{% if block.settings.tt_sub_menu_second_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_second_width != blank %}width="{{ block.settings.tt_sub_menu_second_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_second_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.tt_sub_menu_third_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_third_width != blank %}style="width:{{ block.settings.tt_sub_menu_third_width }}"{% endif %}>
+{% if block.settings.tt_sub_menu_third_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_third_title }}</h4>
+                    {% endif %}
+                    
+                      {% if block.settings.tt_sub_menu_third_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_third_link }}" class="{% if block.settings.tt_sub_menu_third_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_third_width != blank %}width="{{ block.settings.tt_sub_menu_third_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_third_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+
+                    {% if block.settings.tt_sub_menu_forth_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_forth_width != blank %}style="width:{{ block.settings.tt_sub_menu_forth_width }}"{% endif %}>   
+                    {% if block.settings.tt_sub_menu_forth_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_forth_title }}</h4>
+                    {% endif %}
+                      {% if block.settings.tt_sub_menu_forth_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_forth_link }}" class="{% if block.settings.tt_sub_menu_forth_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_forth_width != blank %}width="{{ block.settings.tt_sub_menu_forth_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_forth_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.type == 'tt_sub_menu_p' %}
+                    <div class="tt_sub_menu product{% if block.settings.tt_sub_menu_pcustomclass != blank %} {{ block.settings.tt_sub_menu_pcustomclass }}{% endif %}" {% if block.settings.tt_sub_menu_pwidth != blank %}style="width:{{ block.settings.tt_sub_menu_pwidth }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_ptitle_show != blank %}
+                      {% if block.settings.tt_sub_menu_plink != blank %}
+                      {% if block.settings.tt_sub_menu_ptitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_plink }}">
+                          {{ block.settings.tt_sub_menu_ptitle }}
+                        </a>
+                      </h4>
+                      {% endif %}
+                      {% else %}
+                      {% if block.settings.tt_sub_menu_ptitle != blank %}
+                      <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_ptitle }}</h4>
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      {% case block.settings.tt_sub_menu_items_desktop %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_des = 'col-lg-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_des = 'col-lg-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_des = 'col-lg-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_des = 'col-lg-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_des = 'col-lg-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_des = 'col-lg-2' -%}
+                      {% endcase %}
+                      {% case block.settings.tt_sub_menu_items_tablet %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_tab = 'col-sm-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_tab = 'col-sm-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_tab = 'col-sm-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_tab = 'col-sm-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_tab = 'col-sm-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_tab = 'col-sm-2' -%}
+                      {% endcase %}
+                      {% case block.settings.tt_sub_menu_items_mobile %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_mob = 'col-xs-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_mob = 'col-xs-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_mob = 'col-xs-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_mob = 'col-xs-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_mob = 'col-lg-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_mob = 'col-xs-2' -%}
+                      {% endcase %}
+                      <div class="list_products_menu">
+                        <div class="list_product_menu_content owl-carousel">
+                          {%- assign collection = collections[block.settings.tt_sub_menu_pproduts] -%}
+                          {% assign menu_product_limit = block.settings.tt_sub_menu_pprodut_item %}
+                          {% if collection != blank %}
+                          {% for product in collection.products limit: menu_product_limit %}
+                          <div class="item-row product-layouts col-xs-12 grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}" data-ajax-enabled="{{ settings.use_ajax_cart }}">  
+                            <div class="product-wrapper">    
+                              <div class="thumbs product-thumb">
+                                <div class="grid-view-item {{ pmenu_items_mob }} {{ pmenu_items_tab }} {{ pmenu_items_des }} {{ settings.product_img_hover }}">
+                                  <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
+                                    {% if product.images.size > 1 %}
+                                    {% if product.images.last %} 
+                                    <div class="second-productimg">
+                                      <img width="285" height="371" class="image_thumb_swap" src="{{ product.images.last | product_img_url: settings.product_image_width_height }}" alt="{{ product.images.last.alt | escape }}" />
+                                    </div>
+                                    {% endif %} 
+                                    {% endif %}
+                                    <img width="285" height="371" class="grid-view-item__image featured-image image_thumb" src="{{ product.featured_image.src | img_url: settings.product_image_width_height }}" alt="{{ product.featured_image.alt }}">
+                                    {% if product.compare_at_price > product.price %}
+                                    <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+                                    {% endif %}
+                                  </a> 
+                                  {% if product.available %} 
+                                  {% else %}
+                                  <div class="sold-out-tag text-center">
+                                    <span class="tag">{{ 'products.product.sold_out' | t }}</span>
+                                  </div>
+                                  {% endif %}
+                                  <div class="product_info">
+                                    <div class="h4 grid-view-item__title">
+                                      <a href="{{ product.url | within: collection }}">
+                                        {{ product.title }}
+                                      </a>
+                                    </div>
+                                    <div class="grid-view-item__meta">
+                                      {% render 'product-price' %}
+                                    </div> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {% endfor %}
+                          {% endif %}
+                          {%- for i in (1..4) -%}
+                          {%- assign product_id = 'tt_sub_menu_potherprodut_' | append:i -%}
+                          {%- assign block_product_id = block.settings[product_id] -%}
+                          {%- if block_product_id != blank -%}
+                          {% assign product = all_products[block_product_id] %}
+                          {%- unless check_product_id contains product.id -%}
+                          <div class="item-row product-layouts col-xs-12 grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}" data-ajax-enabled="{{ settings.use_ajax_cart }}">  
+                            <div class="product-wrapper">    
+                              <div class="thumbs product-thumb">
+                                <div class="grid-view-item {{ pmenu_items_mob }} {{ pmenu_items_tab }} {{ pmenu_items_des }} {{ settings.product_img_hover }}">
+                                  <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
+                                    {% if product.images.last %} 
+                                    <img width="310" class="image_thumb_swap" src="{{ product.images.last | img_url: '400x400' }}" alt="{{ product.images.last.alt | escape }}" />
+                                    {% endif %}
+                                    <img width="310" class="grid-view-item__image featured-image image_thumb" src="{{ product.featured_image.src | img_url: '400x400' }}" alt="{{ product.featured_image.alt }}">
+                                    {% if product.compare_at_price > product.price %}
+                                    <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+                                    {% endif %}
+                                  </a> 
+                                  {% if product.available %} 
+                                  {% else %}
+                                  <div class="sold-out-tag text-center">
+                                    <span class="tag">{{ 'products.product.sold_out' | t }}</span>
+                                  </div>
+                                  {% endif %}
+                                  <div class="product_info">
+                                    <div class="h4 grid-view-item__title">
+                                      <a href="{{ product.url | within: collection }}">
+                                        {{ product.title }}
+                                      </a>
+                                    </div>
+                                    <div class="grid-view-item__meta">
+                                      {% render 'product-price' %}
+                                    </div> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end product-items -->
+                          {%- endunless -%}
+                          {%- endif -%}
+                          {%- endfor-%}
+                        </div>
+                      </div>
+                    </div>
+                    {%- assign ik = 1 -%}
+                    {% endif %}
+                    {% endfor %}
+                    {% if ik == 0 %}
+                  </div>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+        {% endif %}
+        <div class="right-icon {% if settings.header_style_1 == 'style_5' %}col-sm-5{% endif %}">
+          {% if settings.header_style_1 == 'style_4' or settings.header_style_1 == 'style_8' %}
+          <div class="right-nav">
+            {% if section.settings.display_myaccount %}
+            <div class="myaccount icon-btn">
+              <span class="dropdown-toggle" title="My Account">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 412.333 412.333" style="enable-background:new 0 0 412.333 412.333;" xml:space="preserve" height="18" width="16">
+                  <g>
+                    <path d="M206.167,205.333c56.61,0,102.667-46.056,102.667-102.667S262.777,0,206.167,0S103.5,46.056,103.5,102.667
+                             S149.556,205.333,206.167,205.333z M206.167,40c34.554,0,62.667,28.112,62.667,62.667s-28.112,62.667-62.667,62.667
+                             S143.5,137.221,143.5,102.667S171.612,40,206.167,40z"/>
+                    <path d="M206.167,223.333c-93.187,0-169,75.813-169,169v20h338v-20C375.167,299.146,299.354,223.333,206.167,223.333z
+                             M78.714,372.333c9.637-61.671,63.12-109,127.452-109s117.815,47.329,127.452,109H78.714z"/>
+                  </g>
+                </svg>
+                <span class="account-title">{{ 'customer.account.title' | t }}</span>
+                <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+              </span>
+              <div class="customer_account">  
+                <ul>
+                  {% if shop.customer_accounts_enabled %}
+                  {% if customer %}
+                  <li>
+                    <a href="/account" title="{{ 'customer.account.hello' | t }}">{{ 'customer.account.hello' | t }}<span class="username">{{ customer.first_name }}</span></a>
+                  </li>
+                  <li class="logout-link">
+                    {{ 'layout.customer.log_out' | t | customer_logout_link }}
+                  </li>
+                  {% else %}
+                  <li>
+                    <a href="/account/login" title="{{ 'layout.customer.log_in' | t }}">{{ 'layout.customer.log_in' | t }}</a>
+                  </li>
+                  <li>
+                    <a href="/account/register" title="{{ 'layout.customer.create_account' | t }}">{{ 'layout.customer.create_account' | t }}</a>
+                  </li>          
+                  {% endif %}  
+                  {% endif %} 
+                   {% if section.settings.display_compare %}  
+            <div class="compare-icon-div">
+              <a class="compare compare-icon" href="{% if shop.locale != 'en' %}/{{ shop.locale }}{% endif %}/pages/compare" title="{{ 'products.compare.compare_name' | t }}">{{ 'products.compare.compare_name' | t }}(<span class="compare-count"></span>)</a>
+            </div>
+            {% endif %}
+                </ul>
+              </div>
+            </div>
+            {% endif %}
+           
+            {% if section.settings.display_language %} 
+            <div class="header_language">
+               <span class="title">{{ 'general.header.language' | t }}</span>
+              <ul class="tbl-list">
+                <li class="language dropdown-parent uppercase language-block"> 
+                  {% render 'language-switcher' %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}
+            {% if section.settings.display_currency %} 
+            <div class="header_currency">
+               <span class="title">{{ 'general.header.currency' | t }}</span>
+              <ul class="tbl-list">
+                <li class="currency dropdown-parent uppercase currency-block">
+                  {% if section.settings.display_currency %}    
+                  {% render 'currencies-switcher' %}
+                  {% endif %}
+                </li>
+              </ul>
+            </div>
+            {% endif %}  
+          </div>
+           {% endif %}
+          <div class="site-header__search icon-btn search-full">
+            <span class="serach_icon search_toggle"><i class="mdi mdi-magnify"></i> <i class="mdi mdi-window-close"></i>
+            </span>
+            <div class="search-button search-full-screen">
+              <div class="full-search-wrapper">
+                <div class="container">
+                  <span class="close-search"><i class="mdi mdi-close"></i></span>
+                  <div class="search-title">{{ 'general.header.search_title' | t }}</div>
+                  {% render 'search-bar' %}        
+                  <div class="search-results-wrapper">
+                    <div class="search-results"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div> 
+
+          {% if section.settings.display_wishlist %}  
+          <div class="wishlist-icon-div icon-btn">
+            {% render 'wishlist' %} 
+          </div>
+          {% endif %} 
+          {% if section.settings.display_cart %}  
+          <div class="site-header__cart icon-btn">
+            <div class="wrapper-top-cart">                 
+              <a href="{{ routes.cart_url }}" id="cart-products-count" class="site-header_cart_link">                    
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512"><g>
+                  <path d="m452 120h-60.946c-7.945-67.478-65.477-120-135.054-120s-127.109 52.522-135.054 120h-60.946c-11.046 0-20 8.954-20 20v352c0 11.046 8.954 20 20 20h392c11.046 0 20-8.954 20-20v-352c0-11.046-8.954-20-20-20zm-196-80c47.484 0 87.019 34.655 94.659 80h-189.318c7.64-45.345 47.175-80 94.659-80zm176 432h-352v-312h40v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h192v60c0 11.046 8.954 20 20 20s20-8.954 20-20v-60h40z"/>
+                  </g></svg>
+                {% if cart.item_count > 0 %}
+                <div id="CartCount_sticky" class="site-header__cart-count" title="Cart">
+                  <span  class="cart-products-count" aria-hidden="true">{{ cart.item_count }}</span>                 
+                </div>
+                {% else %}
+                <div id="CartCount_sticky" class="site-header__cart-count">
+                  <span class="cart-products-count">0</span>        
+                </div>
+                {% endif %}
+              </a>
+              <div id="slidedown-cart"> 
+                <div class="mini-cart-wrap">
+                  <!--  <h3>{{ 'cart.general.mini_cart_title' | t }}</h3>-->
+                  <div class="no-items">
+                    <p>{{ 'cart.general.empty' | t }}</p>
+                  </div>
+                  <div class="has-items">
+                    <ul class="mini-products-list">  
+                      {% for item in cart.items %}
+                      <li class="item" id="cart-item-{{item.id}}">
+                        <a href="{{item.url}}" title="{{item.title}}" class="product-image">
+                          <img src="{{ item.image | product_img_url: 'small' }}" alt="{{item.title}}"></a>
+                        <div class="product-details">
+                          <p class="product-name"><a href="{{item.url}}">{{ item.product.title }}</a></p>
+                          <div class="variants">{% if item.product.variants.size != 0 %}{% unless item.variant.title contains 'Default' %}{{ item.variant.title }}{% endunless %}{% endif %}</div>
+                          <div class="cart-collateral"><span class="price">{{item.price | money}}</span> x {{item.quantity}}</div>
+                        </div>
+                        <a href="javascript:void(0)" title="Remove This Item" class="btn-remove"><span class="mdi mdi-close"></span></a>
+                      </li>
+                      {% endfor %}
+                    </ul>
+                    <div class="summary">                
+                      <p class="total">
+                        <span class="label">{{ 'cart.general.cart_total' | t }}</span>
+                        <span class="price">{{cart.total_price | money}}</span> 
+                      </p>
+                    </div>
+                    <div class="actions">
+                      <button class="btn checkout-btn" onclick="window.location='/checkout'"><i class="mdi mdi-share"></i>{{ 'cart.general.checkout' | t }}</button>
+                      <button class="btn text-cart" onclick="window.location='/cart'"><i class="mdi mdi-cart-outline"></i>{{ 'cart.general.view_cart' | t }}</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endif %}
+           {% if settings.header_style_1 == 'style_1' or settings.header_style_1 == 'style_5' %}
+          <div class="fullscreen_header_toggle">
+            <div class="leftmenu">
+              <button id="menu"></button>
+            </div>
+          </div>
+          {% if section.blocks.size > 0 %}
+          <div id="tt-megamenu1" class="tt-megamenu1">
+            <div class="tt-mega_menu1">
+              <ul class="tt_menus_ul1">
+                {% for block in section.blocks %}
+                {% if block.type == 'tt_mm_menu1' %}
+                {%- assign i1 = 0 -%}
+                {%- assign ik1 = 0 -%}
+                {%- assign i1 = i1 | plus: 1 -%}
+                {% if i1 == 1 %}
+                <li id="menu--{{ block.id }}" class="item tt_menu_item{% if block.settings.tt_mn_show_sub1 == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub1 == false %} single{% endif %}">
+                  <a href="{{ block.settings.button_link1 }}">
+                    <span class="tt_menu_item_heading_title">
+                      {{ block.settings.title1 }}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub1 == true %}
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>{% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub1 == false %}disable{% endif %}">
+                    {% endif %}
+                    {%- assign ik1 = 0 -%}
+                    {% endif %}
+                    <div class="tt_sub_menu">
+                      {% if block.settings.tt_sub_menu_ctitle1_show != blank %}
+                      {% if block.settings.tt_sub_menu_clink1 != blank %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_clink1 }}">{{ block.settings.tt_sub_menu_ctitle1 }}</a>
+                      </h4>
+                      {% endif %}
+                      {% else %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_ctitle1 }}</h4>
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      {%- assign tt_sub_menu_c1 = block.settings.tt_sub_menu_clinklist1 -%}
+                      {%- if linklists[tt_sub_menu_c1].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_c1].links -%}
+                        <li{% if link.links != blank %} class="tt_menu_item"{% endif %}>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link.links != blank %}
+                          <div class="tt_sub_menu_wrap">
+                            <ul class="sub_menu_linklist">
+                              {% for link in link.links %}
+                              <li>
+                                <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </div>
+                    {%- assign ik1 = 1 -%}
+                    {% endfor %}
+                    {% if ik1 == 0 %}
+                  </div>
+                </li>
+                {% endif %}
+              </ul>
+              <span class="menu-close"><i class="mdi mdi-close"></i></span>
+            </div>
+          </div>
+          {% endif %}
+          {% endif %}
+        </div>
+           {% if settings.header_style_1 == 'style_5' %}
+          </div>
+           {% endif %}
+      {% if settings.enable_full_header == false %}
+      </div>
+      {% endif %}
+    </div>
+     {% if settings.header_style_1 == 'style_7' or settings.header_style_1 == 'style_8' %}
+     <div class="header-bottom">
+        {% if settings.enable_full_header == false %}
+      <div class="container">
+        {% endif %}
+       {% if settings.header_style_1 == 'style_8' %}
+       <div class="fullscreen_header_toggle">
+            <div class="leftmenu">
+              <button id="menu"></button>
+            </div>
+          </div>
+          {% if section.blocks.size > 0 %}
+          <div id="tt-megamenu1" class="tt-megamenu1">
+            <div class="tt-mega_menu1">
+              <ul class="tt_menus_ul1">
+                {% for block in section.blocks %}
+                {% if block.type == 'tt_mm_menu1' %}
+                {%- assign i1 = 0 -%}
+                {%- assign ik1 = 0 -%}
+                {%- assign i1 = i1 | plus: 1 -%}
+                {% if i1 == 1 %}
+                <li id="menu--{{ block.id }}" class="item tt_menu_item{% if block.settings.tt_mn_show_sub1 == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub1 == false %} single{% endif %}">
+                  <a href="{{ block.settings.button_link1 }}">
+                    <span class="tt_menu_item_heading_title">
+                      {{ block.settings.title1 }}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub1 == true %}
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>{% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub1 == false %}disable{% endif %}">
+                    {% endif %}
+                    {%- assign ik1 = 0 -%}
+                    {% endif %}
+                    <div class="tt_sub_menu">
+                      {% if block.settings.tt_sub_menu_ctitle1_show != blank %}
+                      {% if block.settings.tt_sub_menu_clink1 != blank %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_clink1 }}">{{ block.settings.tt_sub_menu_ctitle1 }}</a>
+                      </h4>
+                      {% endif %}
+                      {% else %}
+                      {% if block.settings.tt_sub_menu_ctitle1 != blank %}
+                      <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_ctitle1 }}</h4>
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      {%- assign tt_sub_menu_c1 = block.settings.tt_sub_menu_clinklist1 -%}
+                      {%- if linklists[tt_sub_menu_c1].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_c1].links -%}
+                        <li{% if link.links != blank %} class="tt_menu_item"{% endif %}>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link.links != blank %}
+                          <div class="tt_sub_menu_wrap">
+                            <ul class="sub_menu_linklist">
+                              {% for link in link.links %}
+                              <li>
+                                <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                    </div>
+                    {%- assign ik1 = 1 -%}
+                    {% endfor %}
+                    {% if ik1 == 0 %}
+                  </div>
+                </li>
+                {% endif %}
+              </ul>
+              <span class="menu-close"><i class="mdi mdi-close"></i></span>
+            </div>
+          </div>
+          {% endif %}
+       {% endif %}
+        {% if section.blocks.size > 0 %}
+        <div id="shopify-section-TT-megamenu" class="shopify-section tt-mega-menu">
+          <div id="tt-megamenu" class="tt-megamenu">
+            <div class="tt-mega_menu">
+              <ul class="tt_menus_ul">
+                {%- assign i = 0 -%}
+                {%- assign ik = 0 -%}
+                {% for block in section.blocks %}
+                {%- assign i = i | plus: 1 -%}
+                {% if block.type == 'tt_mm_menu' %}
+                {% if i == 1 %}
+                <li class="tt_menu_item{% if block.settings.tt_mn_show_sub == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub == false %} single{% endif %}{% if block.settings.tt_mn_class != blank %} {{ block.settings.tt_mn_class }}{% endif %}">
+                  <a href="{{ block.settings.button_link }}">
+                    <span class="tt_menu_item_heading_title">{{ block.settings.title }}
+                      {% if block.settings.tt_mn_sub_heading != blank %}
+                      <span class="tt_mn_sub_heading" style="{% if block.settings.tt_mn_subheading_bg != blank %}background-color:{{ block.settings.tt_mn_subheading_bg }};{% endif %}{% if block.settings.tt_mn_subheading_color != blank %}color:{{ block.settings.tt_mn_subheading_color }};{% endif %}">{{ block.settings.tt_mn_sub_heading }}</span>{% endif %}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub == true %}  
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>{% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub == false %}disable{% endif %}" {% if block.settings.tt_mn_sub_contentwidth != blank %}style="width:{{ block.settings.tt_mn_sub_contentwidth }}"{% endif %} >
+                    {% else %}
+                  </div>
+                </li>
+                <li id="menu--{{ block.id }}" class="tt_menu_item{% if block.settings.tt_mn_show_sub == true %} tt_mm_hassub{% endif %}{% if block.settings.tt_mn_show_sub == false %} single{% endif %} {% if block.settings.tt_mn_class != blank %} {{ block.settings.tt_mn_class }}{% endif %}">
+                  <a href="{{ block.settings.button_link }}">
+                    <span class="tt_menu_item_heading_title">
+                      {{ block.settings.title }}
+                      {% if block.settings.tt_mn_sub_heading != blank %}
+                      <span class="tt_mn_sub_heading" style="{% if block.settings.tt_mn_subheading_bg != blank %}background-color:{{ block.settings.tt_mn_subheading_bg }};{% endif %}{% if block.settings.tt_mn_subheading_color != blank %}color:{{ block.settings.tt_mn_subheading_color }};{% endif %}">{{ block.settings.tt_mn_sub_heading }}</span>{% endif %}
+                    </span>
+                  </a>
+                  {% if block.settings.tt_mn_show_sub == true %}
+                  <span class="mobile-nav__sublist-trigger">
+                    <span class="mobile-nav__sublist-expand">
+                      <i class="mdi mdi-chevron-down" aria-hidden="true"></i>
+                    </span>
+                    <span class="mobile-nav__sublist-contract">
+                      <i class="mdi mdi-chevron-up" aria-hidden="true"></i>
+                    </span>
+                  </span>
+                  {% endif %}
+                  <div class="tt_sub_menu_wrap {% if block.settings.tt_mn_show_sub == false %}disable{% endif %}" {% if block.settings.tt_mn_sub_contentwidth != blank %}style="width:{{ block.settings.tt_mn_sub_contentwidth }}"{% endif %}>
+                    {% endif %}
+                    {%- assign ik = 0 -%}
+                    {% endif %}
+
+
+                    {% if block.settings.tt_mn_show_sub == true %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_cwidth != blank %}style="width:{{ block.settings.tt_sub_menu_cwidth }}"{% endif %}>
+
+                      {% if block.settings.tt_sub_menu_ctitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_clink }}">{{ block.settings.tt_sub_menu_ctitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_c = block.settings.tt_sub_menu_clinklist -%}
+
+
+                      {%- if linklists[tt_sub_menu_c].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_c].links -%}
+                        <li{% if link.links != blank %} class="tt_menu_item"{% endif %}>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link.links != blank %}
+                          <div class="tt_sub_menu_wrap">
+                            <ul class="sub_menu_linklist">
+                              {% for link in link.links %}
+                              <li>
+                                <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                              </li>
+                              {% endfor %}
+                            </ul>
+                          </div>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+{% if block.settings.tt_sub_menu_csecondtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_csecondlink }}">{{ block.settings.tt_sub_menu_csecondtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_csecondmenu = block.settings.tt_sub_menu_csecondlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_csecondmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_csecondmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_csecondmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_csecondmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+                     
+                    </div>
+
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_cwidth != blank %}style="width:{{ block.settings.tt_sub_menu_cwidth }}"{% endif %}>
+                       
+                      {% if block.settings.tt_sub_menu_cthirdtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_cthirdlink }}">{{ block.settings.tt_sub_menu_cthirdtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_cthirdmenu = block.settings.tt_sub_menu_cthirdlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_cthirdmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_cthirdmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_cthirdmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_cthirdmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+
+                      {% if block.settings.tt_sub_menu_cfourthtitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_cfourthlink }}">{{ block.settings.tt_sub_menu_cfourthtitle }}</a>
+                      </h4>
+                      {% endif %}
+
+
+                      {%- assign tt_sub_menu_cfourthmenu = block.settings.tt_sub_menu_cfourthlinklist -%}
+
+                      {%- if linklists[tt_sub_menu_cfourthmenu].links != blank -%}
+                      <ul class="tt_sub_menu_linklist">
+                        {%- for link in linklists[tt_sub_menu_cfourthmenu].links -%}
+                        <li>
+                          <a href="{{ link.url }}" title="{{ link.object.description | strip_html }}">{{ link.title }}</a>
+                          {% if link[tt_sub_menu_cfourthmenu].links != blank %}
+                          <ul class="tt_sub_menu_linklist">
+                            {%- for sub_link in link[tt_sub_menu_cfourthmenu].links -%}
+                            <li>
+                              <a href="{{ sub_link.url }}" title="{{ sub_link.object.description | strip_html }}">{{ sub_link.title }}</a>
+                            </li>
+                            {% endfor %}
+                          </ul>
+                          {% endif %}
+                        </li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+
+
+                    </div>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_first_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_first_width != blank %}style="width:{{ block.settings.tt_sub_menu_first_width }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_first_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_first_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_first_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_first_link }}" class="{% if block.settings.tt_sub_menu_first_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_first_width != blank %}width="{{ block.settings.tt_sub_menu_first_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_first_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.tt_sub_menu_second_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_second_width != blank %}style="width:{{ block.settings.tt_sub_menu_second_width }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_second_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_second_title }}</h4>
+                    {% endif %}
+                    {% if block.settings.tt_sub_menu_second_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_second_link }}" class="{% if block.settings.tt_sub_menu_second_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_second_width != blank %}width="{{ block.settings.tt_sub_menu_second_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_second_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.tt_sub_menu_third_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_third_width != blank %}style="width:{{ block.settings.tt_sub_menu_third_width }}"{% endif %}>
+{% if block.settings.tt_sub_menu_third_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_third_title }}</h4>
+                    {% endif %}
+                    
+                      {% if block.settings.tt_sub_menu_third_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_third_link }}" class="{% if block.settings.tt_sub_menu_third_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_third_width != blank %}width="{{ block.settings.tt_sub_menu_third_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_third_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+
+                    {% if block.settings.tt_sub_menu_forth_img != blank %}
+                    <div class="tt_sub_menu" {% if block.settings.tt_sub_menu_forth_width != blank %}style="width:{{ block.settings.tt_sub_menu_forth_width }}"{% endif %}>   
+                    {% if block.settings.tt_sub_menu_forth_title != blank %}
+                    <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_forth_title }}</h4>
+                    {% endif %}
+                      {% if block.settings.tt_sub_menu_forth_link != blank %}
+                      <a href="{{ block.settings.tt_sub_menu_forth_link }}" class="{% if block.settings.tt_sub_menu_forth_img != blank %}menu-banner{% endif %}">
+                        <img {% if block.settings.tt_sub_menu_forth_width != blank %}width="{{ block.settings.tt_sub_menu_forth_width }}"{% endif %} src="{{ block.settings.tt_sub_menu_forth_img | img_url: "master"}}" alt="img"/>
+                      </a>
+                      {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.type == 'tt_sub_menu_p' %}
+                    <div class="tt_sub_menu product{% if block.settings.tt_sub_menu_pcustomclass != blank %} {{ block.settings.tt_sub_menu_pcustomclass }}{% endif %}" {% if block.settings.tt_sub_menu_pwidth != blank %}style="width:{{ block.settings.tt_sub_menu_pwidth }}"{% endif %}>
+                      {% if block.settings.tt_sub_menu_ptitle_show != blank %}
+                      {% if block.settings.tt_sub_menu_plink != blank %}
+                      {% if block.settings.tt_sub_menu_ptitle != blank %}
+                      <h4 class="sub_mn_title">
+                        <a href="{{ block.settings.tt_sub_menu_plink }}">
+                          {{ block.settings.tt_sub_menu_ptitle }}
+                        </a>
+                      </h4>
+                      {% endif %}
+                      {% else %}
+                      {% if block.settings.tt_sub_menu_ptitle != blank %}
+                      <h4 class="sub_mn_title">{{ block.settings.tt_sub_menu_ptitle }}</h4>
+                      {% endif %}
+                      {% endif %}
+                      {% endif %}
+                      {% case block.settings.tt_sub_menu_items_desktop %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_des = 'col-lg-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_des = 'col-lg-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_des = 'col-lg-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_des = 'col-lg-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_des = 'col-lg-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_des = 'col-lg-2' -%}
+                      {% endcase %}
+                      {% case block.settings.tt_sub_menu_items_tablet %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_tab = 'col-sm-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_tab = 'col-sm-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_tab = 'col-sm-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_tab = 'col-sm-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_tab = 'col-sm-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_tab = 'col-sm-2' -%}
+                      {% endcase %}
+                      {% case block.settings.tt_sub_menu_items_mobile %}
+                      {% when 1 %}
+                      {%- assign pmenu_items_mob = 'col-xs-12' -%}
+                      {% when 2 %}
+                      {%- assign pmenu_items_mob = 'col-xs-6' -%}
+                      {% when 3 %}
+                      {%- assign pmenu_items_mob = 'col-xs-4' -%}
+                      {% when 4 %}
+                      {%- assign pmenu_items_mob = 'col-xs-3' -%}
+                      {% when 5 %}
+                      {%- assign pmenu_items_mob = 'col-lg-five' -%}
+                      {% when 6 %}
+                      {%- assign pmenu_items_mob = 'col-xs-2' -%}
+                      {% endcase %}
+                      <div class="list_products_menu">
+                        <div class="list_product_menu_content owl-carousel">
+                          {%- assign collection = collections[block.settings.tt_sub_menu_pproduts] -%}
+                          {% assign menu_product_limit = block.settings.tt_sub_menu_pprodut_item %}
+                          {% if collection != blank %}
+                          {% for product in collection.products limit: menu_product_limit %}
+                          <div class="item-row product-layouts col-xs-12 grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}" data-ajax-enabled="{{ settings.use_ajax_cart }}">  
+                            <div class="product-wrapper">    
+                              <div class="thumbs product-thumb">
+                                <div class="grid-view-item {{ pmenu_items_mob }} {{ pmenu_items_tab }} {{ pmenu_items_des }} {{ settings.product_img_hover }}">
+                                  <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
+                                    {% if product.images.size > 1 %}
+                                    {% if product.images.last %} 
+                                    <div class="second-productimg">
+                                      <img width="285" height="371" class="image_thumb_swap" src="{{ product.images.last | product_img_url: settings.product_image_width_height }}" alt="{{ product.images.last.alt | escape }}" />
+                                    </div>
+                                    {% endif %} 
+                                    {% endif %}
+                                    <img width="285" height="371" class="grid-view-item__image featured-image image_thumb" src="{{ product.featured_image.src | img_url: settings.product_image_width_height }}" alt="{{ product.featured_image.alt }}">
+                                    {% if product.compare_at_price > product.price %}
+                                    <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+                                    {% endif %}
+                                  </a> 
+                                  {% if product.available %} 
+                                  {% else %}
+                                  <div class="sold-out-tag text-center">
+                                    <span class="tag">{{ 'products.product.sold_out' | t }}</span>
+                                  </div>
+                                  {% endif %}
+                                  <div class="product_info">
+                                    <div class="h4 grid-view-item__title">
+                                      <a href="{{ product.url | within: collection }}">
+                                        {{ product.title }}
+                                      </a>
+                                    </div>
+                                    <div class="grid-view-item__meta">
+                                      {% render 'product-price' %}
+                                    </div> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          {% endfor %}
+                          {% endif %}
+                          {%- for i in (1..4) -%}
+                          {%- assign product_id = 'tt_sub_menu_potherprodut_' | append:i -%}
+                          {%- assign block_product_id = block.settings[product_id] -%}
+                          {%- if block_product_id != blank -%}
+                          {% assign product = all_products[block_product_id] %}
+                          {%- unless check_product_id contains product.id -%}
+                          <div class="item-row product-layouts col-xs-12 grid-view-item{% unless product.available %} product-price--sold-out grid-view-item--sold-out{% endunless %}" data-ajax-enabled="{{ settings.use_ajax_cart }}">  
+                            <div class="product-wrapper">    
+                              <div class="thumbs product-thumb">
+                                <div class="grid-view-item {{ pmenu_items_mob }} {{ pmenu_items_tab }} {{ pmenu_items_des }} {{ settings.product_img_hover }}">
+                                  <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
+                                    {% if product.images.last %} 
+                                    <img width="310" class="image_thumb_swap" src="{{ product.images.last | img_url: '400x400' }}" alt="{{ product.images.last.alt | escape }}" />
+                                    {% endif %}
+                                    <img width="310" class="grid-view-item__image featured-image image_thumb" src="{{ product.featured_image.src | img_url: '400x400' }}" alt="{{ product.featured_image.alt }}">
+                                    {% if product.compare_at_price > product.price %}
+                                    <span class="product-price__sale-label">{{ 'products.product.on_sale' | t }}</span>
+                                    {% endif %}
+                                  </a> 
+                                  {% if product.available %} 
+                                  {% else %}
+                                  <div class="sold-out-tag text-center">
+                                    <span class="tag">{{ 'products.product.sold_out' | t }}</span>
+                                  </div>
+                                  {% endif %}
+                                  <div class="product_info">
+                                    <div class="h4 grid-view-item__title">
+                                      <a href="{{ product.url | within: collection }}">
+                                        {{ product.title }}
+                                      </a>
+                                    </div>
+                                    <div class="grid-view-item__meta">
+                                      {% render 'product-price' %}
+                                    </div> 
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <!-- end product-items -->
+                          {%- endunless -%}
+                          {%- endif -%}
+                          {%- endfor-%}
+                        </div>
+                      </div>
+                    </div>
+                    {%- assign ik = 1 -%}
+                    {% endif %}
+                    {% endfor %}
+                    {% if ik == 0 %}
+                  </div>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+         {% if settings.header_style_1 == 'style_8' %}
+        <div class="left-nav">
+            <div class="header-contact">
+              <a href="tel:{{ section.settings.contact_number }}">
+                <i class="mdi mdi-phone-in-talk"></i>
+                <div class="contact-number">{{ section.settings.contact_number }}</div>
+              </a>
+            </div>
+            <div class="header-email">
+              <a href="mailto:{{ section.settings.email }}">
+                <i class="mdi mdi-email-open"></i>
+                <div class="email">{{ section.settings.email }}</div>
+              </a>
+            </div> 
+          </div>
+        
+       {% endif %}
+        {% if settings.enable_full_header == false %}
+      </div>
+        {% endif %}
+    </div>
+    
+        {% endif %}
+  </div>
+</header>
+
+{% schema %}
+{
+"name": "Header",
+"settings": [
+{
+"type": "checkbox",
+"id": "sticky_header",
+"label": "Set Header Sticky",
+"default": true
+},
+{
+"type": "color",
+"id": "color_menu_bg",
+"label": "Header Background Color",
+"default": "#222222"
+},
+{
+"type": "color",
+"id": "color_bottom_bg",
+"label": "Bottom Background Color",
+"info": "Header style7 and style8",
+"default": "#fff"
+},
+{
+"type": "header",
+"content": "Top Bar Header "
+},
+{
+"type": "checkbox",
+"id": "announcement_bar",
+"label": "Announcement Bar",
+"default": true
+},
+{
+"type": "color",
+"id": "top_bg_color",
+"label": "Top Background Color"
+},
+{
+"type": "color",
+"id": "top_header_text_color",
+"label": "Top Header Text Color"
+},
+{
+"type": "text",
+"id": "destination",
+"label": "Top Contant"
+},
+{
+"type": "header",
+"content": "Navbar Header "
+},
+{
+"type": "color",
+"id": "main_txt_header",
+"label": "Main Text Color"
+},
+{
+"type": "text",
+"id": "contact_number",
+"label": "contact Number"
+},
+{
+"type": "text",
+"id": "email",
+"label": "Email Id"
+},
+{
+"type": "checkbox",
+"id": "display_currency",
+"label": "Display Currency Switcher",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "display_language",
+"label": "Display language Switcher",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "display_myaccount",
+"label": "Display Myaccount",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "display_compare",
+"label": "Display Compare",
+"default": true
+},
+{
+"type": "header",
+"content": "Main Header settings"
+},
+{
+"type": "image_picker",
+"id": "logo",
+"label": "Custom logo",
+"info": "105px x 40px max"
+},
+{
+"type": "checkbox",
+"id": "display_wishlist",
+"label": "Display Wishlist",
+"default": true
+},
+{
+"type": "checkbox",
+"id": "display_cart",
+"label": "Display Cart",
+"default": true
+},
+{
+"type": "color",
+"id": "menu_text_color",
+"label": "Menu Text Color",
+"default": "#111"
+},
+{
+"type": "color",
+"id": "menu_text_hover_color",
+"label": "Menu Text Hover Color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "menu_bg_color",
+"label": "Menu Background Color",
+"default": "#111"
+},
+{
+"type": "color",
+"id": "count_color",
+"label": "Cart and Wishlist count color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "countbgcolor",
+"label": "Count background color",
+"default": "#fff"
+},
+{
+"type": "text",
+"id": "more_menu_category",
+"label": "Select Horizontal More Menu Category",
+"default": "4",
+"info": "Must be add numeric-value Ex: 4, 5,..."
+}
+],
+"blocks": [
+{
+"type": "tt_mm_menu",
+"name": "Heading menu",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "Menu Item"
+},
+{
+"type": "url",
+"id": "button_link",
+"label": "Menu Link"
+},
+{
+"type": "checkbox",
+"id": "tt_mn_show_sub",
+"default": true,
+"label": "Display sub-menu"
+},
+{
+"type": "text",
+"id": "tt_mn_sub_contentwidth",
+"label": "Submenu width",
+"default": "540px",
+"info": "Ex: 540px or 100% ..."
+},
+{
+"type": "text",
+"id": "tt_mn_class",
+"label": "Custom class"
+},
+{
+"type": "text",
+"id": "tt_mn_sub_heading",
+"label": "Bubble alert text"
+},
+{
+"type": "color",
+"id": "tt_mn_subheading_bg",
+"label": "Bubble alert background",
+"default": "#febb01"
+},
+{
+"type": "color",
+"id": "tt_mn_subheading_color",
+"label": "Bubble alert color",
+"default": "#ffffff"
+},
+{
+"type": "header",
+"content": "Sub Menu Content"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_cwidth",
+"label": "Content Submenu Width"
+},
+{
+"type": "header",
+"content": "First Menu links"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_ctitle",
+"label": "Column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_clink",
+"label": "Sub-menu link"
+},
+{
+"type": "link_list",
+"id": "tt_sub_menu_clinklist",
+"label": "Select a menu"
+},
+{
+"type": "header",
+"content": "Second Menu links"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_csecondtitle",
+"label": "Second column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_csecondlink",
+"label": "Second sub-menu link"
+},
+{
+"type": "link_list",
+"id": "tt_sub_menu_csecondlinklist",
+"label": "Select a second menu"
+},
+{
+"type": "header",
+"content": "Third Menu links"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_cthirdtitle",
+"label": "Third column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_cthirdlink",
+"label": "Third sub-menu link"
+},
+{
+"type": "link_list",
+"id": "tt_sub_menu_cthirdlinklist",
+"label": "Select a third menu"
+},
+{
+"type": "header",
+"content": "Fourth Menu links"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_cfourthtitle",
+"label": "Fourth column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_cfourthlink",
+"label": "Fourth sub-menu link"
+},
+{
+"type": "link_list",
+"id": "tt_sub_menu_cfourthlinklist",
+"label": "Select a fourth menu"
+},
+{
+"type": "header",
+"content": "First Menu Image"
+},
+{
+"type": "image_picker",
+"id": "tt_sub_menu_first_img",
+"label": "First Image"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_first_title",
+"label": "First Image Title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_first_link",
+"label": "First Image link"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_first_width",
+"label": "First Image width"
+},
+{
+"type": "header",
+"content": "Second Menu Image"
+},
+{
+"type": "image_picker",
+"id": "tt_sub_menu_second_img",
+"label": "Second Image"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_second_title",
+"label": "Second Image Title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_second_link",
+"label": "Second Image link"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_second_width",
+"label": "Second Image width"
+},
+{
+"type": "header",
+"content": "Third Menu Image"
+},
+{
+"type": "image_picker",
+"id": "tt_sub_menu_third_img",
+"label": "Third Image"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_third_title",
+"label": "Third Image Title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_third_link",
+"label": "Third Image link"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_third_width",
+"label": "Third Image width"
+},
+{
+"type": "header",
+"content": "Fourth Menu Image"
+},
+{
+"type": "image_picker",
+"id": "tt_sub_menu_forth_img",
+"label": "Forth Image"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_forth_title",
+"label": "Forth Image Title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_forth_link",
+"label": "Forth Image link"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_forth_width",
+"label": "Forth Image width"
+}
+]
+},
+{
+"type": "tt_sub_menu_p",
+"name": "__ sub menu products",
+"settings": [
+{
+"type": "text",
+"id": "tt_sub_menu_ptitle",
+"label": "Column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_plink",
+"label": "Sub-menu link"
+},
+{
+"type": "checkbox",
+"id": "tt_sub_menu_ptitle_show",
+"label": "Show column title",
+"default": true
+},
+{
+"type": "text",
+"id": "tt_sub_menu_pwidth",
+"label": "Sub-menu width"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_pcustomclass",
+"label": "Custom class"
+},
+{
+"type": "range",
+"id": "tt_sub_menu_items_desktop",
+"label": "( DESKTOP ) Number of products per row",
+"min": 1,
+"max": 6,
+"step": 1,
+"default": 1
+},
+{
+"type": "range",
+"id": "tt_sub_menu_items_tablet",
+"label": "( TABLET ) Number of products per row",
+"min": 1,
+"max": 6,
+"step": 1,
+"default": 1
+},
+{
+"type": "range",
+"id": "tt_sub_menu_items_mobile",
+"label": "( MOBILE ) Number of products per row",
+"min": 1,
+"max": 6,
+"step": 1,
+"default": 1
+},
+{
+"type": "header",
+"content": "Product in collection"
+},
+{
+"type": "collection",
+"id": "tt_sub_menu_pproduts",
+"label": "Choose collection"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_pprodut_item",
+"label": "Max items show",
+"default": "4"
+},
+{
+"type": "header",
+"content": "Choose other products"
+},
+{
+"type": "product",
+"id": "tt_sub_menu_potherprodut_1",
+"label": "Choose product"
+},
+{
+"type": "product",
+"id": "tt_sub_menu_potherprodut_2",
+"label": "Choose product"
+},
+{
+"type": "product",
+"id": "tt_sub_menu_potherprodut_3",
+"label": "Choose product"
+},
+{
+"type": "product",
+"id": "tt_sub_menu_potherprodut_4",
+"label": "Choose product"
+}
+]
+},
+{
+"type": "tt_mm_menu1",
+"name": "Heading menu1",
+"settings": [
+{
+"type": "text",
+"id": "title1",
+"label": "Vertical Menu Item"
+},
+{
+"type": "url",
+"id": "button_link1",
+"label": "Vertical Menu Link"
+},
+{
+"type": "checkbox",
+"id": "tt_mn_show_sub1",
+"default": true,
+"label": "Display Vertical sub-menu"
+},
+{
+"type": "header",
+"content": "Vertical First Menu links"
+},
+{
+"type": "text",
+"id": "tt_sub_menu_ctitle1",
+"label": "Vertical Column title"
+},
+{
+"type": "url",
+"id": "tt_sub_menu_clink1",
+"label": "Vertical Sub-menu link"
+},
+{
+"type": "checkbox",
+"id": "tt_sub_menu_ctitle1_show",
+"label": "Vertical Show column title",
+"default": true
+},
+{
+"type": "link_list",
+"id": "tt_sub_menu_clinklist1",
+"label": "Vertical Select a menu"
+}
+]
+}
+]
+}
+{% endschema %}
+<script>
+  function moremenu1() {     
+    var max_elem = {{ section.settings.more_menu_category }};
+    var more_info = "{{ 'general.header.more' | t }}";
+    var items = jQuery('.header_style_1 .tt_menus_ul > li');
+    var surplus = items.slice(max_elem, items.length);
+    surplus.wrapAll('<li class="more_menu tt_menu_item left"><ul class="tt_sub_menu_linklist tt_sub_menu_wrap">');
+    jQuery('.header_style_1 .more_menu').prepend('<a href="#"><span class="tt_menu_item_heading_title">'+more_info+'<span></a>');
+    jQuery('.header_style_1 .more_menu').mouseover(function(){
+      jQuery(this).children('ul').addClass('shown-link');
+    })
+    jQuery('.header_style_1 .more_menu').mouseout(function(){
+      jQuery(this).children('ul').removeClass('shown-link');
+    });
+  }
+
+  jQuery(document).ready(function(){
+    moremenu1();
+    jQuery(".header_style_1 #shopify-section-TT-megamenu").css("display", "inline-block");
+  });
+
+
+</script>

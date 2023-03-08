@@ -1,0 +1,112 @@
+<style>
+  .collection_cat_item  .cat-content .collection_title {color:{{section.settings.title_color }};} 
+  .tt-collection-slider-wrap .ttcat-content:before{background:{{section.settings.image_content_bg_color }};}     
+  .collection_cat_item .category_content .desc{
+    color:{{ section.settings.items_color }};
+  }
+</style>
+<div data-section-id="{{ section.id }}"  data-section-type="tt-collection-slider-wrap" class="tt-collection-slider-wrap" >
+  <div class="collection_cms_slider_wrap">  
+    {% if section.settings.title != blank %}
+    <header class="section-header">        
+      <h2 class="tt-title">{{ section.settings.title | escape }}</h2>
+    </header>
+    {% endif %}
+    {% if section.blocks.size > 0 %}  
+    <div class="category_feature owl-carousel owl-theme">
+      {% for block in section.blocks %}  
+      {%- assign collection = collections[block.settings.collection_cat_id] -%}   
+      <div id="cat-featured--{{ block.id }}" class="collection_cat_item"> 
+        <div class="category_content col-sm-12">              
+          <div class="tt_cat_content">
+            <div class="collection_img"><a href="{{ collection.url }}"><img height="460" width="340" src="{{ block.settings.image_1 | img_url: "340x460"  }}" alt="collection-img"/></a></div>                
+            <div class="cat-content">
+              {% if collection.title != blank  %}  
+              <a href="{{ collection.url }}">
+                <div class="collection_title">{{ block.settings.collection_title }}</div>
+                <div class="desc">{{ collection.all_products_count }} <span>{{ 'cart.general.items' | t }}</span></div>                    
+              </a> 
+              <p class="collection_btn"><a class="btn collection" href="{{ collection.url }}">Shop Now</a></p>
+              {% endif %}
+            </div> 
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+</div>
+{% schema %}
+{
+"name": "Category Feature",
+"class": "index-section category-category",
+"max_blocks":6,
+"settings": [
+{
+"type": "header",
+"content": "CMS category setting"
+},
+{
+"type": "text",
+"id": "title",
+"label": "Heading",
+"default": "Top Categories"
+}, 
+{
+"type": "color",
+"id": "image_content_bg_color",
+"label": "Content Background Color",
+"default":"#1d1c1c"
+},
+{
+"type": "color",
+"id": "title_color",
+"label": "Collection Title Color",
+"default": "#fff"
+},
+{
+"type": "color",
+"id": "items_color",
+"label": "Collection Items Color",
+"default": "#fff"
+}
+],
+"blocks": [
+{
+"type": "text_collection",
+"name": "collection cms",
+"settings": [
+{
+"type": "image_picker",
+"id": "image_1",
+"label": "Image",
+"info": "Size: 140x140"
+},
+{
+"type": "text",
+"id": "collection_title",
+"label": "collection Title"
+},
+{
+"type": "collection",
+"id": "collection_cat_id",
+"label": "Select collection"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Category Feature",
+"category": "TT CMS section",
+"blocks": [
+{
+"type": "text_collection"
+}     
+]
+}
+]
+}
+{% endschema %}
+

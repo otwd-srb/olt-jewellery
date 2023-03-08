@@ -1,0 +1,99 @@
+<div class="container">
+  <div class="row">
+    <div id="cmsgallery" class="col-sm-12 gallery">
+      {% if section.settings.gallery_title != blank %}
+      <i class="mdi mdi-instagram" aria-hidden="true"></i><div class="title">{{ section.settings.gallery_title }}</div>{% endif %}
+      {% if section.settings.gallery_subtitle != blank %}<div class="subtitle">{{ section.settings.gallery_subtitle }}</div>{% endif %}
+      <div class="image-content owl-carousel">
+        {% for block in section.blocks %}
+        <div class="gallery-img">
+          <a href="{{ block.settings.gallery_url }}">
+            <img height="245" width="245" src="{{ block.settings.gallery | img_url: "245x245" }}" alt="gallery" />
+          </a>
+          <span class="bloglinks">
+            <a class="icon zoom" data-lightbox="example-1" href="{{ block.settings.gallery | img_url: 'master' }}" title="Click to view Full Image">
+              <i class="mdi mdi-magnify"></i>
+            </a> 
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<style>
+  #cmsgallery > i{
+    color : {{ section.settings.instagram_icon_color }};
+  }
+  #cmsgallery .title{
+    color : {{ section.settings.gallery_title_color }};
+  }
+  #cmsgallery .subtitle{
+    color : {{ section.settings.gallery_subtitle_color }};
+  }
+</style>
+{% schema %}
+{
+"name": "Gallery",
+"class": "index-section cms-gallery",
+"settings": [
+{
+"type": "color",
+"id": "instagram_icon_color",
+"label": "Instagram Icon Color"
+},
+{
+"type": "text",
+"id": "gallery_title",
+"label": "Gallery title",
+"default": "Gallery"
+},
+{
+"type": "color",
+"id": "gallery_title_color",
+"label": "Gallery title color"
+},
+{
+"type": "text",
+"id": "gallery_subtitle",
+"label": "Gallery subtitle",
+"default": "Gallery"
+},
+{
+"type": "color",
+"id": "gallery_subtitle_color",
+"label": "Gallery subtitle color"
+}
+],
+"blocks": [
+{
+"type": "text",
+"name": "gallery",
+"settings": [
+{	
+"type": "image_picker",
+"id": "gallery",
+"label": "Gallery Image"
+},
+{
+"type": "url",
+"id": "gallery_url",
+"label": "Gallery Url"
+}
+]
+}
+],
+"presets": [
+{
+"name": "Gallery",
+"category": "TT CMS section"
+}
+]
+}
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
