@@ -43,7 +43,7 @@
     "type_subheader_family": "Google+Roboto",
     "favicon": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_1600x1600_fa28c954-6f52-4ac8-a543-fe7e84b242d3.jpg",
     "enable_category_image": false,
-    "enable_breadcrumb_bg": true,
+    "enable_breadcrumb_bg": false,
     "breadcrumb_parallax": "shopify:\/\/shop_images\/breadcrumb_3526f87d-01f0-4e79-ab4f-2737451c0ceb.jpg",
     "breadcrumb_bg_color": "#f5f5f5",
     "breadcrumb_text_color": "#111111",
