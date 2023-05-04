@@ -1,1 +1,120 @@
-{"sections":{"main":{"type":"faq","blocks":{"1515838707365":{"type":"text","settings":{"title":"What is Lorem Ipsum?","description":"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."}},"1515838710078":{"type":"text","settings":{"title":"Why do We Use It?","description":"It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout."}},"1515838714117":{"type":"text","settings":{"title":"Where Does It Come From?","description":"Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old."}}},"block_order":["1515838707365","1515838710078","1515838714117"],"settings":{}}},"order":["main"]}
+{
+  "sections": {
+    "main": {
+      "type": "faq",
+      "blocks": {
+        "1515838707365": {
+          "type": "text",
+          "settings": {
+            "title": "Why should I buy online?",
+            "description": "Simply put, you save money. As we are mainly an online seller our business running costs are much lower than that of a large multi-national company. This affords us the opportunity to pass those savings onto you.  However, for peace of mind we do still have a small showroom for you come and visit us. We are located in City Plaza, which is at 39 Ainslie place Civic (Canberra City) up on level one."
+          }
+        },
+        "1515838710078": {
+          "type": "text",
+          "settings": {
+            "title": "Do you have a shopfront or store I can visit?",
+            "description": "Yes. However, we do sell most of our items online, and as such we do not keep a lot of stock in the store. If you would like to view a particular set of items before purchasing, we can set up an appointment for a private viewing with you. Please get in touch to book. We are located in City Plaza which is at 39 Ainslie place Civic (Canberra City) up on level one."
+          }
+        },
+        "1515838714117": {
+          "type": "text",
+          "settings": {
+            "title": "Can I pick my items up?",
+            "description": "Yes. Please get in touch to book an appointment. We are located in City Plaza which is at 39 Ainslie place Civic (Canberra City) up on level one."
+          }
+        },
+        "c8cc4f31-0098-4349-b06e-dc0a85cc1b2d": {
+          "type": "text",
+          "settings": {
+            "title": "Is it safe to order online?",
+            "description": "Yes. You will be ordering through our Shopify platform \/ website. Shopify is a fully-hosted e-commerce solution used by thousands of businesses globally. Shopify uses reputable payment gateway systems. You can also contact us and get our details to pay via electronic funds transfer (Bank transfer)."
+          }
+        },
+        "7c01fd0f-b8db-4e12-9f25-21648e0dfc16": {
+          "type": "text",
+          "settings": {
+            "title": "Do you offer a money back guarantees?",
+            "description": "Yes. Be confident in your purchase with our money back guarantee. If for any reason you are not happy with the item, you can return it for a full refund within 5 days. The item must be in the same condition it was in it left our store and not modified in any way. "
+          }
+        },
+        "e4fe0d71-71da-4982-b704-f6a88943afa9": {
+          "type": "text",
+          "settings": {
+            "title": "How quickly do you deliver?",
+            "description": "We pack and send items within 24 hours (or next business day) of your order being placed. We use Australia post and post everything via express post, with signature required on delivery. Please note that even though we are sending your items via express post it will usually take approx. 3 to 4 days to arrive due to the current postal systems we are governed by, which is beyond our control.  "
+          }
+        },
+        "63c41326-b2e3-461b-bc0d-a5ac6348c17c": {
+          "type": "text",
+          "settings": {
+            "title": "Are my items insured?",
+            "description": "We insure the parcel up to $100.00. You can organize your own additional insurance if required. Please get in touch with us to organize."
+          }
+        },
+        "0661d7fd-1f49-4659-94d3-f88cece383be": {
+          "type": "text",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "description": "Yes we ship our items globally. There is an additional charge of $70.00 AU and does not include insurance, tax’s, import duties and customs fees. All associated fees are the responsibility of the international buyer."
+          }
+        },
+        "9e3701c3-949f-4f77-9d66-1a3a071d7d03": {
+          "type": "text",
+          "settings": {
+            "title": "Do you layby?",
+            "description": "Yes. If you have found something you love and do not want to miss out, we can layby it for you. Please get in touch with the item number and once a deposit of 25% is paid we will remove the item from sale. To find out more please get in touch with us."
+          }
+        },
+        "131372d0-7157-4b42-a215-c43ae8eb7e9c": {
+          "type": "text",
+          "settings": {
+            "title": "Can I call and speak with someone regarding any questions?",
+            "description": "Yes please call us on 0447387430"
+          }
+        },
+        "13885789-148c-4726-85d8-80a9648a0a96": {
+          "type": "text",
+          "settings": {
+            "title": "Where do you get these beautiful pieces from?",
+            "description": "We source our items from all over Australia as well as some pieces from overseas. We also come by items through trade ins."
+          }
+        },
+        "e9e5dc6b-435a-47c4-aed6-db1df56d6fbd": {
+          "type": "text",
+          "settings": {
+            "title": "Can I trade my old jewellery in for something new?",
+            "description": "Of course. Please send us some pictures and a description and we will asses and see what we can do."
+          }
+        },
+        "cd368790-7265-4c59-af92-fa5a30f18fe4": {
+          "type": "text",
+          "settings": {
+            "title": "Can you resize a ring for me?",
+            "description": "Unfortunately, we do not offer that service. If you purchase something and would like it resized you will need to go to a “local to you” jeweller."
+          }
+        }
+      },
+      "block_order": [
+        "1515838707365",
+        "1515838710078",
+        "1515838714117",
+        "c8cc4f31-0098-4349-b06e-dc0a85cc1b2d",
+        "7c01fd0f-b8db-4e12-9f25-21648e0dfc16",
+        "e4fe0d71-71da-4982-b704-f6a88943afa9",
+        "63c41326-b2e3-461b-bc0d-a5ac6348c17c",
+        "0661d7fd-1f49-4659-94d3-f88cece383be",
+        "9e3701c3-949f-4f77-9d66-1a3a071d7d03",
+        "131372d0-7157-4b42-a215-c43ae8eb7e9c",
+        "13885789-148c-4726-85d8-80a9648a0a96",
+        "e9e5dc6b-435a-47c4-aed6-db1df56d6fbd",
+        "cd368790-7265-4c59-af92-fa5a30f18fe4"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
