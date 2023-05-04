@@ -1395,7 +1395,7 @@
           "1598010548574"
         ],
         "settings": {
-          "show_notification": true,
+          "show_notification": false,
           "notify_product_pos": "right",
           "product_title": "Product Notification",
           "delay_time": "3000"
