@@ -7,6 +7,7 @@
   {% paginate collection.products by products_per_page %}
   <div class="collection_template" id="product-grid" data-id="{{ section.id }}"> 
     <header class="section-header text-left">
+    {% render 'category' %}
     {% if settings.enable_category_image == true %}
     <div class="rte rte--header collection-desc-wrap">
       {% if settings.category_image != blank %}
@@ -21,7 +22,7 @@
     <h1 class="section-header__title">{{ collection.title }}</h1>
     {% endif %}   
    
-    {% render 'category' %}
+    {% comment %} {% render 'category' %} {% endcomment %}
     <div class="filter-wrapper {{ settings.collection_sidebar_use }} wrap_{{ settings.collection_filter_pos }}">
       {% if settings.collection_sidebar_use == "full_width" %}
       {% if settings.collection_filter_pos == "left_filter" %}  
