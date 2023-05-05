@@ -85,18 +85,9 @@
         "promo_link": "",
         "promo_title": "About us"
       }
-    },
-    "ca5aad62-8ec7-4930-9125-612dec73d197": {
-      "type": "product-type-filter",
-      "settings": {
-        "title_1": "products Category Filter",
-        "text_1": "",
-        "number_of_products": "12"
-      }
     }
   },
   "order": [
-    "collection",
-    "ca5aad62-8ec7-4930-9125-612dec73d197"
+    "collection"
   ]
 }
