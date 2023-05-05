@@ -13,7 +13,9 @@
         },
         "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
+            "image_1": "shopify:\/\/shop_images\/earrings-1003.jpg",
             "collection_title": "Earrings",
             "collection_cat_id": "earrings"
           }
@@ -21,22 +23,33 @@
         "c4833f12-b373-4dde-82d7-96b54360c0be": {
           "type": "text_collection",
           "settings": {
-            "collection_title": "Jewelry Set",
-            "collection_cat_id": "jwellery"
+            "image_1": "shopify:\/\/shop_images\/1041.jpg",
+            "collection_title": "Woman Gold Rings",
+            "collection_cat_id": "gold-rings-for-women"
           }
         },
         "2b019c22-4dc3-405d-b9d8-bc0438495494": {
           "type": "text_collection",
           "settings": {
-            "collection_title": "Pendant",
-            "collection_cat_id": "pendant"
+            "image_1": "shopify:\/\/shop_images\/22CT_GOLD_NECKLACE_-_123G_004.jpg",
+            "collection_title": "Necklaces",
+            "collection_cat_id": "necklaces-1"
           }
         },
         "8cadb356-1447-4719-938d-c2c3a96433e8": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Rings",
             "collection_cat_id": "rings"
+          }
+        },
+        "2f6f9384-3824-4171-b411-4fdf43b50292": {
+          "type": "text_collection",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/young-woman-in-sunglasses-with-rings.jpg",
+            "collection_title": "TMP",
+            "collection_cat_id": "18ct-gold-rings"
           }
         }
       },
@@ -45,7 +58,8 @@
         "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6",
         "c4833f12-b373-4dde-82d7-96b54360c0be",
         "2b019c22-4dc3-405d-b9d8-bc0438495494",
-        "8cadb356-1447-4719-938d-c2c3a96433e8"
+        "8cadb356-1447-4719-938d-c2c3a96433e8",
+        "2f6f9384-3824-4171-b411-4fdf43b50292"
       ],
       "settings": {
         "enable_category": true,
