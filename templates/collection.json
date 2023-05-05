@@ -85,37 +85,9 @@
         "promo_link": "",
         "promo_title": "About us"
       }
-    },
-    "558c7e56-be10-493e-88d6-715ff0a4e8c7": {
-      "type": "product-tab-model",
-      "blocks": {
-        "template--18264989204792__558c7e56-be10-493e-88d6-715ff0a4e8c7-16832997192dc720a0-0": {
-          "type": "text_block",
-          "settings": {
-            "title": "Tab Name",
-            "collection": "18ct-gold-rings"
-          }
-        }
-      },
-      "block_order": [
-        "template--18264989204792__558c7e56-be10-493e-88d6-715ff0a4e8c7-16832997192dc720a0-0"
-      ],
-      "settings": {
-        "product_rows": true,
-        "product_col": "4",
-        "title": "Trending products",
-        "title_clr": "#111",
-        "subtitle_clr": "#666",
-        "subtitle": "Add our new arrivals to your weekly lineup.",
-        "button_bg": "#fff",
-        "button_text": "#000",
-        "button_hover_bg": "#000",
-        "button_hover_text": "#fff"
-      }
     }
   },
   "order": [
-    "collection",
-    "558c7e56-be10-493e-88d6-715ff0a4e8c7"
+    "collection"
   ]
 }
