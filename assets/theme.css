@@ -27563,3 +27563,14 @@ details.mobile-facets__disclosure.disclosure-has-popup .mobile-facets__open{
 .TTProduct-Tab .nav-tabs > li.active::after {
   background-color: #916264 !important;
 }
+.product-form__buttons {
+  display: grid;
+}
+@media (max-width: 480px) {
+  .product-layouts .product-wrapper .product-thumb a.grid-view-item__link img {
+    height: 32vw !important;
+  }
+  .thumbs .product-thumb {
+    width: 100%;
+  }
+}
