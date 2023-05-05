@@ -66,7 +66,7 @@
     "currency_8_unit": "",
     "currency_9_unit": "",
     "currency_10_unit": "",
-    "collections_show_rating": true,
+    "collections_show_rating": false,
     "sale_show_percentage": true,
     "collections_view_enable": true,
     "collections_masonry": false,
