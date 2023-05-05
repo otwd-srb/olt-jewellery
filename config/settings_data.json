@@ -360,6 +360,44 @@
               "tt_sub_menu_forth_width": ""
             }
           },
+          "e1f1bc7e-fba1-4daf-a058-0baced150edf": {
+            "type": "tt_mm_menu",
+            "settings": {
+              "title": "About Us",
+              "button_link": "shopify:\/\/pages\/about-us",
+              "tt_mn_show_sub": false,
+              "tt_mn_sub_contentwidth": "540px",
+              "tt_mn_class": "",
+              "tt_mn_sub_heading": "",
+              "tt_mn_subheading_bg": "#febb01",
+              "tt_mn_subheading_color": "#ffffff",
+              "tt_sub_menu_cwidth": "",
+              "tt_sub_menu_ctitle": "",
+              "tt_sub_menu_clink": "",
+              "tt_sub_menu_clinklist": "",
+              "tt_sub_menu_csecondtitle": "",
+              "tt_sub_menu_csecondlink": "",
+              "tt_sub_menu_csecondlinklist": "",
+              "tt_sub_menu_cthirdtitle": "",
+              "tt_sub_menu_cthirdlink": "",
+              "tt_sub_menu_cthirdlinklist": "",
+              "tt_sub_menu_cfourthtitle": "",
+              "tt_sub_menu_cfourthlink": "",
+              "tt_sub_menu_cfourthlinklist": "",
+              "tt_sub_menu_first_title": "",
+              "tt_sub_menu_first_link": "",
+              "tt_sub_menu_first_width": "",
+              "tt_sub_menu_second_title": "",
+              "tt_sub_menu_second_link": "",
+              "tt_sub_menu_second_width": "",
+              "tt_sub_menu_third_title": "",
+              "tt_sub_menu_third_link": "",
+              "tt_sub_menu_third_width": "",
+              "tt_sub_menu_forth_title": "",
+              "tt_sub_menu_forth_link": "",
+              "tt_sub_menu_forth_width": ""
+            }
+          },
           "1551758677377": {
             "type": "tt_mm_menu",
             "settings": {
@@ -604,11 +642,11 @@
               "tt_sub_menu_forth_width": ""
             }
           },
-          "e1f1bc7e-fba1-4daf-a058-0baced150edf": {
+          "b2719a77-36ee-410b-ae10-c42b6639374e": {
             "type": "tt_mm_menu",
             "settings": {
-              "title": "About Us",
-              "button_link": "shopify:\/\/pages\/about-us",
+              "title": "FAQ",
+              "button_link": "shopify:\/\/pages\/faq",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "540px",
               "tt_mn_class": "",
@@ -646,6 +684,7 @@
         "block_order": [
           "1547040638186",
           "1547093938311",
+          "e1f1bc7e-fba1-4daf-a058-0baced150edf",
           "1551758677377",
           "fe00c5c4-bfef-426e-9e66-fb976da821fa",
           "d62eaba9-83e1-47c7-a24c-7db714eef2bc",
@@ -657,7 +696,7 @@
           "93b96ce8-a155-4d84-a7d6-c87ac19ce22d",
           "5fg5c0ed-9e19-401f-95ec-5c49eb5636c0",
           "cbbfa6d6-5cfa-49d1-ad5a-7b4cdce1be8d",
-          "e1f1bc7e-fba1-4daf-a058-0baced150edf"
+          "b2719a77-36ee-410b-ae10-c42b6639374e"
         ],
         "settings": {
           "sticky_header": true,
