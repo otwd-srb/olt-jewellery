@@ -13,6 +13,7 @@
         },
         "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "image_1": "shopify:\/\/shop_images\/earrings-1003.jpg",
             "collection_title": "Earrings",
@@ -37,6 +38,7 @@
         },
         "8cadb356-1447-4719-938d-c2c3a96433e8": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Rings",
             "collection_cat_id": "rings"
