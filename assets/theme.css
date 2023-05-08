@@ -7966,7 +7966,7 @@ input[type=checkbox]:checked ~ label .check,.sidebar-tag label.active .check {
   float: none;
   display: inline-block;
   vertical-align: top;
-  width: 312px;
+  width: 40%; /*312px*/
   padding: 12px 15px;
 }
 .product-single__addtocart .btn:active, .product-single__addtocart .btn:focus {
