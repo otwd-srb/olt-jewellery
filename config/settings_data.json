@@ -714,7 +714,7 @@
           "display_currency": false,
           "display_language": false,
           "display_myaccount": true,
-          "display_compare": true,
+          "display_compare": false,
           "logo": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_800x224_cc0d4faf-fb07-47f6-ba32-6857922186d7.png",
           "display_wishlist": true,
           "display_cart": true,
