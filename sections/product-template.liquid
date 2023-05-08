@@ -562,7 +562,8 @@
 
                         <hr class="hr">
                         {% render 'wishlist-icon', product: product %}             
-                        <div class="add-to-compare pro_btn">     
+                        <!-- OTWD compare disabled -->
+                        {% comment %} <div class="add-to-compare pro_btn">     
                           <div class="show">
                             <div class="default-comparebutton-{{ product.handle }} loading">
                               <a class="add-in-compare-js btn" data-comparehandle="{{ product.handle }}" title="{{ 'products.compare.add_to_compare' | t }}">
@@ -581,7 +582,7 @@
                                 </svg>
                                 <span class="tooltip-label">{{ 'products.compare.add_to_compare' | t }}</span></a></div>
                           </div>
-                        </div>
+                        </div> {% endcomment %}
                         {% if section.settings.sizechart_enable %}
                         <a class="sizechart" data-toggle="modal" data-target="#sizeModal" href="#"><i class="mdi mdi-hanger"></i><span class="tooltip-label"> {{ 'products.product.size_guide' | t }}</span></a>
                         {% endif %}  

@@ -84,7 +84,8 @@
       <div class="btn_wrapper">
          {% if settings.product_hover_btn =="style2" %}
           {% if settings.enable_compare %}
-          <div class="add-to-compare pro_btn">     
+          <!-- OTWD compare disabled -->
+          {% comment %} <div class="add-to-compare pro_btn">     
             <div class="show">
               <div class="default-comparebutton-{{ product.handle }} loading">
                 <a class="add-in-compare-js btn" data-comparehandle="{{ product.handle }}" title="{{ 'products.compare.add_to_compare' | t }}">
@@ -104,7 +105,7 @@
                   <span class="tooltip-label">{{ 'products.compare.add_to_compare' | t }}</span>
                 </a></div>
             </div>
-          </div>
+          </div> {% endcomment %}
           {% endif %}
         {% endif %}
         {% if settings.product_hover_btn =="style1" or settings.product_hover_btn =="style2" %}
@@ -218,7 +219,8 @@
         {% render 'wishlist-icon', product: product %}         
         {% endif %} 
           {% if settings.enable_compare %}
-          <div class="add-to-compare pro_btn">     
+          <!-- OTWD compare disabled -->
+          {% comment %} <div class="add-to-compare pro_btn">     
             <div class="show">
               <div class="default-comparebutton-{{ product.handle }} loading">
                 <a class="add-in-compare-js btn" data-comparehandle="{{ product.handle }}" title="{{ 'products.compare.add_to_compare' | t }}">
@@ -238,7 +240,7 @@
                   <span class="tooltip-label">{{ 'products.compare.add_to_compare' | t }}</span>
                 </a></div>
             </div>
-          </div>
+          </div> {% endcomment %}
           {% endif %}
         {% endif %} 
           {% if settings.enable_quick_view %}                  
