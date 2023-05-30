@@ -4,4 +4,5 @@ a:focus {
 }
 .txt-link {
   color: #916264;
+  text-decoration: underline;
 }
