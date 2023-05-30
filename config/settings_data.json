@@ -477,7 +477,6 @@
           },
           "fe00c5c4-bfef-426e-9e66-fb976da821fa": {
             "type": "tt_mm_menu",
-            "disabled": true,
             "settings": {
               "title": "Blog",
               "button_link": "",
