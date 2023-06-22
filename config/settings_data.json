@@ -703,7 +703,7 @@
           "sticky_header": true,
           "color_menu_bg": "#ffffff",
           "color_bottom_bg": "#ffffff",
-          "announcement_bar": true,
+          "announcement_bar": false,
           "top_bg_color": "#222222",
           "top_header_text_color": "#ffffff",
           "destination": "Hurrah! Get Free Shipping on All Orders Over $99!",
