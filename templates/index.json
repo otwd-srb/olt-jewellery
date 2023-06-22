@@ -201,6 +201,7 @@
     },
     "our_brand": {
       "type": "our_brand",
+      "disabled": true,
       "blocks": {
         "1605783755d6d9f598-0": {
           "type": "brand_image",
