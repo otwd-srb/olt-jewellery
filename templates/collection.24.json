@@ -1,1 +1,90 @@
-{"sections":{"collection":{"type":"collection-24","blocks":{"4b74bc70-7484-42b3-ba48-3b8140aa447f":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/bag_ad1a2a9e-1294-4057-bfd4-97a1f203911a.jpg","collection_title":"Bag","collection_cat_id":"fashion"}},"2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/dress_ab5d713f-7e32-4534-99d4-b934d72b5329.jpg","collection_title":"Dress","collection_cat_id":"womens-wear"}},"c4833f12-b373-4dde-82d7-96b54360c0be":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/lingerie_8aaa9bc8-17be-41b6-b0dd-0e3e47148b3e.jpg","collection_title":"Lingerie","collection_cat_id":"lingerie"}},"2b019c22-4dc3-405d-b9d8-bc0438495494":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/Shirts-_-Pants_a41b5aa1-c333-4fe8-92a2-358e83dad281.jpg","collection_title":"Shirts & Pants","collection_cat_id":"dress"}},"8cadb356-1447-4719-938d-c2c3a96433e8":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/shoes_ac0be3ec-5805-4a7a-aa15-b920838f54fd.jpg","collection_title":"Shoes","collection_cat_id":"shoes"}},"f568a83b-c39b-4c91-b893-d420bc727213":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/swimwear_411223b7-2143-4727-be0b-92c47e2e1a6e.jpg","collection_title":"Swimwear","collection_cat_id":"dress"}},"18e23bab-b6ad-467f-a0f1-2bba5f371723":{"type":"text_collection","settings":{"image_1":"shopify:\/\/shop_images\/outerwear_cd488428-32bd-408c-b30e-2d44281c3445.jpg","collection_title":"Outerwear","collection_cat_id":"outerwear"}}},"block_order":["4b74bc70-7484-42b3-ba48-3b8140aa447f","2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6","c4833f12-b373-4dde-82d7-96b54360c0be","2b019c22-4dc3-405d-b9d8-bc0438495494","8cadb356-1447-4719-938d-c2c3a96433e8","f568a83b-c39b-4c91-b893-d420bc727213","18e23bab-b6ad-467f-a0f1-2bba5f371723"],"settings":{"enable_category":true,"title_1":"Category products","title_color":"#222222","enable_sidecategory":true,"linkedlist":"main-menu","linkedlist_title":"Categories","show_filter":true,"collapse_on_larger_devices":false,"enable_sorting":false,"enable_sidebar_multiple_choice":true,"show_best_products":true,"title":"Best seller","bestseller":"fashion","pro_img_width_height":"80x104","limit":"6","product_rows":true,"promo_img":"shopify:\/\/shop_images\/left-banner-01_c8966d71-8c9b-4f0c-9e04-c772dc6f0912.jpg","promo_link":"#","promo_title":""}}},"order":["collection"]}
+{
+  "sections": {
+    "collection": {
+      "type": "collection-24",
+      "blocks": {
+        "4b74bc70-7484-42b3-ba48-3b8140aa447f": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Bag",
+            "collection_cat_id": "fashion"
+          }
+        },
+        "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Dress",
+            "collection_cat_id": "womens-wear"
+          }
+        },
+        "c4833f12-b373-4dde-82d7-96b54360c0be": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Lingerie",
+            "collection_cat_id": "lingerie"
+          }
+        },
+        "2b019c22-4dc3-405d-b9d8-bc0438495494": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Shirts & Pants",
+            "collection_cat_id": "dress"
+          }
+        },
+        "8cadb356-1447-4719-938d-c2c3a96433e8": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Shoes",
+            "collection_cat_id": "shoes"
+          }
+        },
+        "f568a83b-c39b-4c91-b893-d420bc727213": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Swimwear",
+            "collection_cat_id": "dress"
+          }
+        },
+        "18e23bab-b6ad-467f-a0f1-2bba5f371723": {
+          "type": "text_collection",
+          "settings": {
+            "collection_title": "Outerwear",
+            "collection_cat_id": "outerwear"
+          }
+        }
+      },
+      "block_order": [
+        "4b74bc70-7484-42b3-ba48-3b8140aa447f",
+        "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6",
+        "c4833f12-b373-4dde-82d7-96b54360c0be",
+        "2b019c22-4dc3-405d-b9d8-bc0438495494",
+        "8cadb356-1447-4719-938d-c2c3a96433e8",
+        "f568a83b-c39b-4c91-b893-d420bc727213",
+        "18e23bab-b6ad-467f-a0f1-2bba5f371723"
+      ],
+      "settings": {
+        "enable_category": true,
+        "title_1": "Category products",
+        "title_color": "#222222",
+        "enable_sidecategory": false,
+        "linkedlist": "main-menu",
+        "linkedlist_title": "Categories",
+        "show_filter": true,
+        "collapse_on_larger_devices": false,
+        "enable_sorting": false,
+        "enable_sidebar_multiple_choice": true,
+        "show_best_products": false,
+        "title": "Best seller",
+        "bestseller": "fashion",
+        "pro_img_width_height": "80x104",
+        "limit": "6",
+        "product_rows": true,
+        "promo_link": "#",
+        "promo_title": ""
+      }
+    }
+  },
+  "order": [
+    "collection"
+  ]
+}
