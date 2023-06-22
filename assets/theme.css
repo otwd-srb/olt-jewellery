@@ -8545,9 +8545,10 @@ input[type=checkbox]:checked ~ label .check,.sidebar-tag label.active .check {
 }
 ._quick-view-content { display: none }
 #fancybox-close,
-.search-close,#popupBoxClose {
+.search-close,
+#popupBoxClose {
   background:url({{ 'close.png' | asset_url }}) no-repeat;
-  border:none;
+  border: none;
   cursor: pointer;
   width: 32px;
   height:32px;
