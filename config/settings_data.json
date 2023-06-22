@@ -734,7 +734,7 @@
           "footer_col_title_1": "Legal Information",
           "col_1_menu": "legal-info-footer",
           "footer_col_title_2": "Featured Collections",
-          "col_2_menu": "",
+          "col_2_menu": "featured-collections-footer",
           "newsletter_title": "Newsletter Signup",
           "newsletter_title_color": "#111111",
           "btn_txt_color": "#222222",
