@@ -15063,6 +15063,7 @@ a.product-t {
 .blogleft_inner_content .tt-blog-content .tt-blog-description {
   float: left;
   width: 100%;
+  padding: 1rem;
 }
 .blogleft_inner_content .tt-blog-content .tt-blog-description p {
   font: 400 13px/22px var(--font-stack-body);
