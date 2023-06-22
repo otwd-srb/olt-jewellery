@@ -438,9 +438,8 @@
           },
           "1551758677377": {
             "type": "tt_mm_menu",
-            "disabled": true,
             "settings": {
-              "title": "Pages",
+              "title": "Brand names",
               "button_link": "#",
               "tt_mn_show_sub": true,
               "tt_mn_sub_contentwidth": "280px",
