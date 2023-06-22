@@ -69,7 +69,7 @@
         "enable_category": true,
         "title_1": "Category products",
         "title_color": "#222222",
-        "enable_sidecategory": true,
+        "enable_sidecategory": false,
         "linkedlist": "ring-stone",
         "linkedlist_title": "Categories",
         "show_filter": true,
