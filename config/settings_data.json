@@ -124,11 +124,11 @@
     "btn_bg_hvr_clr": "#ffffff",
     "btn_txt_hvr_clr": "#111111",
     "footer_style_1": "style_1",
-    "social_twitter_link": "https:\/\/twitter.com\/shopify",
-    "social_facebook_link": "https:\/\/www.facebook.com\/",
-    "social_pinterest_link": "https:\/\/www.pinterest.com\/shopify",
+    "social_twitter_link": "",
+    "social_facebook_link": "https:\/\/www.facebook.com\/once.loved.treasures.au",
+    "social_pinterest_link": "",
     "social_google_plus_link": "https:\/\/plus.google.com\/+shopify",
-    "social_instagram_link": "https:\/\/instagram.com\/shopify",
+    "social_instagram_link": "https:\/\/www.instagram.com\/oncelovedtreasures.au\/",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
@@ -740,7 +740,7 @@
           "btn_txt_color": "#222222",
           "btn_hovertxt_color": "#ce465b",
           "footer_col_title_3": "My product",
-          "col_3_menu": "footer"
+          "col_3_menu": ""
         }
       },
       "footer-model-2": {
