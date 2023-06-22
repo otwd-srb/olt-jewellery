@@ -73,7 +73,7 @@
         "collapse_on_larger_devices": false,
         "enable_sorting": false,
         "enable_sidebar_multiple_choice": true,
-        "show_best_products": true,
+        "show_best_products": false,
         "title": "Best seller",
         "bestseller": "fashion",
         "pro_img_width_height": "80x104",

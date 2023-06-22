@@ -73,7 +73,7 @@
     "enable_quick_view": true,
     "enable_add_cart": true,
     "enable_wishlist": true,
-    "enable_compare": true,
+    "enable_compare": false,
     "enable_quantity": false,
     "enable_countdown": true,
     "display_color_variant": false,
