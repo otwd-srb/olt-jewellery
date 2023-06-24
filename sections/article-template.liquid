@@ -83,7 +83,7 @@
               {% endif %}
               <div class="meta text-center col-xs-12">{% render 'tags-article' %}</div>
             </div>
-            <h1>{{ article.title }}</h1>
+            <h1 class="d-none">{{ article.title }}</h1>
             {% assign month = article.published_at | date: "%b" %}
             {% assign day = article.published_at | date: "%d" %}
             {% assign year = article.published_at | date: "%Y" %}

@@ -3,6 +3,7 @@ html {
 }
 blockquote {
   border: none;
+  margin: 4rem;
 }
 .destination a {
   color: #fff;
@@ -20,4 +21,14 @@ a:focus {
 .txt-link {
   color: #916264;
   text-decoration: underline;
+}
+.blog-post-single h1 {
+  line-height: 3rem;
+  margin: 4rem 0;
+}
+.blog-post-single h2 {
+  margin: 3rem 0;
+}
+.blog-post-single h3 {
+  margin: 2.5rem 0;
 }
