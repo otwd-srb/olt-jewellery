@@ -396,6 +396,7 @@
       "blocks": {
         "162463944776d2ae01-0": {
           "type": "s_text",
+          "disabled": true,
           "settings": {
             "service_icon": "shopify:\/\/shop_images\/fast.png",
             "title": "Free Shipping",
@@ -423,7 +424,7 @@
           "settings": {
             "service_icon": "shopify:\/\/shop_images\/strongbox.png",
             "title": "Get Big Saving",
-            "desc": "On Exclusive Items"
+            "desc": "On Weekly Discounts"
           }
         }
       },
