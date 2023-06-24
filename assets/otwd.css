@@ -1,7 +1,18 @@
 html {
   scroll-behavior: smooth;
 }
-
+blockquote {
+  border: none;
+}
+.destination a {
+  color: #fff;
+  text-decoration: none;
+}
+.destination a:hover,
+.destination a:focus,
+.destination a:active {
+  color: antiquewhite;
+}
 a:hover,
 a:focus {
     text-decoration: none;
