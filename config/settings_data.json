@@ -713,7 +713,7 @@
           "display_myaccount": true,
           "display_compare": false,
           "logo": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_800x224_1dfbd138-0c22-4d4e-b9a1-fb90f5071859.png",
-          "display_wishlist": true,
+          "display_wishlist": false,
           "display_cart": true,
           "menu_text_color": "#111111",
           "menu_text_hover_color": "#ffffff",
