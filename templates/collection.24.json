@@ -5,6 +5,7 @@
       "blocks": {
         "4b74bc70-7484-42b3-ba48-3b8140aa447f": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Bag",
             "collection_cat_id": "fashion"
@@ -12,6 +13,7 @@
         },
         "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Dress",
             "collection_cat_id": "womens-wear"
@@ -19,6 +21,7 @@
         },
         "c4833f12-b373-4dde-82d7-96b54360c0be": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Lingerie",
             "collection_cat_id": "lingerie"
@@ -26,6 +29,7 @@
         },
         "2b019c22-4dc3-405d-b9d8-bc0438495494": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Shirts & Pants",
             "collection_cat_id": "dress"
@@ -33,6 +37,7 @@
         },
         "8cadb356-1447-4719-938d-c2c3a96433e8": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Shoes",
             "collection_cat_id": "shoes"
@@ -40,6 +45,7 @@
         },
         "f568a83b-c39b-4c91-b893-d420bc727213": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Swimwear",
             "collection_cat_id": "dress"
@@ -47,6 +53,7 @@
         },
         "18e23bab-b6ad-467f-a0f1-2bba5f371723": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Outerwear",
             "collection_cat_id": "outerwear"
@@ -75,9 +82,9 @@
         "enable_sidebar_multiple_choice": true,
         "show_best_products": false,
         "title": "Best seller",
-        "bestseller": "fashion",
+        "bestseller": "earrings",
         "pro_img_width_height": "80x104",
-        "limit": "6",
+        "limit": "12",
         "product_rows": true,
         "promo_link": "#",
         "promo_title": ""
