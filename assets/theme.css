@@ -14006,10 +14006,10 @@ a.product-t {
 }
 .category_feature .tt_cat_content .cat-content{
   float: none;
-    width: 60%;
+    width: 40%;
     background: rgba(255,255,255,0.9);
-    padding: 22px 20px;
-    height: 100px;
+    padding: 10px 10px;
+    height: 70px;
     top: auto;
     bottom: 0;
     right: 0;
