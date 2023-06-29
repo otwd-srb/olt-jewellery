@@ -2,7 +2,6 @@
   "sections": {
     "collection": {
       "type": "collection-24",
-      "disabled": true,
       "blocks": {
         "4b74bc70-7484-42b3-ba48-3b8140aa447f": {
           "type": "text_collection",
