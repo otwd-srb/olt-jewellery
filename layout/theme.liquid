@@ -235,5 +235,63 @@
       }
     </script>
   {% include 'adroll' %}
+
+
+    <!-- box gift start -->
+    {% if customer.tags contains 'newsletter' %}
+    <!-- Customer is already subscribed, so we don't show the button -->
+  {% else %}
+    <!-- Button for non-subscribed visitors -->
+    <div id="newsletterButton" style="position: fixed; bottom: 10px; left: 10px; z-index: 9999;">
+      <img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;">
+    </div>
+
+    <!-- Pop-up for email subscription -->
+    <div id="newsletterPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background-color: white; padding: 20px; border: 1px solid #ccc;">
+      <img id="closePopup" src="{{ 'close_icon.png' | asset_url }}" alt="Close" style="position: absolute; top: 5px; right: 5px; cursor: pointer; width:20px; height: 20px,">
+      <h2>Subscribe to our Newsletter</h2>
+      <input type="email" id="newsletterEmail" placeholder="Enter your email" style="margin-bottom: 10px;">
+      <button id="submitNewsletter">Subscribe</button>
+    </div>
+  {% endif %}
+  <script>
+    document.getElementById('newsletterButton').addEventListener('click', function() {
+      // Show the pop-up when the button is clicked
+      document.getElementById('newsletterPopup').style.display = 'block';
+    });
+
+    document.getElementById('closePopup').addEventListener('click', function() {
+        // Hide the pop-up when the close icon is clicked
+        document.getElementById('newsletterPopup').style.display = 'none';
+    });
+
+
+    document.getElementById('submitNewsletter').addEventListener('click', function() {
+      var email = document.getElementById('newsletterEmail').value;
+      if (email) {
+        // Use AJAX to submit the email to Shopify's customer list
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', '/account/contact', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                // Successfully added to the newsletter
+                alert('Thank you for subscribing to our newsletter!');
+                document.getElementById('newsletterButton').style.display = 'none';
+                document.getElementById('newsletterPopup').style.display = 'none';
+            } else if (xhr.readyState == 4) {
+                // Error handling
+                alert('There was an error subscribing you to the newsletter. Please try again later.');
+            }
+        };
+        // Send the email as a parameter
+        xhr.send('contact[email]=' + encodeURIComponent(email) + '&contact[tags]=newsletter');
+      } else {
+        alert('Please enter a valid email address.');
+      }
+    });
+  </script>
+
+
 </body>
 </html>
