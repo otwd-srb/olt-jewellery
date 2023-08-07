@@ -237,16 +237,16 @@
   {% include 'adroll' %}
 
 
-    <!-- box gift start -->
+    <!-- box gift start 
     {% if customer.tags contains 'newsletter' %}
-    <!-- Customer is already subscribed, so we don't show the button -->
+    -- Customer is already subscribed, so we don't show the button --
   {% else %}
-    <!-- Button for non-subscribed visitors -->
+    -- Button for non-subscribed visitors --
     <div id="newsletterButton" style="position: fixed; bottom: 10px; left: 10px; z-index: 9999;">
       <img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;">
     </div>
 
-    <!-- Pop-up for email subscription -->
+    -- Pop-up for email subscription --
     <div id="newsletterPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background-color: white; padding: 20px; border: 1px solid #ccc;">
       <img id="closePopup" src="{{ 'close_icon.png' | asset_url }}" alt="Close" style="position: absolute; top: 5px; right: 5px; cursor: pointer; width:20px; height: 20px,">
       <h2>Subscribe to our Newsletter v2</h2>
