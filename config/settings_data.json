@@ -477,8 +477,8 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Blog",
-              "button_link": "",
-              "tt_mn_show_sub": true,
+              "button_link": "shopify:\/\/blogs\/news",
+              "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "280px",
               "tt_mn_class": "blog",
               "tt_mn_sub_heading": "",
