@@ -238,6 +238,7 @@
 
   {% if customer.tags contains 'newsletter' %}
     <!-- Customer is already subscribed, so we don't show the button -->
+    <p>You are already subscribed!!</p>
   {% else %}
     <!-- Button for non-subscribed visitors -->
     <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
