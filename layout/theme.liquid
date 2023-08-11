@@ -235,13 +235,8 @@
       }
     </script>
   {% include 'adroll' %}
-
-  {% if customer.tags contains 'newsletter' %}
-    <!-- Customer is already subscribed, so we don't show the button -->
-    <p>You are already subscribed!!</p>
-  {% else %}
-    <!-- Button for non-subscribed visitors -->
-    <div style="position: fixed; bottom: 30px; left: 30px; z-index: 9999;">
+  
+    <!-- Button for non-subscribed visitors -->    
         <button class="klaviyo_form_trigger" style="border:none;">
           <!--Click here
           <img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;">-->
@@ -252,10 +247,6 @@
             window._klOnsite.push(['openForm', 'RgxbuH']);
           });
         </script>
-      </div>
-  {% endif %}
-    
-
 
 </body>
 </html>
