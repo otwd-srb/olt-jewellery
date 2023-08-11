@@ -236,13 +236,38 @@
     </script>
   {% include 'adroll' %}
       
-        <button class="klaviyo_form_trigger">Click here</button>
+        <!-- <button class="klaviyo_form_trigger">Click here</button>
         <script type="text/javascript">
           document.querySelector('.klaviyo_form_trigger').addEventListener('click', function (){
             window._klOnsite = window._klOnsite || []; 
             window._klOnsite.push(['openForm', 'RgxbuH']);
           });
-        </script>
+        </script> -->
+
+
+              
+
+    {% if customer and customer.tags contains 'newsletter' %}
+    <!-- Customer is already subscribed, so we don't show the button -->
+    <p>You are already subscribed!!</p>
+    {% else %}
+    <!-- Button for non-subscribed visitors -->
+      <div id="btn">
+          <button class="klaviyo_form_trigger" style="border:none;">
+            Click here
+            <!--<img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;">-->
+          </button>
+          <script type="text/javascript">
+            document.querySelector('.klaviyo_form_trigger').addEventListener('click', function (){
+              window._klOnsite = window._klOnsite || []; 
+              window._klOnsite.push(['openForm', 'RgxbuH']);
+            });
+          </script>
+        </div>
+    {% endif %}
+
+
+              
 
 </body>
 </html>
