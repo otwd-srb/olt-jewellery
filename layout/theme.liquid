@@ -236,51 +236,16 @@
     </script>
   {% include 'adroll' %}
 
-
-    <!-- box gift start 
-    {% if customer.tags contains 'newsletter' %}
-    -- Customer is already subscribed, so we don't show the button --
-  {% else %}
-    -- Button for non-subscribed visitors --
-    <div id="newsletterButton" style="position: fixed; bottom: 10px; left: 10px; z-index: 9999;">
-      <img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;">
+  <div style="position: fixed; bottom: 10px; left: 10px; z-index: 9999;">
+      <button class="klaviyo_form_trigger" style="border:none;"><img src="{{ 'gift-box.png' | asset_url }}" alt="Subscribe to our Newsletter" style="cursor: pointer;"></button>
+      <script type="text/javascript">
+        document.querySelector('.klaviyo_form_trigger').addEventListener('click', function (){
+          window._klOnsite = window._klOnsite || []; 
+          window._klOnsite.push(['openForm', 'RgxbuH']);
+        });
+      </script>
     </div>
-
-    -- Pop-up for email subscription --
-    <div id="newsletterPopup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 10000; background-color: white; padding: 20px; border: 1px solid #ccc;">
-      <img id="closePopup" src="{{ 'close_icon.png' | asset_url }}" alt="Close" style="position: absolute; top: 5px; right: 5px; cursor: pointer; width:20px; height: 20px,">
-      <h2>Subscribe to our Newsletter v2</h2>
-      {% comment %} <input type="email" id="newsletterEmail" placeholder="Enter your email" style="margin-bottom: 10px;">
-      <button id="submitNewsletter">Subscribe</button> {% endcomment %}
-      {% render 'newsletter-form' %}
-    </div>
-  {% endif %}
-  <script>
-    document.getElementById('newsletterButton').addEventListener('click', function() {
-      // Show the pop-up when the button is clicked
-      document.getElementById('newsletterPopup').style.display = 'block';
-    });
-
-    document.getElementById('closePopup').addEventListener('click', function() {
-        // Hide the pop-up when the close icon is clicked
-        document.getElementById('newsletterPopup').style.display = 'none';
-    });
-
-
-   /*document.getElementById('submitNewsletter').addEventListener('click', function() {
-      var email = document.getElementById('newsletterEmail').value;
-      if (email) {
-        // Here, you can add the code to submit the email to your newsletter system
-        // For example, using Shopify's AJAX API or any other method
-
-        // After successfully subscribing, hide the button and pop-up
-        document.getElementById('newsletterButton').style.display = 'none';
-        document.getElementById('newsletterPopup').style.display = 'none';
-      } else {
-        alert('Please enter a valid email address.');
-      }
-    });*/
-  </script>
+    
 
 
 </body>
