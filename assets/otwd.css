@@ -43,6 +43,7 @@ article.blog-post-single table {
 article.blog-post-single table thead {
 	background-color: antiquewhite;
 }
-article.blog-post-single table th {
+article.blog-post-single table td:first-child,
+article.blog-post-single table th:first-child {
   width: max-content;
 }
