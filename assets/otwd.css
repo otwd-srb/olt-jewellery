@@ -32,6 +32,14 @@ a:focus {
 .blog-post-single h3 {
   margin: 2.5rem 0;
 }
+
+/* line pin & content; email in footer*/
+.address,
+li.email a {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
 article.blog-post-single table {
 	width: 75%;
 	margin-bottom: 2rem;
