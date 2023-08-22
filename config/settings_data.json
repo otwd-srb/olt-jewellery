@@ -42,7 +42,7 @@
     "type_header_family": "Google+Jost",
     "type_subheader_family": "Google+Roboto",
     "favicon": "shopify:\/\/shop_images\/logo-diamond-400x400.png",
-    "enable_category_image": false,
+    "enable_category_image": true,
     "enable_breadcrumb_bg": false,
     "breadcrumb_parallax": "shopify:\/\/shop_images\/breadcrumb_3526f87d-01f0-4e79-ab4f-2737451c0ceb.jpg",
     "breadcrumb_bg_color": "#f5f5f5",
