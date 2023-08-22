@@ -97,7 +97,7 @@
           "settings": {
             "image_1": "shopify:\/\/shop_images\/18ct-White-Gold-and-Diamond-Ring-2000c_g-600x400.jpg",
             "collection_title": "Rings",
-            "collection_cat_id": "rings"
+            "collection_cat_id": "second-hand-rings"
           }
         },
         "38eb0770-9426-4520-ab73-806276acd695": {
@@ -201,7 +201,6 @@
     },
     "our_brand": {
       "type": "our_brand",
-      "disabled": true,
       "blocks": {
         "1605783755d6d9f598-0": {
           "type": "brand_image",
@@ -255,6 +254,7 @@
         "1605783755d6d9f598-5",
         "fe3f5195-5da5-4a16-b714-43fb3e5da4bd"
       ],
+      "disabled": true,
       "settings": {
         "addclass": "brands",
         "title": "",
@@ -336,7 +336,6 @@
     },
     "gallery": {
       "type": "gallery",
-      "disabled": true,
       "blocks": {
         "6056c5f9-dcad-423f-abe7-ae1e3a254a64": {
           "type": "text",
@@ -383,6 +382,7 @@
         "6fcee063-1f74-4c52-ba17-2cc1e2fad905",
         "a1df8012-c7a8-4e7e-bc00-33e122ab0b84"
       ],
+      "disabled": true,
       "settings": {
         "instagram_icon_color": "#ff5635",
         "gallery_title": "",

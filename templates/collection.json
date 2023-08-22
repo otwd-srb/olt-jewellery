@@ -43,7 +43,7 @@
           "disabled": true,
           "settings": {
             "collection_title": "Rings",
-            "collection_cat_id": "rings"
+            "collection_cat_id": "second-hand-rings"
           }
         },
         "2f6f9384-3824-4171-b411-4fdf43b50292": {
@@ -76,7 +76,7 @@
         "enable_sidebar_multiple_choice": true,
         "show_best_products": false,
         "title": "Best seller",
-        "bestseller": "rings",
+        "bestseller": "second-hand-rings",
         "pro_img_width_height": "80x104",
         "limit": "12",
         "product_rows": false,
