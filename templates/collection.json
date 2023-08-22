@@ -5,6 +5,7 @@
       "blocks": {
         "4b74bc70-7484-42b3-ba48-3b8140aa447f": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "collection_title": "Bracelet",
             "collection_cat_id": "bracelets-and-bangles"
@@ -12,6 +13,7 @@
         },
         "2c08a7b6-7e0b-4d71-8fb8-38358d9d19d6": {
           "type": "text_collection",
+          "disabled": true,
           "settings": {
             "image_1": "shopify:\/\/shop_images\/earrings-1003.jpg",
             "collection_title": "Earrings",
@@ -62,7 +64,7 @@
         "2f6f9384-3824-4171-b411-4fdf43b50292"
       ],
       "settings": {
-        "enable_category": false,
+        "enable_category": true,
         "title_1": "Category products",
         "title_color": "#222222",
         "enable_sidecategory": false,
