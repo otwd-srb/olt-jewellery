@@ -64,7 +64,7 @@
         "2f6f9384-3824-4171-b411-4fdf43b50292"
       ],
       "settings": {
-        "enable_category": true,
+        "enable_category": false,
         "title_1": "Category products",
         "title_color": "#222222",
         "enable_sidecategory": false,
