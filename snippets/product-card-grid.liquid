@@ -27,11 +27,11 @@
       <div class="col-xs-12 {{ settings.product_img_hover }}">
         <div class="product-image {{ settings.product_img_hover }}">
           <a class="grid-view-item__link" href="{{ product.url | within: collection }}">
-            <img class="grid-view-item__image featured-image image_thumb" height="469" width="360" src="{{ product.featured_media | img_url: settings.product_image_width_height }}" alt="{{ product.featured_image.alt }}">
+            <img class="grid-view-item__image featured-image image_thumb" height="469" width="360" loading="lazy" src="{{ product.featured_media | img_url: settings.product_image_width_height }}" alt="{{ product.featured_image.alt }}">
             {% if product.images.size > 1 %}
             {% if product.images.last %} 
             <div class="second-productimg">
-              <img class="image_thumb_swap" height="469" width="360" src="{{ product.images.last | product_img_url: settings.product_image_width_height }}" alt="{{ product.images.last.alt | escape }}" />
+              <img class="image_thumb_swap" height="469" width="360" loading="lazy" src="{{ product.images.last | product_img_url: settings.product_image_width_height }}" alt="{{ product.images.last.alt | escape }}" />
             </div>
             {% endif %} 
             {% endif %}
@@ -343,7 +343,7 @@
               <label>{{ size | split: ' ' | last | handle }}</label>
               {% if variant.image != null %}
               <span class="hidden">
-                <img width="373" height="486" src="{{ variant.image.src | product_img_url: '373x486' }}" alt="{{ text }}"/>
+                <img width="373" height="486" loading="lazy" src="{{ variant.image.src | product_img_url: '373x486' }}" alt="{{ text }}"/>
               </span>
               {% endif %}
             </li>
