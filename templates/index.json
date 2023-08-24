@@ -316,12 +316,11 @@
     },
     "feature-blogs": {
       "type": "feature-blogs",
-      "disabled": true,
       "settings": {
         "title": "Latest News",
-        "desc": "Add our new arrivals to your weekly lineup.",
+        "desc": "",
         "desc_color": "#777777",
-        "blog": "jwellery",
+        "blog": "news",
         "blog_design": "design_3",
         "product_col": "2",
         "post_limit": "6",
@@ -330,7 +329,7 @@
         "blog_hover_btn_text": "#ffffff",
         "blog_date_color": "#666666",
         "blog_bgdate_color": "#ffffff",
-        "show_view_all": false,
+        "show_view_all": true,
         "blog_show_date": true
       }
     },
