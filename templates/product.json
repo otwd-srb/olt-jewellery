@@ -5,7 +5,6 @@
       "blocks": {
         "4b5cd151-1d12-4b24-aeca-7b0c62bb7a0d": {
           "type": "variant_picker",
-          "disabled": true,
           "settings": {
             "picker_type": "dropdown"
           }
