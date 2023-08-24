@@ -1475,7 +1475,7 @@
           "show_notification": false,
           "notify_product_pos": "right",
           "product_title": "Product Notification",
-          "delay_time": "3000"
+          "delay_time": "2000"
         }
       },
       "password-header": {
