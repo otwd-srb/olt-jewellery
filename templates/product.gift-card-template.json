@@ -1,0 +1,56 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "blocks": {
+        "4b5cd151-1d12-4b24-aeca-7b0c62bb7a0d": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown"
+          }
+        },
+        "515e483a-de45-400d-baa8-0551981d407e": {
+          "type": "share",
+          "settings": {
+            "share_label": "Share"
+          }
+        }
+      },
+      "block_order": [
+        "4b5cd151-1d12-4b24-aeca-7b0c62bb7a0d",
+        "515e483a-de45-400d-baa8-0551981d407e"
+      ],
+      "settings": {
+        "product_layout": "design_1",
+        "tab_bg_color": "#000000",
+        "tab_text_color": "#ffffff",
+        "shipping_tab_enable": false,
+        "product_vendor_enable": false,
+        "product_image_zoom_enable": true,
+        "related_products_enable": true,
+        "product_qty_enable": false,
+        "share_enable": true,
+        "enable_payment_button": true,
+        "pro_img_widthheight": "800x1040",
+        "pro_thumb_img_widthheight": "120x140",
+        "thumb_position": "vertical_left",
+        "number_of_thumb": "4",
+        "sizechart_enable": false,
+        "sizechart_lable": "size chart",
+        "sizechart_info": "size guide information"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "show_product_recommendations": false,
+        "heading": "You may also like",
+        "show_vendor": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations"
+  ]
+}
