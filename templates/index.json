@@ -264,7 +264,7 @@
     "e5df0f86-5663-4b81-b4a4-bf85a1818bce": {
       "type": "cms-custom-block",
       "custom_css": [
-
+        "div {background-image: https:\/\/cdn.shopify.com\/s\/files\/1\/0608\/1498\/3409\/files\/ring_with_gemstones.jpg?v=1693410309}"
       ],
       "settings": {
         "title": "Give the Gift of Jewellery",
