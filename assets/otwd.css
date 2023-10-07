@@ -72,4 +72,8 @@ article.blog-post-single table tbody tr th {
   article.blog-post-single table {
     width: 100%;
   }
+  article.blog-post-single table tbody tr td,
+  article.blog-post-single table tbody tr th {
+    padding: 5px;
+  }
 }
