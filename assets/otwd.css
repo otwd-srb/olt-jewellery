@@ -63,3 +63,10 @@ article.blog-post-single table tbody tr th {
   font-size: 2rem;
   font-weight: bold;
 }
+
+@media (max-width: 480px) {
+  blockquote {    
+    margin: 0;
+    width: auto;
+  }
+}
