@@ -69,4 +69,7 @@ article.blog-post-single table tbody tr th {
     margin: 0;
     width: auto;
   }
+  article.blog-post-single table {
+    width: 100%;
+  }
 }
