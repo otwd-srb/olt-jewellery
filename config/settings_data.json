@@ -2166,6 +2166,12 @@
         "disabled": false,
         "settings": {
         }
+      },
+      "17927225063130601129": {
+        "type": "shopify:\/\/apps\/tt-breadcrumbs-seo-schema\/blocks\/ttSchema\/dda6b26d-4f1a-43c6-a94b-6443ed0f750b",
+        "disabled": false,
+        "settings": {
+        }
       }
     }
   },
