@@ -10,8 +10,9 @@
             {% render 'blog-sidebar' %}
             {% comment %}
             Show off meta information like comments and tags.
-            {% endcomment %}
+            {% endcomment %}            
             <div class="text-left">
+              <article> <!-- OTWD -->
               {% if blog.comments_enabled? %}
               <div class="comments">
                 {% comment %}
