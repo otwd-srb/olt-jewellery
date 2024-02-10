@@ -26,7 +26,7 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    {% if handle contains 'sort_by' %}
+    {% if handle contains 'sort_by=title-ascending' or handle contains 'sort_by=title-descending' or handle contains 'compare' %}
       <meta name="robots" content="noindex, nofollow" /><!-- OTWD Ahrefs 404 report -->
     {% endif %}
   
