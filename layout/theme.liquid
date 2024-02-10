@@ -26,7 +26,10 @@
     <link rel="canonical" href="{{ canonical_url }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    {% if handle contains 'collections/9' or handle contains 'collection/36' %}
+      <meta name="robots" content="noindex, nofollow" /><!-- OTWD Ahrefs 404 report -->
+    {% endif %}
+  
     {% render 'css-variables' %}
 
     <!-- CSS ================================================== -->
