@@ -1,5 +1,23 @@
 {
   "sections": {
+    "e5df0f86-5663-4b81-b4a4-bf85a1818bce": {
+      "type": "cms-custom-block",
+      "custom_css": [
+        ".customtext-block {background-color: antiquewhite;}"
+      ],
+      "settings": {
+        "title": "Give the Gift of Jewellery",
+        "title_color": "#916264",
+        "subtitle": "Spoil your loved one with a Once Loved Treasuress Gift Card and let them choose themselves!",
+        "subtitle_color": "#916264",
+        "btn_txt": "BUY NOW",
+        "btn_link": "shopify:\/\/products\/once-loved-treasures-gift-card",
+        "btn_txt_color": "#ffffff",
+        "btn_bg_color": "#c40529",
+        "btn_hover_txt_color": "#ffffff",
+        "btn_hover_bg_color": "#111111"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -261,24 +279,6 @@
         "bg_color": "#ffffff"
       }
     },
-    "e5df0f86-5663-4b81-b4a4-bf85a1818bce": {
-      "type": "cms-custom-block",
-      "custom_css": [
-        ".customtext-block {background-color: antiquewhite;}"
-      ],
-      "settings": {
-        "title": "Give the Gift of Jewellery",
-        "title_color": "#916264",
-        "subtitle": "Spoil your loved one with a Once Loved Treasuress Gift Card and let them choose themselves!",
-        "subtitle_color": "#916264",
-        "btn_txt": "BUY NOW",
-        "btn_link": "shopify:\/\/products\/once-loved-treasures-gift-card",
-        "btn_txt_color": "#ffffff",
-        "btn_bg_color": "#c40529",
-        "btn_hover_txt_color": "#ffffff",
-        "btn_hover_bg_color": "#111111"
-      }
-    },
     "special-product": {
       "type": "special-product",
       "settings": {
@@ -422,12 +422,12 @@
     }
   },
   "order": [
+    "e5df0f86-5663-4b81-b4a4-bf85a1818bce",
     "slideshow",
     "category-feature",
     "product-tab-model",
     "cms-parallax",
     "our_brand",
-    "e5df0f86-5663-4b81-b4a4-bf85a1818bce",
     "special-product",
     "feature-blogs",
     "gallery",
