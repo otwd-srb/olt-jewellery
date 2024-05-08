@@ -30,7 +30,7 @@
         "related_products_enable": true,
         "product_qty_enable": false,
         "share_enable": true,
-        "enable_payment_button": true,
+        "enable_payment_button": false,
         "pro_img_widthheight": "800x1040",
         "pro_thumb_img_widthheight": "120x140",
         "thumb_position": "vertical_left",
