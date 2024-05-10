@@ -73,7 +73,7 @@
         "show_filter": true,
         "collapse_on_larger_devices": false,
         "enable_sorting": false,
-        "enable_sidebar_multiple_choice": true,
+        "enable_sidebar_multiple_choice": false,
         "show_best_products": false,
         "title": "Best seller",
         "bestseller": "second-hand-rings",
