@@ -299,7 +299,7 @@
         "blog": "news",
         "blog_design": "design_1",
         "product_col": "3",
-        "post_limit": "3",
+        "post_limit": "12",
         "blog_btn_text": "#111111",
         "blog_btn_hover_bg": "#222222",
         "blog_hover_btn_text": "#ffffff",
