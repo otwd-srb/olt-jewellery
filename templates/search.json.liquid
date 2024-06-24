@@ -8,6 +8,9 @@
 { 
 "title"    : {{ product.title | json }},
 "url"      : {{ product.url | within: product.collections.last | json }},
+
+"available": {{ item.available | json }},
+  
 {% if settings.enable_ajax_search_full %}
 "thumbnail": {{ product.featured_image.src | product_img_url: settings.product_image_width_height | json }},
 {% else %}
