@@ -35,7 +35,7 @@ Return only products or pages in results:
       <div class="grid-uniform product-grid col-main">
         <div class="products-grid-view">
           <div class="row">
-            {% for item in search.results %}{% if item.type == 'PPLR_HIDDEN_PRODUCT' %}{% continue %}{% endif %}
+            {% for item in search.results %}{% if item.type == 'PPLR_HIDDEN_PRODUCT' or item.available == false %}{% continue %}{% endif %}
             {% render 'search-result', product: item %}
             {% endfor %}
           </div>
@@ -44,7 +44,7 @@ Return only products or pages in results:
     </div>
     {% else %}
     <div class="grid-uniform">
-      {% for item in search.results %}{% if item.type == 'PPLR_HIDDEN_PRODUCT' %}{% continue %}{% endif %}             
+      {% for item in search.results %}{% if item.type == 'PPLR_HIDDEN_PRODUCT' or item.available == false %}{% continue %}{% endif %}             
       {% render 'search-result-grid', product: item %}
       {% endfor %}
     </div>
