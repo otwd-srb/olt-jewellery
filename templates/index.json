@@ -9,6 +9,22 @@
 */
 {
   "sections": {
+    "cms_parallax_N8Wz87": {
+      "type": "cms-parallax",
+      "settings": {
+        "bg_color": "#f5f5f5",
+        "parallax_enable": true,
+        "image": "shopify:\/\/shop_images\/antique-gold-diamond-ring-1920x750.jpg",
+        "title": "Second Hand Rings",
+        "title_color": "#111111",
+        "subtitle": "Magnificent rings fit for any occasion",
+        "subtitle_color": "#111111",
+        "btn_txt": "Browse now",
+        "btn_link": "shopify:\/\/collections\/second-hand-rings",
+        "btn_txt_color": "#ffffff",
+        "btn_hover_txt_color": "#ffffff"
+      }
+    },
     "slideshow": {
       "type": "slideshow",
       "blocks": {
@@ -76,6 +92,7 @@
         "1580215063672-1",
         "960f1481-f307-4739-87ea-b9f3a24162bf"
       ],
+      "disabled": true,
       "settings": {
         "slider_animation_type": "slide",
         "slide_button_txt_color": "#ffffff",
@@ -431,6 +448,7 @@
     }
   },
   "order": [
+    "cms_parallax_N8Wz87",
     "slideshow",
     "category-feature",
     "product-tab-model",
