@@ -93,7 +93,8 @@
           <div class="rte" itemprop="articleBody">{{ article.content }}</div>
           {% if section.settings.social_sharing %}
           <div class="text-left item-social-sharing">
-            <h2 class="h4">{{ "blogs.article.share_post" | t }}</h2>
+            {% comment %}<h2 class="h4">{{ "blogs.article.share_post" | t }}</h2>{% endcomment %}
+            <p class="h4">Share this post</p>
             {% if settings.show_linkedin_share or settings.show_facebook_share or settings.show_twitter_share or settings.show_google_plus_share or settings.show_mailto_share or settings.show_pinterest_share %}
             <div class="tt-social-share">
               {% if settings.show_facebook_share %}
