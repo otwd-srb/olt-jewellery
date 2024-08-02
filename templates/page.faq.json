@@ -65,14 +65,14 @@
           "type": "text",
           "settings": {
             "title": "Do you ship internationally?",
-            "description": "Yes we ship our items globally. There is an additional charge of $70.00 AU and does not include insurance, tax’s, import duties and customs fees. All associated fees are the responsibility of the international buyer."
+            "description": "NO.  We only ship within Australia."
           }
         },
         "9e3701c3-949f-4f77-9d66-1a3a071d7d03": {
           "type": "text",
           "settings": {
             "title": "Do you layby?",
-            "description": "Yes. If you have found something you love and do not want to miss out, we can layby it for you. Please get in touch with the item number and once a deposit of 25% is paid we will remove the item from sale. To find out more please get in touch with us."
+            "description": "NO.  Layby, Afterpay, Zip or any other buy-now-pay-later services are NOT available."
           }
         },
         "131372d0-7157-4b42-a215-c43ae8eb7e9c": {
