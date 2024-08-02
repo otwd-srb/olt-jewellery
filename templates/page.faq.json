@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "main": {
@@ -14,7 +23,7 @@
           "type": "text",
           "settings": {
             "title": "Do you have a shopfront or store I can visit?",
-            "description": "Yes. However, we do sell most of our items online, and as such we do not keep a lot of stock in the store. If you would like to view a particular set of items before purchasing, we can set up an appointment for a private viewing with you. Please get in touch to book. We are located in City Plaza which is at 39 Ainslie place Civic (Canberra City) up on level one."
+            "description": "No.  We are an online store and all purchase are to be made via www.oncelovedtreasures.com.au"
           }
         },
         "1515838714117": {
