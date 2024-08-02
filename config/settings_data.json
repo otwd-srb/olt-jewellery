@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "current": {
     "display_preloader": true,
@@ -712,7 +721,7 @@
           "display_language": false,
           "display_myaccount": true,
           "display_compare": false,
-          "logo": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_800x224_1dfbd138-0c22-4d4e-b9a1-fb90f5071859.png",
+          "logo": "shopify:\/\/shop_images\/Once_Loved_Treasures_Logo.png",
           "display_wishlist": false,
           "display_cart": true,
           "menu_text_color": "#111111",
