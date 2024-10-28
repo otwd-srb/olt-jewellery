@@ -1,12 +1,12 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "cms_parallax_N8Wz87": {
@@ -14,13 +14,13 @@
       "settings": {
         "bg_color": "#f5f5f5",
         "parallax_enable": true,
-        "image": "shopify:\/\/shop_images\/antique-gold-diamond-ring-1920x750.jpg",
-        "title": "Gold rings for women",
+        "image": "shopify://shop_images/antique-gold-diamond-ring-1920x750.jpg",
+        "title": "WEEKLY AUCTIONS",
         "title_color": "#111111",
-        "subtitle": "Magnificent rings fit for any occasion",
+        "subtitle": "GET BARGAINS ON OUR FACEBOOK AUCTION PAGE",
         "subtitle_color": "#111111",
-        "btn_txt": "Browse now",
-        "btn_link": "shopify:\/\/collections\/gold-rings-for-women",
+        "btn_txt": "facebook.com/groups/oncelovedtreasuresjewelleryauctiongroup",
+        "btn_link": "shopify://collections/gold-rings-for-women",
         "btn_txt_color": "#ffffff",
         "btn_hover_txt_color": "#ffffff"
       }
@@ -31,14 +31,14 @@
         "1580215063672-0": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slider_Jewl-chest_9.jpg",
+            "image": "shopify://shop_images/slider_Jewl-chest_9.jpg",
             "image_link": "#",
             "show_video": false,
             "video_url": "",
             "title": "Find your next loved treasure",
             "desc": "Amazing Deals. <br>\nRare & unique pieces.",
             "btn_txt": "Shop Now",
-            "btn_link": "shopify:\/\/collections\/all",
+            "btn_link": "shopify://collections/all",
             "title_color": "#272727",
             "desc_color": "#444444",
             "btn_txt_color": "#272727",
@@ -51,10 +51,10 @@
           "type": "image",
           "disabled": true,
           "settings": {
-            "image": "shopify:\/\/shop_images\/slider--02.jpg",
+            "image": "shopify://shop_images/slider--02.jpg",
             "image_link": "#",
             "show_video": false,
-            "video_url": "https:\/\/www.youtube.com\/watch?v=QMinLipeN3g",
+            "video_url": "https://www.youtube.com/watch?v=QMinLipeN3g",
             "title": "Largest collections of pre owned and second hand jewellery",
             "desc": "Cleaned & restored",
             "btn_txt": "Shop Now",
@@ -70,14 +70,14 @@
         "960f1481-f307-4739-87ea-b9f3a24162bf": {
           "type": "image",
           "settings": {
-            "image": "shopify:\/\/shop_images\/slider--04.jpg",
+            "image": "shopify://shop_images/slider--04.jpg",
             "image_link": "",
             "show_video": false,
             "video_url": "",
             "title": "Wedding rings",
             "desc": "Explore our vast selection of wedding rings for Men and Women",
             "btn_txt": "shop now",
-            "btn_link": "shopify:\/\/collections\/wedding",
+            "btn_link": "shopify://collections/wedding",
             "title_color": "#272727",
             "desc_color": "#444444",
             "btn_txt_color": "#272727",
@@ -105,7 +105,7 @@
         "1622714104fc54d870-0": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/18CT-GOLD-DIAMOND-STUD-EARRINGS-2052-600x400.jpg",
+            "image_1": "shopify://shop_images/18CT-GOLD-DIAMOND-STUD-EARRINGS-2052-600x400.jpg",
             "collection_title": "Earrings",
             "collection_cat_id": "earrings"
           }
@@ -121,7 +121,7 @@
         "d1b19b99-2fa5-44ac-8cbd-7bd64ea75ab5": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/18ct-White-Gold-and-Diamond-Ring-2000c_g-600x400.jpg",
+            "image_1": "shopify://shop_images/18ct-White-Gold-and-Diamond-Ring-2000c_g-600x400.jpg",
             "collection_title": "Rings",
             "collection_cat_id": "second-hand-rings"
           }
@@ -129,7 +129,7 @@
         "38eb0770-9426-4520-ab73-806276acd695": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/LOUIS-VUITTON-PENDANT-A-CHAIN-IN-18CT-GOLD-WITH-DIAMONDS-26549-600x400.jpg",
+            "image_1": "shopify://shop_images/LOUIS-VUITTON-PENDANT-A-CHAIN-IN-18CT-GOLD-WITH-DIAMONDS-26549-600x400.jpg",
             "collection_title": "Pendant",
             "collection_cat_id": "pendants"
           }
@@ -137,7 +137,7 @@
         "16650694-be0a-4348-a4af-699cafff4d2c": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/Watches-600x400.jpg",
+            "image_1": "shopify://shop_images/Watches-600x400.jpg",
             "collection_title": "Watches",
             "collection_cat_id": "watches"
           }
@@ -145,7 +145,7 @@
         "1f85ee91-b4be-4bfc-a908-dbafad4a9e56": {
           "type": "text_collection",
           "settings": {
-            "image_1": "shopify:\/\/shop_images\/9ct-gold-and-copper-filled-chain-necklace-25988-126_d-600x400.jpg",
+            "image_1": "shopify://shop_images/9ct-gold-and-copper-filled-chain-necklace-25988-126_d-600x400.jpg",
             "collection_title": "Necklaces",
             "collection_cat_id": "necklaces"
           }
@@ -220,7 +220,7 @@
         "subtitle": "Spoil your loved one with a Once Loved Treasuress Gift Card and let them choose themselves!",
         "subtitle_color": "#916264",
         "btn_txt": "BUY NOW",
-        "btn_link": "shopify:\/\/products\/once-loved-treasures-gift-card",
+        "btn_link": "shopify://products/once-loved-treasures-gift-card",
         "btn_txt_color": "#ffffff",
         "btn_bg_color": "#c40529",
         "btn_hover_txt_color": "#ffffff",
@@ -232,13 +232,13 @@
       "settings": {
         "bg_color": "#f5f5f5",
         "parallax_enable": true,
-        "image": "shopify:\/\/shop_images\/slider--02.jpg",
+        "image": "shopify://shop_images/slider--02.jpg",
         "title": "FREE Shipping Australia Wide",
         "title_color": "#272727",
         "subtitle": "On All Collections",
         "subtitle_color": "#444444",
         "btn_txt": "Shop Now",
-        "btn_link": "shopify:\/\/collections\/weekly-discount",
+        "btn_link": "shopify://collections/weekly-discount",
         "btn_txt_color": "#272727",
         "btn_hover_txt_color": "#ce465b"
       }
@@ -398,7 +398,7 @@
         "162463944776d2ae01-0": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/fast.png",
+            "service_icon": "shopify://shop_images/fast.png",
             "title": "Free Shipping",
             "desc": "Australia wide"
           }
@@ -406,7 +406,7 @@
         "162463944776d2ae01-1": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/verify.png",
+            "service_icon": "shopify://shop_images/verify.png",
             "title": "Secure Checkout",
             "desc": "Hassel Free Shop"
           }
@@ -414,7 +414,7 @@
         "162463944776d2ae01-2": {
           "type": "s_text",
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/user.png",
+            "service_icon": "shopify://shop_images/user.png",
             "title": "Money back",
             "desc": "Guarantee"
           }
@@ -423,7 +423,7 @@
           "type": "s_text",
           "disabled": true,
           "settings": {
-            "service_icon": "shopify:\/\/shop_images\/strongbox.png",
+            "service_icon": "shopify://shop_images/strongbox.png",
             "title": "Get Big Saving",
             "desc": "On Weekly Discounts"
           }
