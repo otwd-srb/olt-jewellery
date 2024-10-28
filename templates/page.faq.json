@@ -12,13 +12,6 @@
     "main": {
       "type": "faq",
       "blocks": {
-        "text_mRwmg4": {
-          "type": "text",
-          "settings": {
-            "title": "Question",
-            "description": "Answer goes here..."
-          }
-        },
         "text_tHTtng": {
           "type": "text",
           "settings": {
@@ -119,7 +112,6 @@
         }
       },
       "block_order": [
-        "text_mRwmg4",
         "text_tHTtng",
         "1515838707365",
         "1515838710078",
