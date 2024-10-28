@@ -189,12 +189,20 @@
             "title": "Men’s gold Wedding Rings",
             "collection": "men-gold-wedding-rings"
           }
+        },
+        "text_block_AM8WQx": {
+          "type": "text_block",
+          "settings": {
+            "title": "Tab Name",
+            "collection": ""
+          }
         }
       },
       "block_order": [
         "1595656887930",
         "1595650811758-0",
-        "1595656854289"
+        "1595656854289",
+        "text_block_AM8WQx"
       ],
       "settings": {
         "product_rows": true,
@@ -270,6 +278,12 @@
             "link": "#"
           }
         },
+        "brand_image_cebf7M": {
+          "type": "brand_image",
+          "settings": {
+            "link": ""
+          }
+        },
         "1605783755d6d9f598-4": {
           "type": "brand_image",
           "settings": {
@@ -294,6 +308,7 @@
         "1605783755d6d9f598-1",
         "1605783755d6d9f598-2",
         "1605783755d6d9f598-3",
+        "brand_image_cebf7M",
         "1605783755d6d9f598-4",
         "1605783755d6d9f598-5",
         "fe3f5195-5da5-4a16-b714-43fb3e5da4bd"

@@ -1,17 +1,31 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "faq",
       "blocks": {
+        "text_mRwmg4": {
+          "type": "text",
+          "settings": {
+            "title": "Question",
+            "description": "Answer goes here..."
+          }
+        },
+        "text_tHTtng": {
+          "type": "text",
+          "settings": {
+            "title": "Do you run jewelery auctions?",
+            "description": "Yes, we are now running silent auctions on our Facebook auction page.\n\nEach week we are auctioning off 20 items \n\nHead over to our auction page in the link below for your new treasures. There truly are items selling for much lower than retail price. all instructions and rules are on the Facebook page.\n\nfacebook.com/groups/oncelovedtreasuresjewelleryauctiongroup"
+          }
+        },
         "1515838707365": {
           "type": "text",
           "settings": {
@@ -23,21 +37,21 @@
           "type": "text",
           "settings": {
             "title": "Do you have a shopfront or store I can visit?",
-            "description": "No.  We are an online store and all purchase are to be made via <a href=\"https:\/\/oncelovedtreasures.com.au\/\" class=\"txt-link\">www.oncelovedtreasure<\/a>s.com.au"
+            "description": "No.  We are an online store and all purchase are to be made via <a href=\"https://oncelovedtreasures.com.au/\" class=\"txt-link\">www.oncelovedtreasure</a>s.com.au"
           }
         },
         "1515838714117": {
           "type": "text",
           "settings": {
             "title": "Can I pick my items up?",
-            "description": "Yes.  All collections of purchased items are by appointment only.  We do not keep any stock in our office and all items to collect must be brought into our office specifically for you to collect.  It is important that you book a time to collect your purchase to ensure that we have it available for you to collect.<br>\n\nWe are located at City Plaza, 39 Ainslie Place, Civic, Canberra City on Level 1.<br>\n\nTo make a time to collect your items please email <a href=\"mailto:info@oncelovedtreasures.com.au\" class=\"txt-link\">info@oncelovedtreasures.com.au<\/a> OR call on <a href=\"tel:0447%20387%20430\" class=\"txt-link\">0447 387 430<\/a>"
+            "description": "Yes.  All collections of purchased items are by appointment only.  We do not keep any stock in our office and all items to collect must be brought into our office specifically for you to collect.  It is important that you book a time to collect your purchase to ensure that we have it available for you to collect.<br>\n\nWe are located at City Plaza, 39 Ainslie Place, Civic, Canberra City on Level 1.<br>\n\nTo make a time to collect your items please email <a href=\"mailto:info@oncelovedtreasures.com.au\" class=\"txt-link\">info@oncelovedtreasures.com.au</a> OR call on <a href=\"tel:0447%20387%20430\" class=\"txt-link\">0447 387 430</a>"
           }
         },
         "c8cc4f31-0098-4349-b06e-dc0a85cc1b2d": {
           "type": "text",
           "settings": {
             "title": "Is it safe to order online?",
-            "description": "Yes. You will be ordering through our Shopify platform \/ website. Shopify is a fully-hosted e-commerce solution used by thousands of businesses globally. Shopify uses reputable payment gateway systems. You can also contact us and get our details to pay via electronic funds transfer (Bank transfer)."
+            "description": "Yes. You will be ordering through our Shopify platform / website. Shopify is a fully-hosted e-commerce solution used by thousands of businesses globally. Shopify uses reputable payment gateway systems. You can also contact us and get our details to pay via electronic funds transfer (Bank transfer)."
           }
         },
         "7c01fd0f-b8db-4e12-9f25-21648e0dfc16": {
@@ -105,6 +119,8 @@
         }
       },
       "block_order": [
+        "text_mRwmg4",
+        "text_tHTtng",
         "1515838707365",
         "1515838710078",
         "1515838714117",
@@ -118,6 +134,9 @@
         "13885789-148c-4726-85d8-80a9648a0a96",
         "e9e5dc6b-435a-47c4-aed6-db1df56d6fbd",
         "cd368790-7265-4c59-af92-fa5a30f18fe4"
+      ],
+      "custom_css": [
+
       ],
       "settings": {
       }
