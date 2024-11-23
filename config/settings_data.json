@@ -1,23 +1,23 @@
 /*
-* ------------------------------------------------------------
-* IMPORTANT: The contents of this file are auto-generated.
-*
-* This file may be updated by the Shopify admin theme editor
-* or related systems. Please exercise caution as any changes
-* made to this file may be overwritten.
-* ------------------------------------------------------------
-*/
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
     "display_preloader": true,
-    "pre_loader_img": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_800x224_cc0d4faf-fb07-47f6-ba32-6857922186d7.png",
+    "pre_loader_img": "shopify://shop_images/Pink_Diamond_Jewelry_Shop_Logo_800x224_cc0d4faf-fb07-47f6-ba32-6857922186d7.png",
     "preloader_bg": "#ffffff",
     "search_title1": "18ct Diamond Rings",
-    "search_url1": "https:\/\/olt-jewellery.myshopify.com\/search?type=product&q=18ct+Diamond+Rings",
+    "search_url1": "https://olt-jewellery.myshopify.com/search?type=product&q=18ct+Diamond+Rings",
     "search_title2": "Wedding ring",
-    "search_url2": "https:\/\/oncelovedtreasures.com.au\/search?type=product&q=wedding+ring",
+    "search_url2": "https://oncelovedtreasures.com.au/search?type=product&q=wedding+ring",
     "search_title3": "24ct necklace",
-    "search_url3": "https:\/\/oncelovedtreasures.com.au\/search?type=product&q=24ct+necklace",
+    "search_url3": "https://oncelovedtreasures.com.au/search?type=product&q=24ct+necklace",
     "display_body_bg_img": false,
     "color_body_bg": "#ffffff",
     "color_body_text": "#666666",
@@ -50,15 +50,15 @@
     "letter_space": "1px",
     "type_header_family": "Google+Jost",
     "type_subheader_family": "Google+Roboto",
-    "favicon": "shopify:\/\/shop_images\/logo-diamond-400x400.png",
+    "favicon": "shopify://shop_images/logo-diamond-400x400.png",
     "enable_category_image": true,
     "enable_breadcrumb_bg": false,
-    "breadcrumb_parallax": "shopify:\/\/shop_images\/breadcrumb_3526f87d-01f0-4e79-ab4f-2737451c0ceb.jpg",
+    "breadcrumb_parallax": "shopify://shop_images/breadcrumb_3526f87d-01f0-4e79-ab4f-2737451c0ceb.jpg",
     "breadcrumb_bg_color": "#f5f5f5",
     "breadcrumb_text_color": "#111111",
     "enable_full_header": true,
     "header_style_1": "style_1",
-    "mailchimp_form_action": "https:\/\/TemplateTrip.us5.list-manage.com\/subscribe\/post?u=53b61777f972e1b53c67d2963&amp;id=6f5d8a7e6e",
+    "mailchimp_form_action": "https://TemplateTrip.us5.list-manage.com/subscribe/post?u=53b61777f972e1b53c67d2963&amp;id=6f5d8a7e6e",
     "popup_newsletter_show": false,
     "popup_newsletter_title": "Join Our Newsletter And Get 5% DIscount On Your First Purchase",
     "popup_newsletter_description": "Be the first to learn about our latest trends and get exclusive offers",
@@ -118,13 +118,13 @@
     "show_blog_tags": true,
     "show_footer_tweets": false,
     "tweet_heading": "Twitter feeds",
-    "tweet_embcode": "<a class=\"twitter-timeline\" href=\"https:\/\/twitter.com\/TemplateTrip?ref_src=twsrc%5Etfw\">Tweets by TemplateTrip<\/a> <script async=\"\" src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"><\/script>",
+    "tweet_embcode": "<a class=\"twitter-timeline\" href=\"https://twitter.com/TemplateTrip?ref_src=twsrc%5Etfw\">Tweets by TemplateTrip</a> <script async=\"\" src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>",
     "cookie_bg": "#111111",
     "cookie_style": "bottom_to_left",
     "cookie_desc": "By continuing use this site, you agree to the",
     "cookie_txt_clr": "#ffffff",
     "link_title": "Privacy Policy",
-    "link_url": "shopify:\/\/policies\/privacy-policy",
+    "link_url": "shopify://policies/privacy-policy",
     "cookie_txt_link_clr": "#aaaaaa",
     "cookie_txt_link_hvrclr": "#ffffff",
     "c_btn_txt": "Accept",
@@ -134,10 +134,10 @@
     "btn_txt_hvr_clr": "#111111",
     "footer_style_1": "style_1",
     "social_twitter_link": "",
-    "social_facebook_link": "https:\/\/www.facebook.com\/once.loved.treasures.au",
+    "social_facebook_link": "https://www.facebook.com/once.loved.treasures.au",
     "social_pinterest_link": "",
-    "social_google_plus_link": "https:\/\/plus.google.com\/+shopify",
-    "social_instagram_link": "https:\/\/www.instagram.com\/oncelovedtreasures.au\/",
+    "social_google_plus_link": "https://plus.google.com/+shopify",
+    "social_instagram_link": "https://www.instagram.com/oncelovedtreasures.au/",
     "social_tumblr_link": "",
     "social_snapchat_link": "",
     "social_youtube_link": "",
@@ -159,7 +159,7 @@
     "pwd_newsletter_placeholder": "Email address",
     "pwd_newsletter_button_text": "Notify me",
     "checkout_header_image": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/Pink_Diamond_Jewelry_Shop_Logo_800x224_cc0d4faf-fb07-47f6-ba32-6857922186d7.png",
+    "checkout_logo_image": "shopify://shop_images/Pink_Diamond_Jewelry_Shop_Logo_800x224_cc0d4faf-fb07-47f6-ba32-6857922186d7.png",
     "checkout_logo_position": "left",
     "checkout_logo_size": "medium",
     "checkout_body_background_image": "",
@@ -175,8 +175,8 @@
     "enable_ajax_search_full": true,
     "product_variant_change_on_hover": true,
     "product_options_type_large_text": "Size",
-    "newsletter-bg": "shopify:\/\/shop_images\/pop-up-img-1.png",
-    "newsletter-bg1": "shopify:\/\/shop_images\/pop-up-img-2.png",
+    "newsletter-bg": "shopify://shop_images/pop-up-img-1.png",
+    "newsletter-bg1": "shopify://shop_images/pop-up-img-2.png",
     "display_toogle_menu": true,
     "custom_css": "",
     "base_font": "Google+Roboto+Slab",
@@ -295,7 +295,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Home",
-              "button_link": "\/",
+              "button_link": "/",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "",
               "tt_mn_class": "home",
@@ -353,9 +353,9 @@
               "tt_sub_menu_cfourthtitle": "",
               "tt_sub_menu_cfourthlink": "",
               "tt_sub_menu_cfourthlinklist": "",
-              "tt_sub_menu_first_img": "shopify:\/\/shop_images\/300x600.png",
+              "tt_sub_menu_first_img": "shopify://shop_images/300x600.png",
               "tt_sub_menu_first_title": "",
-              "tt_sub_menu_first_link": "shopify:\/\/collections\/under-500",
+              "tt_sub_menu_first_link": "shopify://collections/under-500",
               "tt_sub_menu_first_width": "",
               "tt_sub_menu_second_title": "",
               "tt_sub_menu_second_link": "",
@@ -381,7 +381,7 @@
               "tt_mn_subheading_color": "#ffffff",
               "tt_sub_menu_cwidth": "ALL Brands",
               "tt_sub_menu_ctitle": "ALL Brands",
-              "tt_sub_menu_clink": "shopify:\/\/collections\/all-brand",
+              "tt_sub_menu_clink": "shopify://collections/all-brand",
               "tt_sub_menu_clinklist": "",
               "tt_sub_menu_csecondtitle": "",
               "tt_sub_menu_csecondlink": "",
@@ -410,7 +410,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "About Us",
-              "button_link": "shopify:\/\/pages\/about-us",
+              "button_link": "shopify://pages/about-us",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "540px",
               "tt_mn_class": "",
@@ -448,7 +448,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "FAQ",
-              "button_link": "shopify:\/\/pages\/faq",
+              "button_link": "shopify://pages/faq",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "540px",
               "tt_mn_class": "",
@@ -486,7 +486,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Blog",
-              "button_link": "shopify:\/\/blogs\/news",
+              "button_link": "shopify://blogs/news",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "280px",
               "tt_mn_class": "blog",
@@ -525,7 +525,7 @@
             "disabled": true,
             "settings": {
               "title": "Look Book",
-              "button_link": "shopify:\/\/collections",
+              "button_link": "shopify://collections",
               "tt_mn_show_sub": true,
               "tt_mn_sub_contentwidth": "100%",
               "tt_mn_class": "",
@@ -654,7 +654,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Contact",
-              "button_link": "shopify:\/\/pages\/contact",
+              "button_link": "shopify://pages/contact",
               "tt_mn_show_sub": false,
               "tt_mn_sub_contentwidth": "540px",
               "tt_mn_class": "",
@@ -721,7 +721,7 @@
           "display_language": false,
           "display_myaccount": true,
           "display_compare": false,
-          "logo": "shopify:\/\/shop_images\/Once_Loved_Treasures_Logo.png",
+          "logo": "shopify://shop_images/Once_Loved_Treasures_Logo.png",
           "display_wishlist": false,
           "display_cart": true,
           "menu_text_color": "#111111",
@@ -737,7 +737,7 @@
         "settings": {
           "footer_contact_title": "Store Information",
           "contact_address": "",
-          "contact_no": "0447387430",
+          "contact_no": "",
           "contact_email": "info@oncelovedtreasures.com.au",
           "footer_col_title_1": "Legal Information",
           "col_1_menu": "legal-info-footer",
@@ -760,13 +760,13 @@
           "btn_txt_color": "#ffffff",
           "btn_hovertxt_color": "#ce465b",
           "footer_contact_title": "Store Information",
-          "contact_address": "<p>4030, Central Bazzar,<br\/>Varachha Road, Surat.<\/p>",
+          "contact_address": "<p>4030, Central Bazzar,<br/>Varachha Road, Surat.</p>",
           "contact_no": "092770-77088",
           "contact_email": "sales@yourcompany.com",
           "footer_col_title_1": "Quick Links",
           "col_1_menu": "footer",
           "show_logo": true,
-          "footer_logo": "shopify:\/\/shop_images\/footer-logo.png",
+          "footer_logo": "shopify://shop_images/footer-logo.png",
           "footer_desc": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas vitae risus. Vivamus eget accumsan elit, tincidunt pharetra orci.ProducerCum sociis natoque penatibu",
           "footer_col_title_2": "Our Company",
           "col_2_menu": "footer-menu-2"
@@ -802,8 +802,7 @@
           "1515838710078",
           "1515838714117"
         ],
-        "settings": {
-        }
+        "settings": {}
       },
       "sidebar-blog-listing": {
         "type": "sidebar-blog-listing",
@@ -866,7 +865,7 @@
           "icon_bg_color": "#222222",
           "icon_color": "#ffffff",
           "footer_contact_title": "Store Information",
-          "contact_address": "<p>4030, Central Bazzar,<br\/>Varachha Road, Surat.<\/p>",
+          "contact_address": "<p>4030, Central Bazzar,<br/>Varachha Road, Surat.</p>",
           "contact_title": "Phone No",
           "contact_no": "092770-77088",
           "email_title": "Email Address",
@@ -1032,7 +1031,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Look Book",
-              "button_link": "shopify:\/\/collections",
+              "button_link": "shopify://collections",
               "tt_mn_show_sub": true,
               "tt_mn_sub_contentwidth": "100%",
               "tt_mn_class": "",
@@ -1070,7 +1069,7 @@
             "type": "tt_mm_menu1",
             "settings": {
               "title1": "Women collection",
-              "button_link1": "shopify:\/\/collections\/fashion",
+              "button_link1": "shopify://collections/fashion",
               "tt_mn_show_sub1": false,
               "tt_sub_menu_ctitle1": "",
               "tt_sub_menu_clink1": "",
@@ -1206,7 +1205,7 @@
           "about_desc": "Apparently we had reached a great height in the atmosphere, for the sky was a dead black and there a stars.",
           "about_btn_url": "#",
           "about_btn": "Shop Now",
-          "about_us": "shopify:\/\/shop_images\/about-11.jpg",
+          "about_us": "shopify://shop_images/about-11.jpg",
           "about_sub_title1_color": "#111111",
           "about_sub_title1": "Minimal Cozy Theme for Fashion",
           "about_sub_desc1_color": "#666666",
@@ -1215,8 +1214,8 @@
           "about_sub_title2": "Up to 40% Off  on All Items.",
           "about_sub_desc2_color": "#666666",
           "about_sub_desc2": "With all his cruel ferocity and coldness there was an under of something in Tars Tarkas which he seemed ever battling to subdue. Could it be a of some human instinct come back.",
-          "video_img": "shopify:\/\/shop_images\/about-3.jpg",
-          "video_url": "https:\/\/www.youtube.com\/embed\/gJpXlRkW6Fw",
+          "video_img": "shopify://shop_images/about-3.jpg",
+          "video_url": "https://www.youtube.com/embed/gJpXlRkW6Fw",
           "video_btn_color": "#ffffff",
           "video_btn_hover_color": "#ffffff",
           "about1_subtitle_color": "#666666",
@@ -1227,19 +1226,19 @@
           "about1_desc": "Most journeys start with a series of questions. For us they were: why are \nwe paying so much for razors? Why are so many of us (a third of women \nto be exact) using men’s razors? Why can’t we find razors without animal \ningredients in them? We were confused. The campaigns showing girls in \nwhite bikinis shaving already hairless legs didn’t have the answers were looking for. Our interviews with hundreds of women on their shaving and \nhabits made it clear we weren’t alone. That was all needed to start going to the bottom with overlooked shaving glitch. All of that led to the birth of Estrid — a fierce and female-focused.",
           "about1_btn_url": "#",
           "about1_btn": "Shop Now",
-          "about1_us": "shopify:\/\/shop_images\/about-2.jpg",
+          "about1_us": "shopify://shop_images/about-2.jpg",
           "bg_color": "#f5f5f5",
-          "service_1": "shopify:\/\/shop_images\/services-01_3fba3f12-9833-4d82-80f6-973d6c03a59a.png",
+          "service_1": "shopify://shop_images/services-01_3fba3f12-9833-4d82-80f6-973d6c03a59a.png",
           "service_title1_color": "#111111",
           "service_title1": "Shop Worldwide",
           "service_desc1_color": "#666666",
           "service_desc1": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
-          "service_2": "shopify:\/\/shop_images\/services-02_3d52549e-3357-4700-a701-ccabbb0fb017.png",
+          "service_2": "shopify://shop_images/services-02_3d52549e-3357-4700-a701-ccabbb0fb017.png",
           "service_title2_color": "#111111",
           "service_title2": "Big Saving Shop",
           "service_desc2_color": "#666666",
           "service_desc2": "Excepteur sint occaecat cupidatat non proident,   sunt in culpa qui officia deserunt mollit anim id  est laborum.",
-          "service_3": "shopify:\/\/shop_images\/services-03_56c76d29-b9d1-467d-af01-384444d74e99.png",
+          "service_3": "shopify://shop_images/services-03_56c76d29-b9d1-467d-af01-384444d74e99.png",
           "service_title3_color": "#111111",
           "service_title3": "24H 7D Support",
           "service_desc3_color": "#666666",
@@ -1252,7 +1251,7 @@
           "1570173823217": {
             "type": "text",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/6.jpg",
+              "image_1": "shopify://shop_images/6.jpg",
               "image_heading": "JOHN DOE",
               "author_name": "JOHN DOE",
               "author_designation": "web developer",
@@ -1264,7 +1263,7 @@
           "1570173875415": {
             "type": "text",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/2.jpg",
+              "image_1": "shopify://shop_images/2.jpg",
               "image_heading": "JOHN BUFFER",
               "author_name": "JOHN BUFFER",
               "author_designation": "web developer",
@@ -1276,7 +1275,7 @@
           "1570173906227": {
             "type": "text",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/1.jpg",
+              "image_1": "shopify://shop_images/1.jpg",
               "image_heading": "SANDRA ELLIPS",
               "author_name": "SANDRA ELLIPS",
               "author_designation": "graphics designer",
@@ -1288,7 +1287,7 @@
           "1570174004731": {
             "type": "text",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/7.jpg",
+              "image_1": "shopify://shop_images/7.jpg",
               "image_heading": "CRAIG WILSON",
               "author_name": "CRAIG WILSON",
               "author_designation": "web designer",
@@ -1300,7 +1299,7 @@
           "1570173938187": {
             "type": "text",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/5.jpg",
+              "image_1": "shopify://shop_images/5.jpg",
               "image_heading": "JHON SMITH",
               "author_name": "JHON SMITH",
               "author_designation": "developer",
@@ -1331,10 +1330,10 @@
           "1580215063672-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/slider-01_8bea5528-4dde-4a92-b3b8-1dc6d0f23bcf.jpg",
+              "image": "shopify://shop_images/slider-01_8bea5528-4dde-4a92-b3b8-1dc6d0f23bcf.jpg",
               "image_link": "#",
               "show_video": false,
-              "video_url": "https:\/\/www.youtube.com\/watch?v=P00HwM_S_Js",
+              "video_url": "https://www.youtube.com/watch?v=P00HwM_S_Js",
               "title": "Comfort First Desgin",
               "desc": "The All New Gorgeous Collection of\n2022, Shopping With Us!",
               "btn_txt": "Shop<br>Now",
@@ -1350,10 +1349,10 @@
           "1580215063672-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/slider-02_584f7bc3-809d-438c-bd2f-021510fd6bb4.jpg",
+              "image": "shopify://shop_images/slider-02_584f7bc3-809d-438c-bd2f-021510fd6bb4.jpg",
               "image_link": "#",
               "show_video": false,
-              "video_url": "https:\/\/www.youtube.com\/watch?v=QMinLipeN3g",
+              "video_url": "https://www.youtube.com/watch?v=QMinLipeN3g",
               "title": "Cozy. Summer Shop",
               "desc": "The All New Gorgeous Collection of\n2020, Shopping With Us!",
               "btn_txt": "Shop<br>Now",
@@ -1490,14 +1489,13 @@
       "password-header": {
         "type": "password-header",
         "settings": {
-          "logo": "shopify:\/\/shop_images\/logo.png",
+          "logo": "shopify://shop_images/logo.png",
           "logo_max_width": 100
         }
       },
       "password-content": {
         "type": "password-content",
-        "settings": {
-        }
+        "settings": {}
       },
       "1605783755d6d9f598": {
         "type": "our_brand",
@@ -1505,49 +1503,49 @@
           "1605783755d6d9f598-0": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/01.png",
+              "image": "shopify://shop_images/01.png",
               "link": "#"
             }
           },
           "1605783755d6d9f598-1": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/02.png",
+              "image": "shopify://shop_images/02.png",
               "link": "#"
             }
           },
           "1605783755d6d9f598-2": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/03.png",
+              "image": "shopify://shop_images/03.png",
               "link": "#"
             }
           },
           "1605783755d6d9f598-3": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/04.png",
+              "image": "shopify://shop_images/04.png",
               "link": "#"
             }
           },
           "1605783755d6d9f598-4": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/05.png",
+              "image": "shopify://shop_images/05.png",
               "link": "#"
             }
           },
           "1605783755d6d9f598-5": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/06.png",
+              "image": "shopify://shop_images/06.png",
               "link": "#"
             }
           },
           "fe3f5195-5da5-4a16-b714-43fb3e5da4bd": {
             "type": "brand_image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/07.png",
+              "image": "shopify://shop_images/07.png",
               "link": "#"
             }
           }
@@ -1726,7 +1724,7 @@
             "type": "tt_mm_menu",
             "settings": {
               "title": "Look Book",
-              "button_link": "shopify:\/\/collections",
+              "button_link": "shopify://collections",
               "tt_mn_show_sub": true,
               "tt_mn_sub_contentwidth": "100%",
               "tt_mn_class": "",
@@ -1764,7 +1762,7 @@
             "type": "tt_mm_menu1",
             "settings": {
               "title1": "Women collection",
-              "button_link1": "shopify:\/\/collections\/fashion",
+              "button_link1": "shopify://collections/fashion",
               "tt_mn_show_sub1": false,
               "tt_sub_menu_ctitle1": "",
               "tt_sub_menu_clink1": "",
@@ -1894,7 +1892,7 @@
           "e3e6b750-9084-4f84-8722-cdae85773cc9": {
             "type": "s_text",
             "settings": {
-              "policy_icon": "shopify:\/\/shop_images\/services-01_6aca64fa-610e-4b83-a3b0-946a4e2e812b.png",
+              "policy_icon": "shopify://shop_images/services-01_6aca64fa-610e-4b83-a3b0-946a4e2e812b.png",
               "title": "Security policy",
               "desc": "(edit with the Customer Reassurance module)"
             }
@@ -1902,7 +1900,7 @@
           "051643af-9772-4112-a8b0-c35f0022a81a": {
             "type": "s_text",
             "settings": {
-              "policy_icon": "shopify:\/\/shop_images\/services-02_fd0a0187-98d3-4405-a7c6-9314972abc8a.png",
+              "policy_icon": "shopify://shop_images/services-02_fd0a0187-98d3-4405-a7c6-9314972abc8a.png",
               "title": "Delivery policy",
               "desc": "(edit with the Customer Reassurance module)"
             }
@@ -1910,7 +1908,7 @@
           "ee9c00f7-2c6f-4ef2-b8b7-392f3d81f915": {
             "type": "s_text",
             "settings": {
-              "policy_icon": "shopify:\/\/shop_images\/services-03_bd8d43ae-d069-4011-8d26-1a2f16f958ce.png",
+              "policy_icon": "shopify://shop_images/services-03_bd8d43ae-d069-4011-8d26-1a2f16f958ce.png",
               "title": "Return policy",
               "desc": "(edit with the Customer Reassurance module)"
             }
@@ -1939,42 +1937,42 @@
           "6056c5f9-dcad-423f-abe7-ae1e3a254a64": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/08.jpg",
+              "gallery": "shopify://shop_images/08.jpg",
               "gallery_url": "#"
             }
           },
           "820e96b5-397a-4413-afaa-28f551724373": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/12.jpg",
+              "gallery": "shopify://shop_images/12.jpg",
               "gallery_url": "#"
             }
           },
           "b2b666f3-73df-4698-9520-be0f1e31d9c2": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/11.jpg",
+              "gallery": "shopify://shop_images/11.jpg",
               "gallery_url": "#"
             }
           },
           "9a7b4702-a36f-4fd8-9cd1-57fd9d9e7af0": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/10.jpg",
+              "gallery": "shopify://shop_images/10.jpg",
               "gallery_url": "#"
             }
           },
           "6fcee063-1f74-4c52-ba17-2cc1e2fad905": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/09.jpg",
+              "gallery": "shopify://shop_images/09.jpg",
               "gallery_url": "#"
             }
           },
           "a1df8012-c7a8-4e7e-bc00-33e122ab0b84": {
             "type": "text",
             "settings": {
-              "gallery": "shopify:\/\/shop_images\/07.jpg",
+              "gallery": "shopify://shop_images/07.jpg",
               "gallery_url": "#"
             }
           }
@@ -2000,7 +1998,7 @@
         "settings": {
           "bg_color": "#f5f5f5",
           "parallax_enable": true,
-          "image": "shopify:\/\/shop_images\/parallax-01.jpg",
+          "image": "shopify://shop_images/parallax-01.jpg",
           "title": "New Collection, 2022",
           "title_color": "#111111",
           "subtitle": "All New Gorgeous Collection of 202",
@@ -2028,7 +2026,7 @@
           "162463944776d2ae01-0": {
             "type": "s_text",
             "settings": {
-              "service_icon": "shopify:\/\/shop_images\/services-01.png",
+              "service_icon": "shopify://shop_images/services-01.png",
               "title": "Free Shipping",
               "desc": "world wide"
             }
@@ -2036,7 +2034,7 @@
           "162463944776d2ae01-1": {
             "type": "s_text",
             "settings": {
-              "service_icon": "shopify:\/\/shop_images\/services-02.png",
+              "service_icon": "shopify://shop_images/services-02.png",
               "title": "Secure Checkout",
               "desc": "Hustle Free Shop"
             }
@@ -2044,7 +2042,7 @@
           "162463944776d2ae01-2": {
             "type": "s_text",
             "settings": {
-              "service_icon": "shopify:\/\/shop_images\/services-03.png",
+              "service_icon": "shopify://shop_images/services-03.png",
               "title": "Live Chat Support",
               "desc": "24x7 Online Shop"
             }
@@ -2052,7 +2050,7 @@
           "162463944776d2ae01-3": {
             "type": "s_text",
             "settings": {
-              "service_icon": "shopify:\/\/shop_images\/services-04.png",
+              "service_icon": "shopify://shop_images/services-04.png",
               "title": "Get Big Saving",
               "desc": "On Exclusive Items"
             }
@@ -2086,7 +2084,7 @@
       "1640092742fd43267a": {
         "type": "cms-subbanner2",
         "settings": {
-          "banner1_img": "shopify:\/\/shop_images\/banner-01_b324d8c0-fb86-4704-8ed8-37e6257ec11b.jpg",
+          "banner1_img": "shopify://shop_images/banner-01_b324d8c0-fb86-4704-8ed8-37e6257ec11b.jpg",
           "banner1_url": "#",
           "text1_position": "right",
           "banner1_title": "All New For Women’s",
@@ -2099,7 +2097,7 @@
           "btn1_bg_color": "#111111",
           "btn1_hovertxt_color": "#ffffff",
           "btn1_hoverbg_color": "#ce465b",
-          "banner2_img": "shopify:\/\/shop_images\/banner-02_1639d425-d1cd-43a6-bfa8-a92c96615e5c.jpg",
+          "banner2_img": "shopify://shop_images/banner-02_1639d425-d1cd-43a6-bfa8-a92c96615e5c.jpg",
           "banner2_url": "#",
           "text2_position": "center",
           "banner2_title": "Save up to 35%",
@@ -2112,7 +2110,7 @@
           "btn2_bg_color": "#ffffff",
           "btn2_hovertxt_color": "#ffffff",
           "btn2_hoverbg_color": "#ce465b",
-          "banner3_img": "shopify:\/\/shop_images\/banner-03_5c851d54-222f-4f11-806f-c04e2a8b90d4.jpg",
+          "banner3_img": "shopify://shop_images/banner-03_5c851d54-222f-4f11-806f-c04e2a8b90d4.jpg",
           "banner3_url": "#",
           "text3_position": "center",
           "banner3_title": "Styles Shoes",
@@ -2129,14 +2127,13 @@
       },
       "password-footer": {
         "type": "password-footer",
-        "settings": {
-        }
+        "settings": {}
       },
       "footer-model-4": {
         "type": "footer-model-4",
         "settings": {
           "footer_contact_title": "Store Information",
-          "contact_address": "<p>4030, Central Bazzar,<br\/>Varachha Road, Surat.<\/p>",
+          "contact_address": "<p>4030, Central Bazzar,<br/>Varachha Road, Surat.</p>",
           "contact_no": "0123-456-789",
           "contact_email": "sales@yourcompany.com",
           "footer_col_title_1": "Quick Shop",
@@ -2171,19 +2168,17 @@
     ],
     "blocks": {
       "855628211100114053": {
-        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "17927225063130601129": {
-        "type": "shopify:\/\/apps\/tt-breadcrumbs-seo-schema\/blocks\/ttSchema\/dda6b26d-4f1a-43c6-a94b-6443ed0f750b",
+        "type": "shopify://apps/tt-breadcrumbs-seo-schema/blocks/ttSchema/dda6b26d-4f1a-43c6-a94b-6443ed0f750b",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
+        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
         "disabled": true,
         "settings": {
           "button_color": "#202a36",
@@ -2254,13 +2249,11 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "slideshow-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
@@ -2338,13 +2331,11 @@
           "blocks": {
             "slideshow-0": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             },
             "slideshow-1": {
               "type": "image",
-              "settings": {
-              }
+              "settings": {}
             }
           },
           "block_order": [
