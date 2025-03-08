@@ -64,7 +64,7 @@
     "popup_newsletter_description": "Be the first to learn about our latest trends and get exclusive offers",
     "popup_newsletter_delay_first": "5000",
     "popup_newsletter_delay": "1",
-    "enable_multiple_currencies": false,
+    "enable_multiple_currencies": true,
     "currency_1_unit": "USA",
     "currency_2_unit": "EUR",
     "currency_3_unit": "GBP",
