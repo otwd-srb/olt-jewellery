@@ -353,7 +353,6 @@
               "tt_sub_menu_cfourthtitle": "",
               "tt_sub_menu_cfourthlink": "",
               "tt_sub_menu_cfourthlinklist": "",
-              "tt_sub_menu_first_img": "shopify://shop_images/300x600.png",
               "tt_sub_menu_first_title": "",
               "tt_sub_menu_first_link": "shopify://collections/under-500",
               "tt_sub_menu_first_width": "",
@@ -721,7 +720,6 @@
           "display_language": false,
           "display_myaccount": true,
           "display_compare": false,
-          "logo": "shopify://shop_images/Once_Loved_Treasures_Logo.png",
           "display_wishlist": false,
           "display_cart": true,
           "menu_text_color": "#111111",
@@ -737,7 +735,7 @@
         "settings": {
           "footer_contact_title": "Store Information",
           "contact_address": "",
-          "contact_no": "0447387430",
+          "contact_no": "",
           "contact_email": "info@oncelovedtreasures.com.au",
           "footer_col_title_1": "Legal Information",
           "col_1_menu": "legal-info-footer",
@@ -2167,26 +2165,39 @@
       "162463944776d2ae01"
     ],
     "blocks": {
-      "855628211100114053": {
-        "type": "shopify://apps/klaviyo-email-marketing-sms/blocks/klaviyo-onsite-embed/2632fe16-c075-4321-a88b-50b567f42507",
+      "12793297677437526120": {
+        "type": "shopify://apps/t-lab-ai-language-translate/blocks/custom_translations/b5b83690-efd4-434d-8c6a-a5cef4019faf",
         "disabled": false,
         "settings": {}
       },
-      "17927225063130601129": {
-        "type": "shopify://apps/tt-breadcrumbs-seo-schema/blocks/ttSchema/dda6b26d-4f1a-43c6-a94b-6443ed0f750b",
+      "8765772171712610185": {
+        "type": "shopify://apps/t-lab-ai-language-translate/blocks/language_switcher/b5b83690-efd4-434d-8c6a-a5cef4019faf",
         "disabled": false,
-        "settings": {}
-      },
-      "15683396631634586217": {
-        "type": "shopify://apps/inbox/blocks/chat/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": true,
         "settings": {
-          "button_color": "#202a36",
-          "button_icon": "chat_bubble",
-          "button_text": "no_text",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": "👋 Hi, message us with any questions. We're happy to help!"
+          "enable_language_switcher": true,
+          "enable_country_region_switcher": false,
+          "use_currency_for_region": false,
+          "switcher_position": "custom",
+          "show_flags": true,
+          "switcher_appearance": "language-name",
+          "invert_switcher_icon_colors": false,
+          "dropdown_appearance": "language-name",
+          "use_modal_dialog": false,
+          "language_country_mapping": "",
+          "countries_filter": "",
+          "custom_css": "",
+          "header_switcher_reference_element": "",
+          "header_switcher_relative_position": "before",
+          "mobile_menu_switcher_reference_element": "",
+          "mobile_switcher_relative_position": "before",
+          "header_switcher_border_width": 0,
+          "switcher_viewport_position": "top-right",
+          "custom_position_spacing": "55,20,20,20",
+          "custom_switcher_font_size": "14px",
+          "custom_switcher_border_width": 1,
+          "custom_switcher_text_color": "#5c5c5c",
+          "custom_switcher_background_color": "#ffffff",
+          "custom_switcher_border_color": "#000000"
         }
       }
     }
